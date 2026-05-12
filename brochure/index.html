@@ -253,9 +253,9 @@ body {
 .svc__desc { font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.55; color: rgba(245,240,232,0.82); }
 
 /* ── Page 4 · Private dining ─────────────────────────── */
-.pd { display: grid; grid-template-rows: 50% 50%; }
+.pd { display: grid; grid-template-rows: 60% 40%; }
 .pd__media {
-  background: var(--img-shrimp) center/cover no-repeat;
+  background: url('../assets/images/private-gravlax.JPG') center/cover no-repeat;
   filter: brightness(0.95);
   position: relative;
 }
@@ -275,7 +275,7 @@ body {
 
 /* ── Page 5 · Events ─────────────────────────────────── */
 .ev { display: grid; grid-template-rows: 50mm 1fr; }
-.ev__band { display: grid; grid-template-columns: 1fr 1fr; }
+.ev__band { display: grid; grid-template-columns: 1fr 1fr 1fr; }
 .ev__band > div { background-size: cover; background-position: center; }
 .ev__main {
   padding: 16mm 18mm 22mm;
@@ -504,12 +504,13 @@ body {
 .back__center .serif { font-size: 22pt; color: var(--bronze-light); }
 .back__center .h1 { color: var(--cream); font-size: 22pt; letter-spacing: 0.16em; }
 .back__contact {
-  display: flex; flex-direction: column; gap: 4mm;
-  font-weight: 300; font-size: 11pt; letter-spacing: 0.06em;
-  color: rgba(245,240,232,0.88);
+  display: flex; flex-direction: column; gap: 5mm;
+  font-weight: 300; font-size: 13pt; letter-spacing: 0.06em;
+  color: rgba(245,240,232,0.92);
 }
-.back__contact a { color: inherit; text-decoration: none; }
-.back__contact .lbl { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1mm; display: block; }
+.back__contact a { color: inherit; text-decoration: none; transition: color 200ms; }
+.back__contact a:hover { color: var(--bronze-light); }
+.back__contact .lbl { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.5mm; display: block; }
 .back__rule { width: 60px; height: 1px; background: var(--bronze); margin: 4mm 0; }
 .back__footer {
   display: flex; gap: 30mm; align-items: baseline;
@@ -648,6 +649,7 @@ body {
      ───────────────────────────────────────────────────── -->
 <section class="page ev" data-screen-label="05 Events">
   <div class="ev__band">
+    <div style="background-image: url('../assets/images/event-oysters.JPG');"></div>
     <div style="background-image: url('../assets/images/event-tartare-table.JPG');"></div>
     <div style="background-image: url('../assets/images/event-charcuterie-service.JPG');"></div>
   </div>
@@ -762,9 +764,9 @@ body {
      ───────────────────────────────────────────────────── -->
 <section class="page wks" data-screen-label="08 Workshops">
   <div class="wks__band">
-    <div style="background-image: var(--img-private);"></div>
-    <div style="background-image: var(--img-tacos);"></div>
-    <div style="background-image: var(--img-scallops);"></div>
+    <div style="background-image: url('../assets/images/workshop-bbq-tacos.JPG');"></div>
+    <div style="background-image: url('../assets/images/workshop-pasta-pan.JPG');"></div>
+    <div style="background-image: url('../assets/images/workshop-spring-rolls.JPG');"></div>
     <span class="label">Workshops · Cook with us</span>
   </div>
   <div class="wks__body">
@@ -1081,9 +1083,9 @@ body {
      ───────────────────────────────────────────────────── -->
 <section class="page drk" data-screen-label="15 Drinks">
   <div class="drk__band">
+    <div style="background-image: url('../assets/images/drink-flutes-marble.JPG');"></div>
+    <div style="background-image: url('../assets/images/drink-bucket-bottles.JPG');"></div>
     <div style="background-image: url('../assets/images/drink-coupe-blood-orange.JPG');"></div>
-    <div style="background-image: url('../assets/images/drink-passionfruit-1888.JPG');"></div>
-    <div style="background-image: url('../assets/images/drink-grapefruit-rosemary.JPG');"></div>
     <span class="label">Wine · Cocktails · Pairings</span>
   </div>
   <div class="drk__body">
@@ -1139,7 +1141,7 @@ body {
       <span class="back__rule"></span>
       <div class="back__contact">
         <div><span class="lbl">Email</span><a href="mailto:info@chefandchief.be">info@chefandchief.be</a></div>
-        <div><span class="lbl">Telefoon</span>+32 476 54 96 49</div>
+        <div><span class="lbl">Telefoon</span><a href="tel:+32476549649">+32 476 54 96 49</a></div>
         <div><span class="lbl">Web</span>chefandchief.be · @ChefandChiefBE</div>
         <div><span class="lbl">Locatie</span>Brussels · Worldwide</div>
       </div>
