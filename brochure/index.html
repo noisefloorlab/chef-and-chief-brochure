@@ -449,16 +449,17 @@ body {
 .alc .pagefoot .num { color: var(--bronze); }
 
 /* ── Page 13 · Drinks ────────────────────────────────── */
-.drk { padding: 0; display: grid; grid-template-rows: 38% 62%; }
+.drk { padding: 0; display: grid; grid-template-rows: 28% 72%; }
 .drk__band { display: grid; grid-template-columns: 1fr 1fr 1fr; position: relative; }
 .drk__band > div { background-size: cover; background-position: center; filter: brightness(0.85); }
 .drk__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.85) 100%); }
 .drk__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
 .drk__body {
-  padding: 12mm 16mm 18mm;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 12mm;
+  padding: 10mm 16mm 16mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 12mm;
 }
-.drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 2mm; max-width: 170mm; }
+.drk__head .lead { font-size: 13pt; line-height: 1.4; color: var(--bronze-light); }
 .drk__col h4 {
   font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase;
   color: var(--bronze);
@@ -466,18 +467,18 @@ body {
   border-bottom: 1px solid rgba(245,240,232,0.18);
 }
 .drk__col h5 {
-  font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream);
-  margin-bottom: 1.5mm; margin-top: 4mm;
+  font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream);
+  margin-bottom: 1.5mm; margin-top: 3mm;
 }
 .drk__col h5:first-of-type { margin-top: 0; }
 .drk__col p {
   font-family: var(--serif); font-style: italic;
-  font-size: 11.5pt; line-height: 1.55; color: rgba(245,240,232,0.78);
-  margin-bottom: 3mm;
+  font-size: 10.5pt; line-height: 1.45; color: rgba(245,240,232,0.78);
+  margin-bottom: 2.5mm;
 }
-.drk__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.5mm; margin-bottom: 2mm; }
-.drk__col ul li { font-size: 10.5pt; line-height: 1.45; }
-.drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 9.5pt; color: var(--cream); display: block; margin-bottom: 0.5mm; }
+.drk__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.2mm; margin-bottom: 2mm; }
+.drk__col ul li { font-size: 9.5pt; line-height: 1.35; }
+.drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 9pt; color: var(--cream); display: block; margin-bottom: 0.3mm; }
 .drk__col ul li em { font-family: var(--serif); font-style: normal; color: rgba(245,240,232,0.72); }
 
 /* ── Page 14 · Back cover ────────────────────────────── */
@@ -1093,36 +1094,36 @@ body {
       <span class="eyebrow">De drankenkaart</span>
       <h1 class="h1">Wijnen, cocktails<br/>en pairings.</h1>
       <span class="rule"></span>
-      <p class="lead">Drank maakt de avond. We stellen een arrangement op maat voor. Of jullie schenken zelf en wij verzorgen de service.</p>
+      <p class="lead">De juiste drank maakt de avond af.</p>
+      <p class="body" style="font-size: 10pt; line-height: 1.5;">Van wine pairing tot Champagne, signature cocktails of alcoholvrije alternatieven: Chef &amp; Chief stelt een drankenformule samen op maat van jullie menu, gasten en moment.</p>
+      <p class="body" style="font-size: 10pt; line-height: 1.5;">Hebben jullie eigen wijnen of bijzondere flessen die jullie graag willen schenken? Dan integreren we die met plezier in de avond. Jullie kunnen kiezen voor een volledige drankenformule via Chef &amp; Chief, of zelf de dranken voorzien terwijl ons team de service verzorgt.</p>
     </div>
     <div class="drk__col">
       <h4>Wijn &amp; bubbels</h4>
       <h5>Wine pairing</h5>
-      <p>Een glas per gerecht. Onze sommelier bouwt de pairing, klassiek Frans of bewust avontuurlijk, afhankelijk van het menu en de smaak aan tafel.</p>
-      <h5>Open bar wijn</h5>
-      <p>Eén wit, één rood, één rosé. Geselecteerd uit onze huisselectie. Onbeperkt voor de duur van het diner.</p>
+      <p>Onze sommelier bouwt een pairing rond het menu: klassiek Frans, elegant en toegankelijk, of bewust avontuurlijker met verrassende regio's en druiven. We werken met drie niveaus:</p>
+      <ul>
+        <li><b>Basic</b><em>Toegankelijke, kwalitatieve wijnen die mooi aansluiten bij het menu.</em></li>
+        <li><b>Medium</b><em>Een verfijndere selectie met meer karakter, complexiteit en aandacht voor herkomst.</em></li>
+        <li><b>Luxe</b><em>Bijzondere flessen en premium pairings voor wie van wijn een echte hoofdrol wil maken.</em></li>
+      </ul>
       <h5>Champagne &amp; bubbels</h5>
-      <p>Een welkomstglas Champagne, Crémant of Franciacorta. Of een fles aan tafel bij het dessert.</p>
-      <h5>Bring your own</h5>
-      <p>Eigen kelder? Geen probleem. We rekenen geen kurkrecht en we serveren met dezelfde zorg.</p>
+      <p>Een glas Champagne, Crémant, Franciacorta of andere feestelijke bubbel als aperitief, bij een toast of als elegante afsluiter bij het dessert.</p>
+      <p>We stemmen de keuze af op de sfeer van het event: feestelijk en toegankelijk, gastronomisch verfijnd of luxueus.</p>
     </div>
     <div class="drk__col">
-      <h4>Cocktails &amp; alcoholvrij</h4>
-      <h5>Welkomstcocktail</h5>
+      <h4>Cocktails &amp; mocktails</h4>
+      <p>Naast koken hebben we ook een sterke liefde voor cocktails, smaken en pairings. We maken klassieke cocktails, eigen creaties en alcoholvrije alternatieven op maat van jullie event.</p>
+      <p>Denk aan een frisse welkomstcocktail, een signature drink voor jullie feest, een cocktail bij het dessert of een mocktail pairing zonder alcohol.</p>
+      <h5>Voorbeelden</h5>
       <ul>
-        <li><b>Pisco Sour</b><em>Fris en zuur, limoen en eiwit.</em></li>
-        <li><b>Negroni met vijg</b><em>Bitterzoet, een iets rondere versie van de klassieker.</em></li>
+        <li><b>Pisco Sour</b><em>Fris en zuur, met limoen en eiwit.</em></li>
+        <li><b>Negroni met vijg</b><em>Bitterzoet, rond en iets zachter dan de klassieker.</em></li>
         <li><b>Naked &amp; Famous</b><em>Fris, kruidig en licht rokerig, met mezcal.</em></li>
-        <li><b>French 75</b><em>Gin, citroen, Champagne.</em></li>
+        <li><b>French 75</b><em>Gin, citroen en Champagne.</em></li>
+        <li><b>Pompelmoes &amp; alcoholvrije gin</b><em>Fris, citrus en bitter.</em></li>
       </ul>
-      <h5>Mocktails &amp; pairings zonder alcohol</h5>
-      <ul>
-        <li><b>Pompelmoes &amp; alcoholvrije gin</b><em>Fris, citrus, bitter.</em></li>
-        <li><b>Verjus &amp; dragon</b><em>Verfrissend, kruidig.</em></li>
-        <li><b>Shrub van rabarber</b><em>Zuur, fruitig, lang.</em></li>
-      </ul>
-      <h5>Digestief &amp; koffie</h5>
-      <p>Espresso of filterkoffie en losse thee. Eau de vie, grappa of een goede whisky om de avond af te sluiten.</p>
+      <p style="font-size: 9pt; line-height: 1.4; color: rgba(245,240,232,0.58); margin-top: 2mm;">Onderstaande cocktails zijn voorbeelden. We maken de uiteindelijke selectie steeds op maat van jullie menu, seizoen en smaak.</p>
     </div>
   </div>
   <div class="pagefoot"><span>Drankenkaart</span><span class="num">15</span></div>
