@@ -141,12 +141,13 @@ body {
 }
 .cover__icon {
   position: absolute;
-  right: 16mm; top: 50%;
-  transform: translateY(-58%);
-  width: 96mm; height: auto;
-  opacity: 0.20;
+  right: 8mm; top: 50%;
+  transform: translateY(-55%);
+  width: 160mm; height: auto;
+  opacity: 0.18;
   z-index: 1;
-  mix-blend-mode: screen;
+  filter: invert(1) brightness(2);
+  mix-blend-mode: lighten;
   pointer-events: none;
 }
 .cover__head {
@@ -224,7 +225,7 @@ body {
   padding-top: 6mm;
 }
 .concept__sig strong { font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; font-size: 10pt; }
-.concept__sig em { font-family: var(--serif); font-style: normal; font-size: 12.5pt; color: rgba(245,240,232,0.78); }
+.concept__sig em { font-family: var(--serif); font-style: italic; font-size: 12.5pt; color: rgba(245,240,232,0.78); }
 
 /* ── Page 3 · Services ───────────────────────────────── */
 .services { padding: 24mm 18mm 28mm; }
@@ -362,8 +363,8 @@ body {
 .cst__head .h1 { color: var(--black); }
 .cst__head .eyebrow { color: var(--bronze); }
 .cst__head .lead { color: var(--warm-gray); }
-.cst__pull { font-family: var(--serif); font-style: normal; font-size: 22pt; line-height: 1.32; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 6mm 0; }
-.cst__pull em { color: var(--black); font-style: normal; }
+.cst__pull { font-family: var(--serif); font-style: italic; font-size: 23pt; line-height: 1.32; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 6mm 0; }
+.cst__pull em { color: var(--black); font-style: italic; }
 .cst__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 12mm; }
 .cst__card { display: flex; flex-direction: column; gap: 2mm; }
 .cst__card .num { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
@@ -518,7 +519,7 @@ body {
   <div class="cover__bg"></div>
   <div class="cover__veil"></div>
   <div class="cover__rim"></div>
-  <img src="../assets/logo-icon-white.png" alt="" class="cover__icon" />
+  <img src="../assets/logo-icon-black.png" alt="" class="cover__icon" />
   <div class="cover__head">
     <span class="eyebrow">Brussels · Worldwide</span>
     <span class="eyebrow" style="color: var(--bronze-light);">Services — 2026</span>
@@ -612,7 +613,7 @@ body {
     </div>
     <div class="pd__col">
       <p class="body">Jij ontvangt zorgeloos, met een glas in de hand. Wij koken, serveren en ruimen op. Aan het einde van de avond laten we je keuken netjes achter, zoals we ze gevonden hebben.</p>
-      <p class="body" style="font-family: var(--serif); color: var(--bronze-light); font-size: 13pt; line-height: 1.4;">“Van aperitief tot laatste glas — jij ontvangt, wij doen de rest.”</p>
+      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Van aperitief tot laatste glas — jij ontvangt, wij doen de rest.”</p>
     </div>
   </div>
   <div class="pagefoot"><span>A. Private dining</span><span class="num">04</span></div>
@@ -633,7 +634,7 @@ body {
       <span class="rule"></span>
       <p class="lead">Een trouwfeest, doopsel, communie, verjaardag, jubileum of weekend aan een lange tafel. Chef &amp; Chief kookt voor private events op een locatie naar keuze, met gerechten die passen bij jullie gasten, jullie sfeer en het moment.</p>
       <p class="body">We starten altijd met een gesprek. Over wie jullie zijn, wat jullie graag eten en welk gevoel de dag of avond mag krijgen. Op basis daarvan stellen we een menu voor dat alleen voor jullie wordt gemaakt.</p>
-      <p class="body" style="font-family: var(--serif); color: var(--bronze-light); font-size: 13pt; line-height: 1.4;">“Eén menu voor het hele gezelschap — zo bewaken we de kwaliteit, houden we de service vloeiend en blijft er ruimte voor wat echt telt: samen genieten.”</p>
+      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Eén menu voor het hele gezelschap — zo bewaken we de kwaliteit, houden we de service vloeiend en blijft er ruimte voor wat echt telt: samen genieten.”</p>
     </div>
     <div class="ev__types">
       <div class="ev__type">
