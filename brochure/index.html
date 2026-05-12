@@ -199,7 +199,7 @@ body {
   font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase; color: rgba(245,240,232,0.7);
   font-weight: 600;
 }
-.cover__caption span:last-child { color: var(--bronze); }
+.cover__caption span:first-child { color: var(--bronze); }
 
 /* ── Page 2 · Concept ────────────────────────────────── */
 .concept { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
@@ -343,34 +343,37 @@ body {
 }
 
 /* ── Page 8 · Workshops ──────────────────────────────── */
-.wks { padding: 0; display: grid; grid-template-rows: 30% 70%; }
+.wks { padding: 0; display: grid; grid-template-rows: 24% 76%; }
 .wks__band { display: grid; grid-template-columns: 1.2fr 1fr 1fr; position: relative; }
 .wks__band > div { background-size: cover; background-position: center; filter: brightness(0.88); }
 .wks__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%); }
 .wks__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
-.wks__body { padding: 12mm 18mm 20mm; display: flex; flex-direction: column; gap: 5mm; }
-.wks__head { display: flex; flex-direction: column; gap: 3mm; max-width: 160mm; }
-.wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 12mm; }
-.wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 3mm; display: flex; flex-direction: column; gap: 1.5mm; }
-.wks__item--wide { grid-column: 1 / -1; border-top-color: var(--bronze); padding-top: 4mm; margin-top: 1mm; }
-.wks__item .letter { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
-.wks__item .t { font-weight: 400; font-size: 13pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 10.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
+.wks__body { padding: 10mm 18mm 18mm; display: flex; flex-direction: column; gap: 4mm; }
+.wks__head { display: flex; flex-direction: column; gap: 2mm; max-width: 165mm; }
+.wks__head .h1 { font-size: 26pt; }
+.wks__head .lead { font-size: 13pt; line-height: 1.4; }
+.wks__head .body { font-size: 9.5pt; line-height: 1.5; }
+.wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 12mm; }
+.wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 2mm; display: flex; flex-direction: column; gap: 1mm; }
+.wks__item--wide { grid-column: 1 / -1; border-top-color: var(--bronze); padding-top: 3mm; margin-top: 0.5mm; }
+.wks__item .letter { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.wks__item .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 9.5pt; line-height: 1.45; color: rgba(245,240,232,0.78); }
 
 /* ── Page 9 · Custom experiences ─────────────────────── */
-.cst { padding: 20mm 18mm 20mm; display: flex; flex-direction: column; gap: 6mm; background: var(--cream); color: var(--black); }
-.cst__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.cst { padding: 16mm 18mm 18mm; display: flex; flex-direction: column; gap: 5mm; background: var(--cream); color: var(--black); }
+.cst__head { display: flex; flex-direction: column; gap: 3mm; max-width: 160mm; }
 .cst__head .h1 { color: var(--black); }
 .cst__head .eyebrow { color: var(--bronze); }
-.cst__head .lead { color: var(--warm-gray); }
-.cst__pull { font-family: var(--serif); font-style: italic; font-size: 23pt; line-height: 1.32; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 6mm 0; }
+.cst__head .lead { color: var(--warm-gray); font-size: 14pt; line-height: 1.45; }
+.cst__head .body { color: var(--warm-gray); font-size: 10.5pt; line-height: 1.55; }
+.cst__pull { font-family: var(--serif); font-style: italic; font-size: 20pt; line-height: 1.3; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 5mm 0; }
 .cst__pull em { color: var(--black); font-style: italic; }
-.cst__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 12mm; }
-.cst__card { display: flex; flex-direction: column; gap: 2mm; }
+.cst__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 12mm; }
+.cst__card { display: flex; flex-direction: column; gap: 1.5mm; }
 .cst__card .num { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
-.cst__card h4 { font-weight: 500; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
-.cst__card p { font-family: var(--serif); font-style: normal; font-size: 12pt; line-height: 1.5; color: var(--warm-gray); }
-.cst__photo { height: 36mm; background: var(--img-burrata) center/cover no-repeat; margin-top: auto; }
+.cst__card h4 { font-weight: 500; font-size: 11.5pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
+.cst__card p { font-family: var(--serif); font-style: normal; font-size: 10.5pt; line-height: 1.5; color: var(--warm-gray); }
 .cst .pagefoot { color: rgba(15,15,15,0.55); }
 .cst .pagefoot .num { color: var(--bronze); }
 
@@ -521,8 +524,7 @@ body {
   <div class="cover__rim"></div>
   <img src="../assets/logo-icon-black.png" alt="" class="cover__icon" />
   <div class="cover__head">
-    <span class="eyebrow">Brussels · Worldwide</span>
-    <span class="eyebrow" style="color: var(--bronze-light);">Services — 2026</span>
+    <span class="eyebrow" style="color: var(--bronze-light); margin-left: auto;">Services 2026</span>
   </div>
   <div class="cover__title">
     <span class="cover__brand">Chef &amp; Chief</span>
@@ -530,8 +532,8 @@ body {
     <span class="cover__line">Private dining · Events · Culinary experiences</span>
   </div>
   <div class="cover__caption">
-    <span>Chloë &amp; Dax</span>
     <span>Brussels</span>
+    <span>Chloë &amp; Dax</span>
   </div>
 </section>
 
@@ -542,7 +544,7 @@ body {
   <div class="concept__media"></div>
   <div class="concept__text">
     <span class="eyebrow">Het concept</span>
-    <h1 class="h1">A world of flavour,<br/>served at your table.</h1>
+    <h1 class="h1">A world<br/>of flavour,<br/>served at your table.</h1>
     <span class="rule"></span>
     <p class="body">Chef &amp; Chief brengt restaurantkwaliteit naar jouw huis, eventlocatie of bedrijf. Geen standaard catering, maar een culinaire ervaring op maat: persoonlijk, smaakvol en tot in de puntjes verzorgd.</p>
     <p class="body">Onze keuken is geïnspireerd door reizen, mediterrane roots en een liefde voor krachtige smaken, eerlijke producten en culinaire culturen van over de hele wereld. We zoeken naar ingrediënten met karakter, combinaties die kloppen en gerechten die mensen samenbrengen.</p>
@@ -613,7 +615,7 @@ body {
     </div>
     <div class="pd__col">
       <p class="body">Jij ontvangt zorgeloos, met een glas in de hand. Wij koken, serveren en ruimen op. Aan het einde van de avond laten we je keuken netjes achter, zoals we ze gevonden hebben.</p>
-      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Van aperitief tot laatste glas — jij ontvangt, wij doen de rest.”</p>
+      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Van aperitief tot laatste glas. Jij ontvangt, wij doen de rest.”</p>
     </div>
   </div>
   <div class="pagefoot"><span>A. Private dining</span><span class="num">04</span></div>
@@ -634,7 +636,7 @@ body {
       <span class="rule"></span>
       <p class="lead">Een trouwfeest, doopsel, communie, verjaardag, jubileum of weekend aan een lange tafel. Chef &amp; Chief kookt voor private events op een locatie naar keuze, met gerechten die passen bij jullie gasten, jullie sfeer en het moment.</p>
       <p class="body">We starten altijd met een gesprek. Over wie jullie zijn, wat jullie graag eten en welk gevoel de dag of avond mag krijgen. Op basis daarvan stellen we een menu voor dat alleen voor jullie wordt gemaakt.</p>
-      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Eén menu voor het hele gezelschap — zo bewaken we de kwaliteit, houden we de service vloeiend en blijft er ruimte voor wat echt telt: samen genieten.”</p>
+      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Eén menu voor het hele gezelschap. Zo bewaken we de kwaliteit, houden we de service vloeiend en blijft er ruimte voor wat echt telt: samen genieten.”</p>
     </div>
     <div class="ev__types">
       <div class="ev__type">
@@ -698,7 +700,7 @@ body {
     <span class="eyebrow">Werkwijze</span>
     <h1 class="h1">Van eerste idee<br/>tot laatste glas.</h1>
     <span class="rule"></span>
-    <p class="lead">Vier stappen, één avond. Zo werken we samen — van eerste mail tot het moment dat de keuken weer kraaknet is.</p>
+    <p class="lead">Vier stappen, één avond. Zo werken we samen, van eerste mail tot het moment dat de keuken weer kraaknet is.</p>
   </div>
   <div class="wf__steps">
     <div class="wf__step">
@@ -768,7 +770,7 @@ body {
 <section class="page cst" data-screen-label="09 Custom">
   <div class="cst__head">
     <span class="eyebrow">Custom experiences</span>
-    <h1 class="h1">Voor avonden die niet in<br/>een standaardformule passen.</h1>
+    <h1 class="h1">Voor avonden<br/>die niet passen in<br/>een standaardformule.</h1>
     <span class="rule" style="background: var(--bronze);"></span>
     <p class="lead">Soms vraagt een moment om meer dan een menu. Een weekend in het buitenland. Een feest rond een bepaald thema. Een productlancering met een culinair verhaal. Een private dinner waarbij alles mag kloppen: van aperitief tot laatste glas.</p>
     <p class="body" style="color: var(--warm-gray); font-size: 11pt; line-height: 1.6;">Voor zulke momenten bouwen we een volledige culinaire ervaring rond jullie idee. We denken mee over concept, sfeer, menu, service, drinks, timing en flow. Niet als vaste formule, maar als een ervaring die vanaf nul wordt opgebouwd rond wat jullie willen laten voelen.</p>
@@ -781,7 +783,6 @@ body {
     <div class="cst__card"><span class="num">04</span><h4>Voor bijzondere locaties</h4><p>Een villa in Toscane, een loft in Brussel, een tuinfeest, galerie, chalet of bedrijfslocatie. We stemmen de ervaring af op de plek en zorgen dat eten, sfeer en service natuurlijk samenkomen.</p></div>
     <div class="cst__card"><span class="num">05</span><h4>In België en daarbuiten</h4><p>Wij koken op locaties in heel België en reizen op aanvraag ook verder. Nog geen locatie? In de regio Brussel denken we graag mee over een passende plek voor jouw diner, feest of bedrijfsevent.</p></div>
   </div>
-  <div class="cst__photo"></div>
   <div class="pagefoot"><span>Custom experiences</span><span class="num">09</span></div>
 </section>
 
@@ -804,7 +805,7 @@ body {
       <div class="menu__course">
         <span class="lbl">Hoofdgerecht</span>
         <span class="nm">Bourgondische tafel</span>
-        <p class="desc">Een grote houten plank met premium rundvlees uit Ierland, Spanje en Argentinië. Gegrilde groenten, hasselback potatoes en chimichurri — alles voor de tafel om te delen, alles huisgemaakt.</p>
+        <p class="desc">Een grote houten plank met premium rundvlees uit Ierland, Spanje en Argentinië. Gegrilde groenten, hasselback potatoes en chimichurri. Alles voor de tafel om te delen. Alles huisgemaakt.</p>
       </div>
       <div class="menu__course">
         <span class="lbl">Dessert</span>
@@ -864,7 +865,7 @@ body {
       </ul>
     </div>
   </div>
-  <p class="alc__foot">Vervolg op de volgende pagina — mediterraans, internationaal &amp; tapas.</p>
+  <p class="alc__foot">Vervolg op de volgende pagina. Mediterraans, internationaal &amp; tapas.</p>
   <div class="pagefoot"><span>À la carte · I</span><span class="num">11</span></div>
 </section>
 
@@ -923,10 +924,10 @@ body {
         <li><b>Spaanse tapas plank</b><em>Olijven, serrano, manchego, huisgemaakte dips.</em></li>
         <li><b>Antipasti plank</b><em>Iberico, manchego, olijven, dips.</em></li>
       </ul>
-      <p class="note" style="margin-top: 4mm;">Beide planken staan klaar op de staantafels zodra de gasten arriveren — zo kan wie wil meteen beginnen. ± 70 g per persoon.</p>
+      <p class="note" style="margin-top: 4mm;">Beide planken staan klaar op de staantafels zodra de gasten arriveren. Zo kan wie wil meteen beginnen. ± 70 g per persoon.</p>
       <h4 style="margin-top: 8mm;">Desserts</h4>
       <ul>
-        <li><b>Dessertenbuffet</b><em>Selectie ambachtelijke gebakjes, taartjes en soesjes — alles huisgemaakt.</em></li>
+        <li><b>Dessertenbuffet</b><em>Selectie ambachtelijke gebakjes, taartjes en soesjes. Alles huisgemaakt.</em></li>
         <li><b>Ricotta &amp; passievrucht cheesecake</b><em>Met ijs van bruine boter.</em></li>
         <li><b>Vijg &amp; kardemom ijs</b><em>Huisgemaakt.</em></li>
         <li><b>Cheese course</b><em>Selectie kazen, vijgenconfit.</em></li>
@@ -951,26 +952,26 @@ body {
       <span class="eyebrow">De drankenkaart</span>
       <h1 class="h1">Wijnen, cocktails<br/>en pairings.</h1>
       <span class="rule"></span>
-      <p class="lead">Drank maakt de avond. We stellen een arrangement op maat voor — of jullie schenken zelf en wij verzorgen de service.</p>
+      <p class="lead">Drank maakt de avond. We stellen een arrangement op maat voor. Of jullie schenken zelf en wij verzorgen de service.</p>
     </div>
     <div class="drk__col">
       <h4>Wijn &amp; bubbels</h4>
       <h5>Wine pairing</h5>
-      <p>Een glas per gerecht. Onze sommelier bouwt de pairing — klassiek Frans of bewust avontuurlijk, afhankelijk van het menu en de smaak aan tafel.</p>
+      <p>Een glas per gerecht. Onze sommelier bouwt de pairing, klassiek Frans of bewust avontuurlijk, afhankelijk van het menu en de smaak aan tafel.</p>
       <h5>Open bar wijn</h5>
-      <p>Eén wit, één rood, één rosé — geselecteerd uit onze huisselectie. Onbeperkt voor de duur van het diner.</p>
+      <p>Eén wit, één rood, één rosé. Geselecteerd uit onze huisselectie. Onbeperkt voor de duur van het diner.</p>
       <h5>Champagne &amp; bubbels</h5>
       <p>Een welkomstglas Champagne, Crémant of Franciacorta. Of een fles aan tafel bij het dessert.</p>
       <h5>Bring your own</h5>
-      <p>Eigen kelder? Geen probleem. We rekenen geen kurkrecht — en serveren met dezelfde zorg.</p>
+      <p>Eigen kelder? Geen probleem. We rekenen geen kurkrecht en we serveren met dezelfde zorg.</p>
     </div>
     <div class="drk__col">
       <h4>Cocktails &amp; alcoholvrij</h4>
       <h5>Welkomstcocktail</h5>
       <ul>
         <li><b>Pisco Sour</b><em>Fris en zuur, limoen en eiwit.</em></li>
-        <li><b>Negroni met vijg</b><em>Bitterzoet — een iets rondere versie van de klassieker.</em></li>
-        <li><b>Naked &amp; Famous</b><em>Fris, kruidig en licht rokerig — met mezcal.</em></li>
+        <li><b>Negroni met vijg</b><em>Bitterzoet, een iets rondere versie van de klassieker.</em></li>
+        <li><b>Naked &amp; Famous</b><em>Fris, kruidig en licht rokerig, met mezcal.</em></li>
         <li><b>French 75</b><em>Gin, citroen, Champagne.</em></li>
       </ul>
       <h5>Mocktails &amp; pairings zonder alcohol</h5>
