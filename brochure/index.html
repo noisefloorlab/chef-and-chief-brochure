@@ -139,6 +139,16 @@ body {
   position: absolute; inset: 12mm;
   border: 1px solid rgba(245,240,232,0.22);
 }
+.cover__icon {
+  position: absolute;
+  right: 16mm; top: 50%;
+  transform: translateY(-58%);
+  width: 96mm; height: auto;
+  opacity: 0.20;
+  z-index: 1;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
 .cover__head {
   position: absolute; top: 22mm; left: 22mm; right: 22mm;
   display: flex; justify-content: space-between; align-items: flex-start;
@@ -508,6 +518,7 @@ body {
   <div class="cover__bg"></div>
   <div class="cover__veil"></div>
   <div class="cover__rim"></div>
+  <img src="../assets/logo-icon-white.png" alt="" class="cover__icon" />
   <div class="cover__head">
     <span class="eyebrow">Brussels · Worldwide</span>
     <span class="eyebrow" style="color: var(--bronze-light);">Services — 2026</span>
