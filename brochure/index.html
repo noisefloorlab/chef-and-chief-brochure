@@ -332,18 +332,19 @@ body {
 }
 
 /* ── Page 8 · Workshops ──────────────────────────────── */
-.wks { padding: 0; display: grid; grid-template-rows: 38% 62%; }
+.wks { padding: 0; display: grid; grid-template-rows: 30% 70%; }
 .wks__band { display: grid; grid-template-columns: 1.2fr 1fr 1fr; position: relative; }
 .wks__band > div { background-size: cover; background-position: center; filter: brightness(0.88); }
 .wks__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%); }
 .wks__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
-.wks__body { padding: 14mm 18mm 22mm; display: flex; flex-direction: column; gap: 8mm; }
-.wks__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
-.wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 12mm; }
-.wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 4mm; display: flex; flex-direction: column; gap: 2mm; }
+.wks__body { padding: 12mm 18mm 20mm; display: flex; flex-direction: column; gap: 5mm; }
+.wks__head { display: flex; flex-direction: column; gap: 3mm; max-width: 160mm; }
+.wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 12mm; }
+.wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 3mm; display: flex; flex-direction: column; gap: 1.5mm; }
+.wks__item--wide { grid-column: 1 / -1; border-top-color: var(--bronze); padding-top: 4mm; margin-top: 1mm; }
 .wks__item .letter { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
 .wks__item .t { font-weight: 400; font-size: 13pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
+.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 10.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 
 /* ── Page 9 · Custom experiences ─────────────────────── */
 .cst { padding: 20mm 18mm 20mm; display: flex; flex-direction: column; gap: 6mm; background: var(--cream); color: var(--black); }
@@ -733,15 +734,17 @@ body {
   <div class="wks__body">
     <div class="wks__head">
       <span class="eyebrow">D. Workshops</span>
-      <h1 class="h1">Een kookworkshop,<br/>bij jou aan tafel.</h1>
+      <h1 class="h1">Een kookworkshop<br/>aan jouw tafel.</h1>
       <span class="rule"></span>
-      <p class="lead">Niet alleen proeven — ook leren. We geven kookworkshops in kleine groepen, bij jou thuis of op locatie. Hands-on, niet stijf. Tussen pannen, glazen en pratende vrienden.</p>
+      <p class="lead">Niet alleen proeven, maar ook leren, maken en samen beleven. Chef &amp; Chief geeft kookworkshops in kleine groepen, bij jou thuis of op een locatie naar keuze.</p>
+      <p class="body">Hands-on, ontspannen en smaakvol. Geen stijve les, maar een gezellige culinaire ervaring tussen pannen, glazen en pratende gasten. We begeleiden jullie stap voor stap, delen technieken en zorgen dat iedereen met nieuwe inspiratie én een goed gevulde tafel naar huis gaat.</p>
     </div>
     <div class="wks__grid">
-      <div class="wks__item"><span class="letter">A.</span><span class="t">Pasta workshop</span><span class="d">Verse pasta draaien, ravioli vullen, sauzen vanaf nul opbouwen.</span></div>
-      <div class="wks__item"><span class="letter">B.</span><span class="t">Sushi &amp; sashimi</span><span class="d">Vis fileren, rijst kruiden, rollen en serveren zoals in Tokio.</span></div>
-      <div class="wks__item"><span class="letter">C.</span><span class="t">Asado &amp; BBQ</span><span class="d">Vuur lezen, vlees op het juiste moment keren. Argentijnse chimichurri en hasselback potatoes.</span></div>
-      <div class="wks__item"><span class="letter">D.</span><span class="t">Cocktail workshop</span><span class="d">Klassiekers en eigen creaties. Shaken, stirren, bouwen met vermouts en bitters.</span></div>
+      <div class="wks__item"><span class="letter">A.</span><span class="t">Pasta workshop</span><span class="d">Verse pasta draaien, ravioli vullen en sauzen bouwen vanaf nul. Een warme, toegankelijke workshop rond Italiaanse technieken, goede ingrediënten en samen koken aan tafel.</span></div>
+      <div class="wks__item"><span class="letter">B.</span><span class="t">Sushi &amp; sashimi</span><span class="d">Rijst bereiden, vis snijden, rollen en serveren met precisie. We leren jullie de basis van sushi en sashimi, met aandacht voor techniek, smaakbalans en presentatie.</span></div>
+      <div class="wks__item"><span class="letter">C.</span><span class="t">Asado &amp; BBQ</span><span class="d">Vuur maken, vlees bereiden en leren koken op gevoel. Van Argentijnse chimichurri tot hasselback aardappel: een workshop rond hitte, rook, timing en pure smaak.</span></div>
+      <div class="wks__item"><span class="letter">D.</span><span class="t">Cocktail workshop</span><span class="d">Shaken, stirren, proeven en combineren. We maken klassiekers en eigen creaties met sours, vermouts, bitters en verrassende smaakmakers.</span></div>
+      <div class="wks__item wks__item--wide"><span class="letter">E.</span><span class="t">Workshop op maat</span><span class="d">Een thema dat past bij jullie groep, event of bedrijf. Denk aan wereldse streetfood, mediterrane sharing dishes, feestelijke hapjes, foodpairing, spice blending of een workshop rond jullie favoriete keuken. Samen bepalen we het thema, het niveau en de formule. Wij zorgen voor ingrediënten, materiaal, begeleiding en natuurlijk genoeg lekkers om samen van te genieten.</span></div>
     </div>
   </div>
   <div class="pagefoot"><span>D. Workshops</span><span class="num">08</span></div>
