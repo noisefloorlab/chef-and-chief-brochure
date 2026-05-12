@@ -205,7 +205,34 @@ body {
 }
 .cover__caption span:first-child { color: var(--bronze); }
 
-/* ── Page 2 · Concept ────────────────────────────────── */
+/* ── Page 2 · Inhoud / Index ─────────────────────────── */
+.idx { padding: 22mm 18mm 22mm; display: flex; flex-direction: column; gap: 7mm; }
+.idx__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.idx__list { display: flex; flex-direction: column; gap: 6mm; margin-top: 2mm; }
+.idx__group { display: flex; flex-direction: column; gap: 0.5mm; }
+.idx__group-lbl {
+  font-size: 9pt; font-weight: 600; letter-spacing: 0.30em;
+  text-transform: uppercase; color: var(--bronze);
+  padding-bottom: 2mm; margin-bottom: 1mm;
+  border-bottom: 1px solid rgba(245,240,232,0.18);
+}
+.idx__item {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 2mm 0; border-bottom: 1px dotted rgba(245,240,232,0.16);
+  gap: 4mm;
+}
+.idx__item:last-child { border-bottom: 0; }
+.idx__item .t { font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--cream); }
+.idx__item--sub { padding-left: 6mm; }
+.idx__item--sub .t { font-size: 11pt; color: rgba(245,240,232,0.78); }
+.idx__item--highlight .t { color: var(--bronze-light); }
+.idx__item .num {
+  font-family: var(--sans); font-weight: 500; font-size: 11pt;
+  letter-spacing: 0.10em; color: var(--bronze);
+  min-width: 16mm; text-align: right;
+}
+
+/* ── Page 3 · Concept ────────────────────────────────── */
 .concept { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
 .concept__media {
   background: var(--img-atmosphere) center/cover no-repeat;
@@ -330,6 +357,7 @@ body {
 .corp__head .h1 { font-size: 26pt; }
 .corp__head .lead { font-size: 12pt; line-height: 1.4; }
 .corp__head .body { font-size: 10pt; line-height: 1.45; }
+.corp__grid-wrap { padding: 0 18mm; }
 .corp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; align-items: start; padding: 0 18mm; }
 .corp__list { list-style: none; display: flex; flex-direction: column; gap: 3mm; font-family: var(--serif); font-style: normal; font-size: 11pt; color: rgba(245,240,232,0.82); }
 .corp__list li { padding-bottom: 3mm; border-bottom: 1px dotted rgba(245,240,232,0.16); }
@@ -606,9 +634,49 @@ body {
 </section>
 
 <!-- ─────────────────────────────────────────────────────
-     PAGE 2 · CONCEPT
+     PAGE 2 · INHOUD / INDEX
      ───────────────────────────────────────────────────── -->
-<section class="page concept" data-screen-label="02 Concept">
+<section class="page idx" data-screen-label="02 Inhoud">
+  <div class="idx__head">
+    <span class="eyebrow">Inhoud</span>
+    <h1 class="h1">Wat vind je<br/>waar.</h1>
+    <span class="rule"></span>
+    <p class="lead" style="font-size: 12pt; line-height: 1.4;">Een korte gids door deze brochure. Gerechten, voorbeeldmenu's en prijssuggesties vind je terug onder Menu's &amp; gerechten.</p>
+  </div>
+  <div class="idx__list">
+    <div class="idx__group">
+      <span class="idx__group-lbl">Het verhaal</span>
+      <div class="idx__item"><span class="t">Het concept</span><span class="num">03</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Diensten</span>
+      <div class="idx__item"><span class="t">Onze diensten — overzicht</span><span class="num">04</span></div>
+      <div class="idx__item idx__item--sub"><span class="t">A. Private dining</span><span class="num">05</span></div>
+      <div class="idx__item idx__item--sub"><span class="t">B. Private events &amp; weddings</span><span class="num">06</span></div>
+      <div class="idx__item idx__item--sub"><span class="t">C. Corporate events</span><span class="num">07</span></div>
+      <div class="idx__item"><span class="t">Werkwijze — Van eerste idee tot laatste glas</span><span class="num">08</span></div>
+      <div class="idx__item"><span class="t">Workshops</span><span class="num">09</span></div>
+      <div class="idx__item"><span class="t">Custom experiences</span><span class="num">10</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Menu's &amp; gerechten</span>
+      <div class="idx__item idx__item--highlight"><span class="t">Voorgesteld menu — Bourgondische tafel</span><span class="num">11</span></div>
+      <div class="idx__item idx__item--highlight"><span class="t">À la carte — small plates &amp; gerechten</span><span class="num">12 – 13</span></div>
+      <div class="idx__item idx__item--highlight"><span class="t">Voorbeeldmenu's met prijssuggesties</span><span class="num">14 – 15</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Drank &amp; contact</span>
+      <div class="idx__item"><span class="t">Drankenkaart</span><span class="num">16</span></div>
+      <div class="idx__item"><span class="t">Contact &amp; boekingen</span><span class="num">17</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Inhoud</span><span class="num">02</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 3 · CONCEPT
+     ───────────────────────────────────────────────────── -->
+<section class="page concept" data-screen-label="03 Concept">
   <div class="concept__media"></div>
   <div class="concept__text">
     <span class="eyebrow">Het concept</span>
@@ -623,7 +691,7 @@ body {
       <span><strong>Dax</strong><br/><em>Chief of the day</em></span>
     </div>
   </div>
-  <div class="pagefoot"><span>Chef &amp; Chief · Het concept</span><span class="num">02</span></div>
+  <div class="pagefoot"><span>Chef &amp; Chief · Het concept</span><span class="num">03</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -663,7 +731,7 @@ body {
       </div>
     </div>
   </div>
-  <div class="pagefoot"><span>Onze diensten</span><span class="num">03</span></div>
+  <div class="pagefoot"><span>Onze diensten</span><span class="num">04</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -689,7 +757,7 @@ body {
       <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 14pt; line-height: 1.4;">“Van aperitief tot laatste glas. Jij ontvangt, wij doen de rest.”</p>
     </div>
   </div>
-  <div class="pagefoot"><span>A. Private dining</span><span class="num">04</span></div>
+  <div class="pagefoot"><span>A. Private dining</span><span class="num">05</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -724,7 +792,7 @@ body {
       <p class="ev__quote">“Eén menu voor het hele gezelschap. Zo bewaken we de kwaliteit, houden we de service vloeiend en blijft er ruimte voor wat echt telt: samen genieten.”</p>
     </div>
   </div>
-  <div class="pagefoot"><span>B. Private events &amp; weddings</span><span class="num">05</span></div>
+  <div class="pagefoot"><span>B. Private events &amp; weddings</span><span class="num">06</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -763,7 +831,7 @@ body {
       <div><h4>Volledige ontzorging</h4><p>Wij nemen de praktische organisatie in handen: voorbereiding, keuken, service, materiaal en opkuis.</p></div>
     </div>
   </div>
-  <div class="pagefoot"><span>C. Corporate events</span><span class="num">06</span></div>
+  <div class="pagefoot"><span>C. Corporate events</span><span class="num">07</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -806,7 +874,7 @@ body {
       </div>
     </div>
   </div>
-  <div class="pagefoot"><span>Werkwijze · Van eerste idee tot laatste glas</span><span class="num">07</span></div>
+  <div class="pagefoot"><span>Werkwijze · Van eerste idee tot laatste glas</span><span class="num">08</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -835,7 +903,7 @@ body {
       <div class="wks__item wks__item--wide"><span class="letter">E.</span><span class="t">Workshop op maat</span><span class="d">Een thema dat past bij jullie groep, event of bedrijf. Denk aan wereldse streetfood, mediterrane sharing dishes, feestelijke hapjes, foodpairing, spice blending of een workshop rond jullie favoriete keuken. Samen bepalen we het thema, het niveau en de formule. Wij zorgen voor ingrediënten, materiaal, begeleiding en natuurlijk genoeg lekkers om samen van te genieten.</span></div>
     </div>
   </div>
-  <div class="pagefoot"><span>D. Workshops</span><span class="num">08</span></div>
+  <div class="pagefoot"><span>D. Workshops</span><span class="num">09</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -854,10 +922,10 @@ body {
     <div class="cst__card"><span class="num">01</span><h4>Van idee naar concept</h4><p>We starten niet alleen bij het menu, maar bij het grotere idee. Wat vieren jullie? Wie zit er aan tafel? Welke sfeer mag de avond krijgen? Op basis daarvan bouwen we een culinair concept dat verder gaat dan de gerechten alleen.</p></div>
     <div class="cst__card"><span class="num">02</span><h4>Alles rond één verhaal</h4><p>Een zuiders sharing dinner, een whisky-paired fire dinner, een Japanse avond, een Mediterraans familiefeest of een diner geïnspireerd door een reis. We vertalen het thema naar smaken, ritme, presentatie en beleving.</p></div>
     <div class="cst__card"><span class="num">03</span><h4>Meer dan koken</h4><p>We denken mee over de volledige flow van de avond: ontvangst, aperitief, food moments, dranken, service, timing en eventuele extra’s zoals cocktails, pairing, live cooking of een lange tafelsetting.</p></div>
-    <div class="cst__card"><span class="num">04</span><h4>Voor bijzondere locaties</h4><p>Een villa in Toscane, een loft in Brussel, een tuinfeest, galerie, chalet of bedrijfslocatie. We stemmen de ervaring af op de plek en zorgen dat eten, sfeer en service natuurlijk samenkomen.</p></div>
+    <div class="cst__card"><span class="num">04</span><h4>Voor bijzondere locaties</h4><p>Een villa in Toscane, een loft in Brussel, een tuinfeest, galerij, chalet of bedrijfslocatie. We stemmen de ervaring af op de plek en zorgen dat eten, sfeer en service natuurlijk samenkomen.</p></div>
     <div class="cst__card"><span class="num">05</span><h4>In België en daarbuiten</h4><p>Wij koken op locaties in heel België en reizen op aanvraag ook verder. Nog geen locatie? In de regio Brussel denken we graag mee over een passende plek voor jouw diner, feest of bedrijfsevent.</p></div>
   </div>
-  <div class="pagefoot"><span>Custom experiences</span><span class="num">09</span></div>
+  <div class="pagefoot"><span>Custom experiences</span><span class="num">10</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -889,7 +957,7 @@ body {
     </div>
     <p class="menu__note">Eén menu voor het hele gezelschap.<br/>Vrij te kiezen uit zes signature menu’s, of samen te stellen uit onze à la carte kaart.</p>
   </div>
-  <div class="pagefoot" style="color: rgba(245,240,232,0.55);"><span>Voorgesteld menu</span><span class="num">10</span></div>
+  <div class="pagefoot" style="color: rgba(245,240,232,0.55);"><span>Voorgesteld menu</span><span class="num">11</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -940,7 +1008,7 @@ body {
     </div>
   </div>
   <p class="alc__foot">Vervolg op de volgende pagina. Mediterraans, internationaal &amp; tapas.</p>
-  <div class="pagefoot"><span>À la carte · I</span><span class="num">11</span></div>
+  <div class="pagefoot"><span>À la carte · I</span><span class="num">12</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -1008,7 +1076,7 @@ body {
       </ul>
     </div>
   </div>
-  <div class="pagefoot"><span>À la carte · II</span><span class="num">12</span></div>
+  <div class="pagefoot"><span>À la carte · II</span><span class="num">13</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -1066,7 +1134,7 @@ body {
       </div>
     </div>
   </div>
-  <div class="pagefoot"><span>Voorbeeldmenu's · I</span><span class="num">13</span></div>
+  <div class="pagefoot"><span>Voorbeeldmenu's · I</span><span class="num">14</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -1080,7 +1148,7 @@ body {
   </div>
   <div class="exa__grid">
     <div class="exa__menu">
-      <div class="exa__img" style="background-image: url('../assets/images/hero-meatboard.jpg');"></div>
+      <div class="exa__img" style="background-image: url('../assets/images/hero-meatboard.jpg'); background-position: center 30%;"></div>
       <span class="lbl">Voorbeeld 3</span>
       <h3 class="title">Walking dinner &amp;<br/>The Meat Board.</h3>
       <p class="ctx">Huwelijksfeest. 50 gasten. Middagreceptie + diner. Zomer 2025.</p>
@@ -1103,7 +1171,7 @@ body {
       </div>
     </div>
     <div class="exa__menu">
-      <div class="exa__img" style="background-image: url('../assets/images/event-lobster-pasta.jpg');"></div>
+      <div class="exa__img" style="background-image: url('../assets/images/event-lobster-pasta.jpg'); background-position: center 30%;"></div>
       <span class="lbl">Voorbeeld 4</span>
       <h3 class="title">Klassiek 3-gangen<br/>diner aan tafel.</h3>
       <p class="ctx">Bedrijfsdiner. 40 gasten. Najaar 2026.</p>
@@ -1129,7 +1197,7 @@ body {
       </div>
     </div>
   </div>
-  <div class="pagefoot"><span>Voorbeeldmenu's · II</span><span class="num">14</span></div>
+  <div class="pagefoot"><span>Voorbeeldmenu's · II</span><span class="num">15</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -1178,7 +1246,7 @@ body {
       <p style="font-size: 9pt; line-height: 1.4; color: rgba(245,240,232,0.58); margin-top: 2mm;">Onderstaande cocktails zijn voorbeelden. We maken de uiteindelijke selectie steeds op maat van jullie menu, seizoen en smaak.</p>
     </div>
   </div>
-  <div class="pagefoot"><span>Drankenkaart</span><span class="num">15</span></div>
+  <div class="pagefoot"><span>Drankenkaart</span><span class="num">16</span></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────
@@ -1195,7 +1263,7 @@ body {
       <div class="back__contact">
         <div><span class="lbl">Email</span><a href="mailto:info@chefandchief.be">info@chefandchief.be</a></div>
         <div><span class="lbl">Telefoon</span><a href="tel:+32476549649">+32 476 54 96 49</a></div>
-        <div><span class="lbl">Web</span>chefandchief.be · @ChefandChiefBE</div>
+        <div><span class="lbl">Web/Social</span>chefandchief.be · @ChefandChiefBE</div>
         <div><span class="lbl">Locatie</span>Brussels · Worldwide</div>
       </div>
     </div>
