@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Brochure — Chef &amp; Chief</title>
 <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/36caa84e-1fb7-42af-bde3-f9f2f91ed161/-.png" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&family=Marcellus&display=swap" />
 <style>
 :root {
   --black: #0F0F0F;
@@ -19,7 +19,7 @@
   --bronze-light: #C09A6A;
   --bronze-dark: #7A5A34;
   --sans: 'Jost', sans-serif;
-  --serif: 'Cormorant Garamond', serif;
+  --serif: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
   --A4-w: 210mm;
   --A4-h: 297mm;
 
@@ -36,7 +36,6 @@
   --img-scallops:     url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968399290-33KECJRUE5QXPGISNFFA/IMG_3152.jpeg?format=2500w');
   --img-gazpacho:     url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968419324-PCMITQ3M27VWESWVIYDO/IMG_6853.jpeg?format=2500w');
   --img-fig:          url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860657614-QM3N992PHNWS761XCSOJ/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-271.jpg?format=2500w');
-  --logo-wordmark:    https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/36caa84e-1fb7-42af-bde3-f9f2f91ed161/-.png;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -87,7 +86,7 @@ body {
 .pagefoot {
   position: absolute; left: 18mm; right: 18mm; bottom: 12mm;
   display: flex; justify-content: space-between; align-items: baseline;
-  font-size: 8.5pt; letter-spacing: 0.30em; text-transform: uppercase;
+  font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase;
   color: rgba(245,240,232,0.55);
   font-weight: 600;
 }
@@ -96,7 +95,7 @@ body {
 
 /* ── Type roles ──────────────────────────────────────── */
 .eyebrow {
-  font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--bronze);
 }
 .display {
@@ -107,19 +106,19 @@ body {
   text-wrap: balance;
 }
 .h1 { font-weight: 200; font-size: 30pt; letter-spacing: 0.10em; line-height: 1.06; text-transform: uppercase; text-wrap: balance; }
-.h2 { font-weight: 300; font-size: 18pt; letter-spacing: 0.16em; line-height: 1.12; text-transform: uppercase; }
-.h3 { font-weight: 500; font-size: 10pt; letter-spacing: 0.30em; line-height: 1.25; text-transform: uppercase; }
-.serif { font-family: var(--serif); font-style: italic; }
+.h2 { font-weight: 300; font-size: 20pt; letter-spacing: 0.16em; line-height: 1.12; text-transform: uppercase; }
+.h3 { font-weight: 500; font-size: 11pt; letter-spacing: 0.30em; line-height: 1.25; text-transform: uppercase; }
+.serif { font-family: var(--serif); font-style: normal; }
 .lead {
-  font-family: var(--serif); font-style: italic;
-  font-size: 14pt; line-height: 1.55;
-  color: rgba(245,240,232,0.82);
+  font-family: var(--serif); font-style: normal;
+  font-size: 15.5pt; line-height: 1.5;
+  color: rgba(245,240,232,0.86);
   text-wrap: pretty;
 }
 .page--light .lead { color: var(--warm-gray); }
 .body {
-  font-weight: 300; font-size: 10pt; line-height: 1.65;
-  color: rgba(245,240,232,0.72);
+  font-weight: 300; font-size: 10.5pt; line-height: 1.65;
+  color: rgba(245,240,232,0.78);
   text-wrap: pretty;
 }
 .page--light .body { color: var(--warm-gray); }
@@ -147,17 +146,17 @@ body {
 }
 .cover__head .wordmark {
   font-family: var(--sans);
-  font-weight: 200; font-size: 14pt; letter-spacing: 0.32em;
+  font-weight: 200; font-size: 15pt; letter-spacing: 0.32em;
   text-transform: uppercase; color: var(--cream);
   line-height: 1;
 }
 .cover__head .wordmark .bar { color: var(--bronze); }
-.cover__head .eyebrow { padding-top: 6mm; font-size: 10pt; }
+.cover__head .eyebrow { padding-top: 6mm; font-size: 11pt; }
 .cover__taglines {
   position: absolute; left: 22mm; right: 22mm; top: 70mm;
   z-index: 2;
   display: flex; gap: 6mm; align-items: center;
-  font-size: 10pt; letter-spacing: 0.26em; text-transform: uppercase;
+  font-size: 11pt; letter-spacing: 0.26em; text-transform: uppercase;
   color: rgba(245,240,232,0.86); font-weight: 600;
 }
 .cover__taglines .dot { width: 4px; height: 4px; background: var(--bronze); border-radius: 50%; }
@@ -166,14 +165,14 @@ body {
   z-index: 2;
 }
 .cover__title .serif {
-  font-size: 16pt; color: var(--bronze-light); display: block; margin-bottom: 6mm;
+  font-size: 20pt; color: var(--bronze-light); display: block; margin-bottom: 6mm;
 }
 .cover__title .display { color: var(--cream); }
 .cover__caption {
   position: absolute; left: 22mm; right: 22mm; bottom: 22mm;
   z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end;
-  font-size: 8.5pt; letter-spacing: 0.30em; text-transform: uppercase; color: rgba(245,240,232,0.7);
+  font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase; color: rgba(245,240,232,0.7);
   font-weight: 600;
 }
 .cover__caption span:last-child { color: var(--bronze); }
@@ -190,8 +189,8 @@ body {
 }
 .concept__text .h1 { color: var(--cream); }
 .concept__quote {
-  font-family: var(--serif); font-style: italic;
-  font-size: 15pt; line-height: 1.45; color: var(--bronze-light);
+  font-family: var(--serif); font-style: normal;
+  font-size: 18pt; line-height: 1.4; color: var(--bronze-light);
   padding-left: 6mm; border-left: 1px solid var(--bronze);
 }
 .concept__sig {
@@ -200,8 +199,8 @@ body {
   border-top: 1px solid rgba(245,240,232,0.18);
   padding-top: 6mm;
 }
-.concept__sig strong { font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; font-size: 9pt; }
-.concept__sig em { font-family: var(--serif); font-style: italic; font-size: 11pt; color: rgba(245,240,232,0.7); }
+.concept__sig strong { font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; font-size: 10pt; }
+.concept__sig em { font-family: var(--serif); font-style: normal; font-size: 12.5pt; color: rgba(245,240,232,0.78); }
 
 /* ── Page 3 · Services ───────────────────────────────── */
 .services { padding: 24mm 18mm 28mm; }
@@ -219,9 +218,9 @@ body {
   background-size: cover; background-position: center;
 }
 .svc__body { display: flex; flex-direction: column; gap: 3mm; }
-.svc__num { font-size: 9pt; letter-spacing: 0.32em; color: var(--bronze); font-weight: 600; }
-.svc__title { font-weight: 300; font-size: 16pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.svc__desc { font-family: var(--serif); font-style: italic; font-size: 10.5pt; line-height: 1.55; color: rgba(245,240,232,0.75); }
+.svc__num { font-size: 10pt; letter-spacing: 0.32em; color: var(--bronze); font-weight: 600; }
+.svc__title { font-weight: 300; font-size: 18pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.svc__desc { font-family: var(--serif); font-style: normal; font-size: 12.5pt; line-height: 1.55; color: rgba(245,240,232,0.82); }
 
 /* ── Page 4 · Private dining ─────────────────────────── */
 .pd { display: grid; grid-template-rows: 56% 44%; }
@@ -250,9 +249,9 @@ body {
   border-top: 1px solid rgba(245,240,232,0.12);
   padding-top: 3mm;
 }
-.pd__steps li strong { font-size: 9pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
-.pd__steps li .t { font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); display: block; margin-bottom: 1.5mm; }
-.pd__steps li .d { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: rgba(245,240,232,0.68); }
+.pd__steps li strong { font-size: 10pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
+.pd__steps li .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); display: block; margin-bottom: 1.5mm; }
+.pd__steps li .d { font-family: var(--serif); font-style: normal; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 
 /* ── Page 5 · Events ─────────────────────────────────── */
 .ev { display: grid; grid-template-rows: 50mm 1fr; }
@@ -275,15 +274,15 @@ body {
   padding-top: 4mm;
   display: flex; flex-direction: column; gap: 2mm;
 }
-.ev__type .letter { font-size: 9pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
-.ev__type .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); }
-.ev__type .d { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: rgba(245,240,232,0.7); }
+.ev__type .letter { font-size: 10pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
+.ev__type .t { font-weight: 400; font-size: 13pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); }
+.ev__type .d { font-family: var(--serif); font-style: normal; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 
 /* ── Page 6 · Corporate ──────────────────────────────── */
 .corp { padding: 24mm 18mm 28mm; display: flex; flex-direction: column; gap: 10mm; }
 .corp__head { display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
 .corp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; align-items: start; }
-.corp__list { list-style: none; display: flex; flex-direction: column; gap: 4mm; font-family: var(--serif); font-style: italic; font-size: 11pt; color: rgba(245,240,232,0.78); }
+.corp__list { list-style: none; display: flex; flex-direction: column; gap: 4mm; font-family: var(--serif); font-style: normal; font-size: 12.5pt; color: rgba(245,240,232,0.82); }
 .corp__list li { padding-bottom: 4mm; border-bottom: 1px dotted rgba(245,240,232,0.16); }
 .corp__list li:last-child { border-bottom: 0; }
 .corp__list li::before { content: "→ "; color: var(--bronze); font-style: normal; font-weight: 600; }
@@ -295,8 +294,8 @@ body {
   padding-top: 4mm;
   display: flex; flex-direction: column; gap: 2mm;
 }
-.corp__why h4 { font-weight: 400; font-size: 10pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); }
-.corp__why p { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.5; color: rgba(245,240,232,0.65); }
+.corp__why h4 { font-weight: 400; font-size: 11pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); }
+.corp__why p { font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.5; color: rgba(245,240,232,0.72); }
 .corp__photo {
   height: 70mm;
   margin-top: 4mm;
@@ -308,14 +307,14 @@ body {
 .wks__band { display: grid; grid-template-columns: 1.2fr 1fr 1fr; position: relative; }
 .wks__band > div { background-size: cover; background-position: center; filter: brightness(0.88); }
 .wks__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%); }
-.wks__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
+.wks__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
 .wks__body { padding: 14mm 18mm 22mm; display: flex; flex-direction: column; gap: 8mm; }
 .wks__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
 .wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 12mm; }
 .wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 4mm; display: flex; flex-direction: column; gap: 2mm; }
-.wks__item .letter { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
-.wks__item .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.wks__item .d { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.5; color: rgba(245,240,232,0.7); }
+.wks__item .letter { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.wks__item .t { font-weight: 400; font-size: 13pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 
 /* ── Page 8 · Custom experiences ─────────────────────── */
 .cst { padding: 20mm 18mm 20mm; display: flex; flex-direction: column; gap: 6mm; background: var(--cream); color: var(--black); }
@@ -323,13 +322,13 @@ body {
 .cst__head .h1 { color: var(--black); }
 .cst__head .eyebrow { color: var(--bronze); }
 .cst__head .lead { color: var(--warm-gray); }
-.cst__pull { font-family: var(--serif); font-style: italic; font-size: 18pt; line-height: 1.35; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 6mm 0; }
-.cst__pull em { color: var(--black); font-style: italic; }
+.cst__pull { font-family: var(--serif); font-style: normal; font-size: 22pt; line-height: 1.32; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 6mm 0; }
+.cst__pull em { color: var(--black); font-style: normal; }
 .cst__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 12mm; }
 .cst__card { display: flex; flex-direction: column; gap: 2mm; }
-.cst__card .num { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
-.cst__card h4 { font-weight: 500; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
-.cst__card p { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: var(--warm-gray); }
+.cst__card .num { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.cst__card h4 { font-weight: 500; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
+.cst__card p { font-family: var(--serif); font-style: normal; font-size: 12pt; line-height: 1.5; color: var(--warm-gray); }
 .cst__photo { height: 36mm; background: var(--img-burrata) center/cover no-repeat; margin-top: auto; }
 .cst .pagefoot { color: rgba(15,15,15,0.55); }
 .cst .pagefoot .num { color: var(--bronze); }
@@ -345,17 +344,17 @@ body {
   display: flex; flex-direction: column; gap: 7mm;
 }
 .menu__body .h1 { color: var(--cream); font-size: 26pt; }
-.menu__body .tag { font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--bronze-light); }
+.menu__body .tag { font-family: var(--serif); font-style: normal; font-size: 14pt; color: var(--bronze-light); }
 .menu__courses { display: flex; flex-direction: column; gap: 6mm; margin-top: 2mm; }
 .menu__course { display: flex; flex-direction: column; gap: 2mm; padding-top: 4mm; border-top: 1px solid rgba(245,240,232,0.16); }
-.menu__course .lbl { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
-.menu__course .nm { font-weight: 400; font-size: 13pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.menu__course .desc { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: rgba(245,240,232,0.7); }
+.menu__course .lbl { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
+.menu__course .nm { font-weight: 400; font-size: 14pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.menu__course .desc { font-family: var(--serif); font-style: normal; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 .menu__note {
   margin-top: auto;
   border-top: 1px solid rgba(245,240,232,0.16);
   padding-top: 4mm;
-  font-family: var(--serif); font-style: italic; font-size: 9.5pt; color: rgba(245,240,232,0.55);
+  font-family: var(--serif); font-style: normal; font-size: 11pt; color: rgba(245,240,232,0.62);
 }
 
 /* ── Page 10/11 · À la carte ─────────────────────────── */
@@ -365,19 +364,19 @@ body {
 .alc__head .lead { color: var(--warm-gray); }
 .alc__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8mm 10mm; margin-top: 4mm; align-items: start; }
 .alc__col h4 {
-  font-size: 8.5pt; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+  font-size: 9.5pt; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--bronze);
   padding-bottom: 2mm; margin-bottom: 3mm;
   border-bottom: 1px solid rgba(15,15,15,0.18);
 }
 .alc__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.8mm; }
-.alc__col li { font-size: 8pt; line-height: 1.3; }
-.alc__col li b { font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); display: block; font-size: 7.5pt; margin-bottom: 0.2mm; }
-.alc__col li em { font-family: var(--serif); font-style: italic; color: var(--warm-gray); font-size: 8pt; }
-.alc__col p.note { font-family: var(--serif); font-style: italic; font-size: 9pt; line-height: 1.5; color: var(--warm-gray); }
+.alc__col li { font-size: 8.5pt; line-height: 1.35; }
+.alc__col li b { font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); display: block; font-size: 8pt; margin-bottom: 0.2mm; }
+.alc__col li em { font-family: var(--serif); font-style: normal; color: var(--warm-gray); font-size: 9pt; }
+.alc__col p.note { font-family: var(--serif); font-style: normal; font-size: 10pt; line-height: 1.5; color: var(--warm-gray); }
 .alc__foot {
   margin-top: 4mm;
-  font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.55;
+  font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.55;
   color: var(--warm-gray);
   border-top: 1px solid rgba(15,15,15,0.14);
   padding-top: 4mm;
@@ -400,7 +399,7 @@ body {
 .drk__band .label {
   position: absolute; left: 18mm; bottom: 6mm;
   z-index: 2;
-  font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--bronze);
 }
 .drk__body {
@@ -409,46 +408,46 @@ body {
 }
 .drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
 .drk__col h4 {
-  font-size: 8.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase;
+  font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase;
   color: var(--bronze);
   padding-bottom: 2mm; margin-bottom: 4mm;
   border-bottom: 1px solid rgba(245,240,232,0.18);
 }
 .drk__col h5 {
-  font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream);
+  font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream);
   margin-bottom: 1.5mm; margin-top: 4mm;
 }
 .drk__col h5:first-of-type { margin-top: 0; }
 .drk__col p {
-  font-family: var(--serif); font-style: italic;
-  font-size: 10pt; line-height: 1.55; color: rgba(245,240,232,0.72);
+  font-family: var(--serif); font-style: normal;
+  font-size: 11.5pt; line-height: 1.55; color: rgba(245,240,232,0.78);
   margin-bottom: 3mm;
 }
 .drk__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.5mm; margin-bottom: 2mm; }
 .drk__col ul li {
-  font-size: 9.5pt; line-height: 1.45;
+  font-size: 10.5pt; line-height: 1.45;
 }
-.drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 8.5pt; color: var(--cream); display: block; margin-bottom: 0.5mm; }
-.drk__col ul li em { font-family: var(--serif); font-style: italic; color: rgba(245,240,232,0.65); }
+.drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 9.5pt; color: var(--cream); display: block; margin-bottom: 0.5mm; }
+.drk__col ul li em { font-family: var(--serif); font-style: normal; color: rgba(245,240,232,0.72); }
 
 /* ── Page 13 · Practical info ────────────────────────── */
 .prac { padding: 20mm 18mm 22mm; display: flex; flex-direction: column; gap: 6mm; }
 .prac__head { display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
 .prac__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10mm; }
 .prac__card { display: flex; flex-direction: column; gap: 3mm; border-top: 1px solid rgba(245,240,232,0.14); padding-top: 4mm; }
-.prac__card h4 { font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.prac__card p { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.55; color: rgba(245,240,232,0.72); }
+.prac__card h4 { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.prac__card p { font-family: var(--serif); font-style: normal; font-size: 11.5pt; line-height: 1.55; color: rgba(245,240,232,0.78); }
 .prac__pull {
   margin-top: 4mm;
   background: var(--charcoal);
   padding: 10mm 12mm;
-  font-family: var(--serif); font-style: italic;
-  font-size: 14pt; line-height: 1.45; color: var(--bronze-light);
+  font-family: var(--serif); font-style: normal;
+  font-size: 16pt; line-height: 1.45; color: var(--bronze-light);
   text-align: center;
   border-top: 1px solid var(--bronze);
   border-bottom: 1px solid var(--bronze);
 }
-.prac__pull em { color: var(--cream); font-style: italic; }
+.prac__pull em { color: var(--cream); font-style: normal; }
 
 /* ── Page 14 · Back cover ────────────────────────────── */
 .back { padding: 0; }
@@ -465,25 +464,25 @@ body {
 }
 .back__wordmark {
   font-family: var(--sans);
-  font-weight: 200; font-size: 22pt; letter-spacing: 0.32em;
+  font-weight: 200; font-size: 24pt; letter-spacing: 0.32em;
   text-transform: uppercase; color: var(--cream);
   margin-top: 18mm; line-height: 1;
 }
 .back__wordmark .bar { color: var(--bronze); }
 .back__center { display: flex; flex-direction: column; gap: 6mm; align-items: center; max-width: 130mm; }
-.back__center .serif { font-size: 18pt; color: var(--bronze-light); }
+.back__center .serif { font-size: 22pt; color: var(--bronze-light); }
 .back__center .h1 { color: var(--cream); font-size: 22pt; letter-spacing: 0.16em; }
 .back__contact {
   display: flex; flex-direction: column; gap: 4mm;
-  font-weight: 300; font-size: 10pt; letter-spacing: 0.06em;
-  color: rgba(245,240,232,0.86);
+  font-weight: 300; font-size: 11pt; letter-spacing: 0.06em;
+  color: rgba(245,240,232,0.88);
 }
 .back__contact a { color: inherit; text-decoration: none; }
-.back__contact .lbl { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1mm; display: block; }
+.back__contact .lbl { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1mm; display: block; }
 .back__rule { width: 60px; height: 1px; background: var(--bronze); margin: 4mm 0; }
 .back__footer {
   display: flex; gap: 30mm; align-items: baseline;
-  font-size: 8.5pt; letter-spacing: 0.30em; text-transform: uppercase;
+  font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase;
   color: rgba(245,240,232,0.65);
   font-weight: 600;
   padding-bottom: 4mm;
@@ -505,7 +504,7 @@ body {
 <body>
 
 <div class="brochure-bar">
-  <span style="align-self: center;">Brochure · V1</span>
+  <span style="align-self: center;">Brochure · V2</span>
   <button onclick="window.print()">Save as PDF</button>
   <a href="index.html">← Back to site</a>
 </div>
@@ -607,7 +606,7 @@ body {
   </div>
   <div class="pd__body">
     <div class="pd__col">
-      <p class="lead" style="color: rgba(245,240,232,0.82);">Wij brengen alles mee: verse ingrediënten van onze vaste marchands, mise en place, materiaal. En een gerecht-voor-gerecht ervaring die anders alleen een sterrenrestaurant je voorschotelt.</p>
+      <p class="lead" style="color: rgba(245,240,232,0.86);">Wij brengen alles mee: verse ingrediënten van onze vaste marchands, mise en place, materiaal. En een gerecht-voor-gerecht ervaring die anders alleen een sterrenrestaurant je voorschotelt.</p>
       <p class="body">Jij ontvangt je gasten met een glas in de hand; wij doen de rest. Aan het einde van de avond laten we je keuken kraaknet achter.</p>
     </div>
     <ul class="pd__steps">
@@ -635,7 +634,7 @@ body {
       <span class="rule"></span>
       <p class="lead">Een trouwfeest, een doopsel, een verjaardag waar nog jaren over wordt gepraat. Wij koken voor gezelschappen vanaf 14 — en ver daarboven.</p>
       <p class="body">Elk evenement begint met een gesprek: over jullie, jullie smaak en het ritme van de dag. Daarna stellen we een menu voor dat alleen op deze avond bestaat.</p>
-      <p class="body" style="font-style: italic; font-family: var(--serif); color: var(--bronze-light);">“One menu, one table, one story.”</p>
+      <p class="body" style="font-family: var(--serif); color: var(--bronze-light); font-size: 13pt; line-height: 1.4;">“One menu, one table, one story.”</p>
     </div>
     <div class="ev__types">
       <div class="ev__type">
