@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brochure — Chef &amp; Chief</title>
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/36caa84e-1fb7-42af-bde3-f9f2f91ed161/-.png" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" />
+<style>
+:root {
+  --black: #0F0F0F;
+  --charcoal: #1E1E1E;
+  --slate: #2E2E2E;
+  --warm-gray: #6B655E;
+  --stone: #B8B0A6;
+  --cream: #F5F0E8;
+  --white: #FFFFFF;
+  --bronze: #A07848;
+  --bronze-light: #C09A6A;
+  --bronze-dark: #7A5A34;
+  --sans: 'Jost', sans-serif;
+  --serif: 'Cormorant Garamond', serif;
+  --A4-w: 210mm;
+  --A4-h: 297mm;
+
+  /* ── Image library (real Chef & Chief gallery, Squarespace CDN) ── */
+  --img-cover:        url('assets/images/hero-lobster.jpg');
+  --img-atmosphere:   url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860550418-9IMF6LMJTII755WR1PD4/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-358.jpg?format=2500w');
+  --img-private:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968412691-F9JWECZ20L78LMMP5G68/IMG_6185.JPG?format=2500w');
+  --img-burrata:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080089663-GPZ5RZHND9VFM3055HV8/IMG_7014.JPG?format=2500w');
+  --img-board:        url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080087035-MGBKZ4K9FT3BKO033FTO/42017580-21F5-4D4B-87DA-BB3D124DD434.JPG?format=2500w');
+  --img-shrimp:       url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860703813-BB1XM8FN0O5IWPVKWS6F/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-329.jpg?format=2500w');
+  --img-meat:         url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860589517-WRPAZT3QFHX68H4ITV3T/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-332.jpg?format=2500w');
+  --img-lobster:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860616181-9FBFRMZ3UKZUGQOEASMC/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-49.jpg?format=2500w');
+  --img-tacos:        url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080158700-8VPPJ8KRO8US4TCB0PVF/IMG_9397.JPG?format=2500w');
+  --img-scallops:     url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968399290-33KECJRUE5QXPGISNFFA/IMG_3152.jpeg?format=2500w');
+  --img-gazpacho:     url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968419324-PCMITQ3M27VWESWVIYDO/IMG_6853.jpeg?format=2500w');
+  --img-fig:          url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860657614-QM3N992PHNWS761XCSOJ/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-271.jpg?format=2500w');
+  --logo-wordmark:    https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/36caa84e-1fb7-42af-bde3-f9f2f91ed161/-.png;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #232323; }
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  padding: 28px 0;
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+}
+
+/* ── Screen helper toolbar ───────────────────────────── */
+.brochure-bar {
+  position: fixed; top: 16px; right: 16px;
+  display: flex; gap: 10px; z-index: 100;
+  background: rgba(10,10,10,0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245,240,232,0.12);
+  padding: 10px 14px;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--cream);
+  font-weight: 600;
+}
+.brochure-bar a, .brochure-bar button {
+  color: var(--cream); background: none; border: 1px solid rgba(245,240,232,0.28);
+  padding: 8px 14px; text-decoration: none; cursor: pointer;
+  font: inherit; transition: all 220ms ease;
+}
+.brochure-bar a:hover, .brochure-bar button:hover { background: var(--bronze); border-color: var(--bronze); }
+
+/* ── Page frame (A4) ─────────────────────────────────── */
+.page {
+  width: var(--A4-w);
+  height: var(--A4-h);
+  background: var(--black);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04);
+  page-break-after: always;
+  break-after: page;
+}
+.page--light { background: var(--cream); color: var(--black); }
+.page--charcoal { background: var(--charcoal); }
+
+/* Page number footer */
+.pagefoot {
+  position: absolute; left: 18mm; right: 18mm; bottom: 12mm;
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 8.5pt; letter-spacing: 0.30em; text-transform: uppercase;
+  color: rgba(245,240,232,0.55);
+  font-weight: 600;
+}
+.page--light .pagefoot { color: rgba(15,15,15,0.45); }
+.pagefoot .num { color: var(--bronze); }
+
+/* ── Type roles ──────────────────────────────────────── */
+.eyebrow {
+  font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--bronze);
+}
+.display {
+  font-family: var(--sans);
+  font-weight: 200;
+  font-size: 56pt; letter-spacing: 0.10em; line-height: 0.96;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.h1 { font-weight: 200; font-size: 30pt; letter-spacing: 0.10em; line-height: 1.06; text-transform: uppercase; text-wrap: balance; }
+.h2 { font-weight: 300; font-size: 18pt; letter-spacing: 0.16em; line-height: 1.12; text-transform: uppercase; }
+.h3 { font-weight: 500; font-size: 10pt; letter-spacing: 0.30em; line-height: 1.25; text-transform: uppercase; }
+.serif { font-family: var(--serif); font-style: italic; }
+.lead {
+  font-family: var(--serif); font-style: italic;
+  font-size: 14pt; line-height: 1.55;
+  color: rgba(245,240,232,0.82);
+  text-wrap: pretty;
+}
+.page--light .lead { color: var(--warm-gray); }
+.body {
+  font-weight: 300; font-size: 10pt; line-height: 1.65;
+  color: rgba(245,240,232,0.72);
+  text-wrap: pretty;
+}
+.page--light .body { color: var(--warm-gray); }
+.rule { width: 36px; height: 1px; background: var(--bronze); display: block; }
+
+/* ── Page 1 · Cover ──────────────────────────────────── */
+.cover { padding: 0; }
+.cover__bg {
+  position: absolute; inset: 0;
+  background: var(--img-cover) center/cover no-repeat;
+  filter: brightness(0.78) saturate(1.05);
+}
+.cover__veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0.40) 0%, rgba(15,15,15,0.25) 35%, rgba(15,15,15,0.78) 100%);
+}
+.cover__rim {
+  position: absolute; inset: 12mm;
+  border: 1px solid rgba(245,240,232,0.22);
+}
+.cover__head {
+  position: absolute; top: 22mm; left: 22mm; right: 22mm;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  z-index: 2;
+}
+.cover__head .wordmark {
+  font-family: var(--sans);
+  font-weight: 200; font-size: 14pt; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--cream);
+  line-height: 1;
+}
+.cover__head .wordmark .bar { color: var(--bronze); }
+.cover__head .eyebrow { padding-top: 6mm; font-size: 10pt; }
+.cover__taglines {
+  position: absolute; left: 22mm; right: 22mm; top: 70mm;
+  z-index: 2;
+  display: flex; gap: 6mm; align-items: center;
+  font-size: 10pt; letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(245,240,232,0.86); font-weight: 600;
+}
+.cover__taglines .dot { width: 4px; height: 4px; background: var(--bronze); border-radius: 50%; }
+.cover__title {
+  position: absolute; left: 22mm; right: 22mm; bottom: 60mm;
+  z-index: 2;
+}
+.cover__title .serif {
+  font-size: 16pt; color: var(--bronze-light); display: block; margin-bottom: 6mm;
+}
+.cover__title .display { color: var(--cream); }
+.cover__caption {
+  position: absolute; left: 22mm; right: 22mm; bottom: 22mm;
+  z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  font-size: 8.5pt; letter-spacing: 0.30em; text-transform: uppercase; color: rgba(245,240,232,0.7);
+  font-weight: 600;
+}
+.cover__caption span:last-child { color: var(--bronze); }
+
+/* ── Page 2 · Concept ────────────────────────────────── */
+.concept { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.concept__media {
+  background: var(--img-atmosphere) center/cover no-repeat;
+  filter: brightness(0.92);
+}
+.concept__text {
+  padding: 32mm 18mm 22mm 16mm;
+  display: flex; flex-direction: column; gap: 8mm;
+}
+.concept__text .h1 { color: var(--cream); }
+.concept__quote {
+  font-family: var(--serif); font-style: italic;
+  font-size: 15pt; line-height: 1.45; color: var(--bronze-light);
+  padding-left: 6mm; border-left: 1px solid var(--bronze);
+}
+.concept__sig {
+  margin-top: auto;
+  display: flex; gap: 12mm; align-items: baseline;
+  border-top: 1px solid rgba(245,240,232,0.18);
+  padding-top: 6mm;
+}
+.concept__sig strong { font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; font-size: 9pt; }
+.concept__sig em { font-family: var(--serif); font-style: italic; font-size: 11pt; color: rgba(245,240,232,0.7); }
+
+/* ── Page 3 · Services ───────────────────────────────── */
+.services { padding: 24mm 18mm 28mm; }
+.services__head { margin-bottom: 14mm; display: flex; flex-direction: column; gap: 4mm; max-width: 130mm; }
+.services__grid { display: grid; grid-template-columns: 1fr; gap: 6mm; }
+.svc {
+  display: grid; grid-template-columns: 52mm 1fr;
+  gap: 8mm;
+  border-top: 1px solid rgba(245,240,232,0.14);
+  padding-top: 6mm;
+  align-items: center;
+}
+.svc__img {
+  height: 36mm;
+  background-size: cover; background-position: center;
+}
+.svc__body { display: flex; flex-direction: column; gap: 3mm; }
+.svc__num { font-size: 9pt; letter-spacing: 0.32em; color: var(--bronze); font-weight: 600; }
+.svc__title { font-weight: 300; font-size: 16pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.svc__desc { font-family: var(--serif); font-style: italic; font-size: 10.5pt; line-height: 1.55; color: rgba(245,240,232,0.75); }
+
+/* ── Page 4 · Private dining ─────────────────────────── */
+.pd { display: grid; grid-template-rows: 56% 44%; }
+.pd__media {
+  background: var(--img-shrimp) center/cover no-repeat;
+  filter: brightness(0.95);
+  position: relative;
+}
+.pd__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0) 60%, rgba(15,15,15,0.9) 100%);
+}
+.pd__head {
+  position: absolute; left: 18mm; right: 18mm; bottom: 8mm;
+  z-index: 2;
+}
+.pd__body {
+  padding: 12mm 18mm 22mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12mm;
+}
+.pd__col { display: flex; flex-direction: column; gap: 4mm; }
+.pd__steps { list-style: none; display: flex; flex-direction: column; gap: 4mm; }
+.pd__steps li {
+  display: grid; grid-template-columns: 12mm 1fr;
+  gap: 4mm; align-items: baseline;
+  border-top: 1px solid rgba(245,240,232,0.12);
+  padding-top: 3mm;
+}
+.pd__steps li strong { font-size: 9pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
+.pd__steps li .t { font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); display: block; margin-bottom: 1.5mm; }
+.pd__steps li .d { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: rgba(245,240,232,0.68); }
+
+/* ── Page 5 · Events ─────────────────────────────────── */
+.ev { display: grid; grid-template-rows: 50mm 1fr; }
+.ev__band {
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.ev__band > div {
+  background-size: cover; background-position: center;
+}
+.ev__main {
+  padding: 16mm 18mm 22mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12mm;
+}
+.ev__left { display: flex; flex-direction: column; gap: 5mm; }
+.ev__types {
+  display: flex; flex-direction: column; gap: 5mm;
+}
+.ev__type {
+  border-top: 1px solid rgba(245,240,232,0.14);
+  padding-top: 4mm;
+  display: flex; flex-direction: column; gap: 2mm;
+}
+.ev__type .letter { font-size: 9pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
+.ev__type .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); }
+.ev__type .d { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: rgba(245,240,232,0.7); }
+
+/* ── Page 6 · Corporate ──────────────────────────────── */
+.corp { padding: 24mm 18mm 28mm; display: flex; flex-direction: column; gap: 10mm; }
+.corp__head { display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
+.corp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; align-items: start; }
+.corp__list { list-style: none; display: flex; flex-direction: column; gap: 4mm; font-family: var(--serif); font-style: italic; font-size: 11pt; color: rgba(245,240,232,0.78); }
+.corp__list li { padding-bottom: 4mm; border-bottom: 1px dotted rgba(245,240,232,0.16); }
+.corp__list li:last-child { border-bottom: 0; }
+.corp__list li::before { content: "→ "; color: var(--bronze); font-style: normal; font-weight: 600; }
+.corp__why {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 8mm;
+}
+.corp__why div {
+  border-top: 1px solid rgba(245,240,232,0.14);
+  padding-top: 4mm;
+  display: flex; flex-direction: column; gap: 2mm;
+}
+.corp__why h4 { font-weight: 400; font-size: 10pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); }
+.corp__why p { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.5; color: rgba(245,240,232,0.65); }
+.corp__photo {
+  height: 70mm;
+  margin-top: 4mm;
+  background: var(--img-board) center/cover no-repeat;
+}
+
+/* ── Page 7 · Workshops ──────────────────────────────── */
+.wks { padding: 0; display: grid; grid-template-rows: 38% 62%; }
+.wks__band { display: grid; grid-template-columns: 1.2fr 1fr 1fr; position: relative; }
+.wks__band > div { background-size: cover; background-position: center; filter: brightness(0.88); }
+.wks__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%); }
+.wks__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
+.wks__body { padding: 14mm 18mm 22mm; display: flex; flex-direction: column; gap: 8mm; }
+.wks__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 12mm; }
+.wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 4mm; display: flex; flex-direction: column; gap: 2mm; }
+.wks__item .letter { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.wks__item .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.wks__item .d { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.5; color: rgba(245,240,232,0.7); }
+
+/* ── Page 8 · Custom experiences ─────────────────────── */
+.cst { padding: 20mm 18mm 20mm; display: flex; flex-direction: column; gap: 6mm; background: var(--cream); color: var(--black); }
+.cst__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.cst__head .h1 { color: var(--black); }
+.cst__head .eyebrow { color: var(--bronze); }
+.cst__head .lead { color: var(--warm-gray); }
+.cst__pull { font-family: var(--serif); font-style: italic; font-size: 18pt; line-height: 1.35; color: var(--bronze); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 6mm 0; }
+.cst__pull em { color: var(--black); font-style: italic; }
+.cst__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 12mm; }
+.cst__card { display: flex; flex-direction: column; gap: 2mm; }
+.cst__card .num { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.cst__card h4 { font-weight: 500; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
+.cst__card p { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: var(--warm-gray); }
+.cst__photo { height: 36mm; background: var(--img-burrata) center/cover no-repeat; margin-top: auto; }
+.cst .pagefoot { color: rgba(15,15,15,0.55); }
+.cst .pagefoot .num { color: var(--bronze); }
+
+/* ── Page 9 · Sample menu ────────────────────────────── */
+.menu { display: grid; grid-template-columns: 47% 53%; }
+.menu__media {
+  background: var(--img-meat) center/cover no-repeat;
+  filter: brightness(0.92);
+}
+.menu__body {
+  padding: 24mm 16mm 24mm 14mm;
+  display: flex; flex-direction: column; gap: 7mm;
+}
+.menu__body .h1 { color: var(--cream); font-size: 26pt; }
+.menu__body .tag { font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--bronze-light); }
+.menu__courses { display: flex; flex-direction: column; gap: 6mm; margin-top: 2mm; }
+.menu__course { display: flex; flex-direction: column; gap: 2mm; padding-top: 4mm; border-top: 1px solid rgba(245,240,232,0.16); }
+.menu__course .lbl { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
+.menu__course .nm { font-weight: 400; font-size: 13pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.menu__course .desc { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: rgba(245,240,232,0.7); }
+.menu__note {
+  margin-top: auto;
+  border-top: 1px solid rgba(245,240,232,0.16);
+  padding-top: 4mm;
+  font-family: var(--serif); font-style: italic; font-size: 9.5pt; color: rgba(245,240,232,0.55);
+}
+
+/* ── Page 10/11 · À la carte ─────────────────────────── */
+.alc { padding: 18mm 14mm 20mm; display: flex; flex-direction: column; gap: 5mm; background: var(--cream); color: var(--black); }
+.alc__head { display: flex; flex-direction: column; gap: 3mm; max-width: 140mm; }
+.alc__head .h1 { color: var(--black); }
+.alc__head .lead { color: var(--warm-gray); }
+.alc__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8mm 10mm; margin-top: 4mm; align-items: start; }
+.alc__col h4 {
+  font-size: 8.5pt; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--bronze);
+  padding-bottom: 2mm; margin-bottom: 3mm;
+  border-bottom: 1px solid rgba(15,15,15,0.18);
+}
+.alc__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.8mm; }
+.alc__col li { font-size: 8pt; line-height: 1.3; }
+.alc__col li b { font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); display: block; font-size: 7.5pt; margin-bottom: 0.2mm; }
+.alc__col li em { font-family: var(--serif); font-style: italic; color: var(--warm-gray); font-size: 8pt; }
+.alc__col p.note { font-family: var(--serif); font-style: italic; font-size: 9pt; line-height: 1.5; color: var(--warm-gray); }
+.alc__foot {
+  margin-top: 4mm;
+  font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.55;
+  color: var(--warm-gray);
+  border-top: 1px solid rgba(15,15,15,0.14);
+  padding-top: 4mm;
+  text-align: center;
+}
+.alc .pagefoot { color: rgba(15,15,15,0.5); }
+.alc .pagefoot .num { color: var(--bronze); }
+
+/* ── Page 12 · Drinks ────────────────────────────────── */
+.drk { padding: 0; display: grid; grid-template-rows: 38% 62%; }
+.drk__band {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+.drk__band > div { background-size: cover; background-position: center; filter: brightness(0.85); }
+.drk__band::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.85) 100%);
+}
+.drk__band .label {
+  position: absolute; left: 18mm; bottom: 6mm;
+  z-index: 2;
+  font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--bronze);
+}
+.drk__body {
+  padding: 12mm 16mm 18mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 12mm;
+}
+.drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.drk__col h4 {
+  font-size: 8.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase;
+  color: var(--bronze);
+  padding-bottom: 2mm; margin-bottom: 4mm;
+  border-bottom: 1px solid rgba(245,240,232,0.18);
+}
+.drk__col h5 {
+  font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream);
+  margin-bottom: 1.5mm; margin-top: 4mm;
+}
+.drk__col h5:first-of-type { margin-top: 0; }
+.drk__col p {
+  font-family: var(--serif); font-style: italic;
+  font-size: 10pt; line-height: 1.55; color: rgba(245,240,232,0.72);
+  margin-bottom: 3mm;
+}
+.drk__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.5mm; margin-bottom: 2mm; }
+.drk__col ul li {
+  font-size: 9.5pt; line-height: 1.45;
+}
+.drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 8.5pt; color: var(--cream); display: block; margin-bottom: 0.5mm; }
+.drk__col ul li em { font-family: var(--serif); font-style: italic; color: rgba(245,240,232,0.65); }
+
+/* ── Page 13 · Practical info ────────────────────────── */
+.prac { padding: 20mm 18mm 22mm; display: flex; flex-direction: column; gap: 6mm; }
+.prac__head { display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
+.prac__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10mm; }
+.prac__card { display: flex; flex-direction: column; gap: 3mm; border-top: 1px solid rgba(245,240,232,0.14); padding-top: 4mm; }
+.prac__card h4 { font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.prac__card p { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.55; color: rgba(245,240,232,0.72); }
+.prac__pull {
+  margin-top: 4mm;
+  background: var(--charcoal);
+  padding: 10mm 12mm;
+  font-family: var(--serif); font-style: italic;
+  font-size: 14pt; line-height: 1.45; color: var(--bronze-light);
+  text-align: center;
+  border-top: 1px solid var(--bronze);
+  border-bottom: 1px solid var(--bronze);
+}
+.prac__pull em { color: var(--cream); font-style: italic; }
+
+/* ── Page 14 · Back cover ────────────────────────────── */
+.back { padding: 0; }
+.back__bg {
+  position: absolute; inset: 0;
+  background: var(--img-lobster) center/cover no-repeat;
+  filter: brightness(0.42) saturate(1.05);
+}
+.back__inner {
+  position: absolute; inset: 18mm;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  z-index: 2;
+  text-align: center;
+}
+.back__wordmark {
+  font-family: var(--sans);
+  font-weight: 200; font-size: 22pt; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--cream);
+  margin-top: 18mm; line-height: 1;
+}
+.back__wordmark .bar { color: var(--bronze); }
+.back__center { display: flex; flex-direction: column; gap: 6mm; align-items: center; max-width: 130mm; }
+.back__center .serif { font-size: 18pt; color: var(--bronze-light); }
+.back__center .h1 { color: var(--cream); font-size: 22pt; letter-spacing: 0.16em; }
+.back__contact {
+  display: flex; flex-direction: column; gap: 4mm;
+  font-weight: 300; font-size: 10pt; letter-spacing: 0.06em;
+  color: rgba(245,240,232,0.86);
+}
+.back__contact a { color: inherit; text-decoration: none; }
+.back__contact .lbl { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1mm; display: block; }
+.back__rule { width: 60px; height: 1px; background: var(--bronze); margin: 4mm 0; }
+.back__footer {
+  display: flex; gap: 30mm; align-items: baseline;
+  font-size: 8.5pt; letter-spacing: 0.30em; text-transform: uppercase;
+  color: rgba(245,240,232,0.65);
+  font-weight: 600;
+  padding-bottom: 4mm;
+}
+
+/* ── Print rules ─────────────────────────────────────── */
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: white; }
+  body { padding: 0; gap: 0; }
+  .brochure-bar { display: none !important; }
+  .page {
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="brochure-bar">
+  <span style="align-self: center;">Brochure · V1</span>
+  <button onclick="window.print()">Save as PDF</button>
+  <a href="index.html">← Back to site</a>
+</div>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 1 · COVER
+     ───────────────────────────────────────────────────── -->
+<section class="page cover" data-screen-label="01 Cover">
+  <div class="cover__bg"></div>
+  <div class="cover__veil"></div>
+  <div class="cover__rim"></div>
+  <div class="cover__head">
+    <span class="wordmark"><span class="bar">│</span>Chef &amp; Chief<span class="bar">│</span></span>
+    <span class="eyebrow" style="color: var(--bronze-light);">Services Brochure · 2026</span>
+  </div>
+  <div class="cover__taglines">
+    <span>Private chefs</span><span class="dot"></span>
+    <span>Events &amp; weddings</span><span class="dot"></span>
+    <span>Corporate</span>
+  </div>
+  <div class="cover__title">
+    <span class="serif">Aan tafel.</span>
+    <span class="display">At your<br/>table.</span>
+  </div>
+  <div class="cover__caption">
+    <span>Brussels — Worldwide</span>
+    <span>Chloë &amp; Dax</span>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 2 · CONCEPT
+     ───────────────────────────────────────────────────── -->
+<section class="page concept" data-screen-label="02 Concept">
+  <div class="concept__media"></div>
+  <div class="concept__text">
+    <span class="eyebrow">Het concept</span>
+    <h1 class="h1">Een sterren&shy;restaurant<br/>in jouw<br/>eetkamer.</h1>
+    <span class="rule"></span>
+    <p class="body">Wij zijn Chloë Szpyt en Dax Geyskens — partners in life, en zo nu en dan in stille discussie over wie vandaag de Chef is en wie de Chief. Als private chefs brengen we fine dining naar je woonkamer, je tuin of een locatie naar keuze.</p>
+    <p class="body">We koken voor gezelschappen vanaf 14 personen, overal in België. Eén menu voor de hele tafel, gerecht na gerecht, met service inbegrepen. Geen restaurant, geen kookworkshop — een avond zoals je die anders alleen aan een sterrentafel beleeft.</p>
+    <div class="concept__quote">“We love to create food inspired by our heritage and our love for travelling.”</div>
+    <div class="concept__sig">
+      <span><strong>Chloë</strong><br/><em>Chef of the day</em></span>
+      <span><strong>Dax</strong><br/><em>Chief of the day</em></span>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Chef &amp; Chief · Het concept</span><span class="num">02</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 3 · SERVICES OVERVIEW
+     ───────────────────────────────────────────────────── -->
+<section class="page services" data-screen-label="03 Services">
+  <div class="services__head">
+    <span class="eyebrow">Onze diensten</span>
+    <h1 class="h1">Drie manieren<br/>om aan tafel<br/>te schuiven.</h1>
+    <span class="rule"></span>
+    <p class="lead">Privé bij jou thuis. Een bruiloft of feest. Een zakelijk diner. Telkens dezelfde aanpak: één menu, één verhaal, aan jouw tafel.</p>
+  </div>
+  <div class="services__grid">
+    <div class="svc">
+      <div class="svc__img" style="background-image: var(--img-private);"></div>
+      <div class="svc__body">
+        <span class="svc__num">A. Private dining</span>
+        <h3 class="svc__title">Bij jou thuis.</h3>
+        <p class="svc__desc">Een private chef die bij jou aan het fornuis staat. Voor een verjaardag, een jubileum of zomaar een diner — vanaf 14 personen.</p>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc__img" style="background-image: var(--img-burrata);"></div>
+      <div class="svc__body">
+        <span class="svc__num">B. Events &amp; weddings</span>
+        <h3 class="svc__title">Voor de grote dag.</h3>
+        <p class="svc__desc">Een trouwfeest, een doopsel, een verloving of een verjaardag waar nog lang over wordt nagepraat. Wij koken volledig op locatie.</p>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc__img" style="background-image: var(--img-board);"></div>
+      <div class="svc__body">
+        <span class="svc__num">C. Corporate</span>
+        <h3 class="svc__title">Een diner dat blijft hangen.</h3>
+        <p class="svc__desc">Klantendiners, team events of productlanceringen. Een restaurantervaring — op kantoor of waar het verhaal speelt.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Onze diensten</span><span class="num">03</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 4 · PRIVATE DINING
+     ───────────────────────────────────────────────────── -->
+<section class="page pd" data-screen-label="04 Private Dining">
+  <div class="pd__media">
+    <div class="pd__head">
+      <span class="eyebrow">A. Private dining</span>
+      <h1 class="h1" style="margin-top: 4mm;">Bij jou thuis.</h1>
+    </div>
+  </div>
+  <div class="pd__body">
+    <div class="pd__col">
+      <p class="lead" style="color: rgba(245,240,232,0.82);">Wij brengen alles mee: verse ingrediënten van onze vaste marchands, mise en place, materiaal. En een gerecht-voor-gerecht ervaring die anders alleen een sterrenrestaurant je voorschotelt.</p>
+      <p class="body">Jij ontvangt je gasten met een glas in de hand; wij doen de rest. Aan het einde van de avond laten we je keuken kraaknet achter.</p>
+    </div>
+    <ul class="pd__steps">
+      <li><strong>01</strong><div><span class="t">Inkoop &amp; mise en place</span><span class="d">We selecteren en sourcen alles bij onze vaste marchands.</span></div></li>
+      <li><strong>02</strong><div><span class="t">Op locatie koken</span><span class="d">We koken bij jou in de keuken — gerecht na gerecht, in het ritme van je avond.</span></div></li>
+      <li><strong>03</strong><div><span class="t">Service aan tafel</span><span class="d">Elk gerecht wordt aan tafel uitgelegd en geserveerd.</span></div></li>
+      <li><strong>04</strong><div><span class="t">Opkuis</span><span class="d">We ruimen op. Jouw keuken oogt straks beter dan ervoor.</span></div></li>
+    </ul>
+  </div>
+  <div class="pagefoot"><span>A. Private dining</span><span class="num">04</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 5 · EVENTS & WEDDINGS
+     ───────────────────────────────────────────────────── -->
+<section class="page ev" data-screen-label="05 Events">
+  <div class="ev__band">
+    <div style="background-image: var(--img-meat);"></div>
+    <div style="background-image: var(--img-lobster);"></div>
+  </div>
+  <div class="ev__main">
+    <div class="ev__left">
+      <span class="eyebrow">B. Events &amp; weddings</span>
+      <h1 class="h1">Voor de grote dag.</h1>
+      <span class="rule"></span>
+      <p class="lead">Een trouwfeest, een doopsel, een verjaardag waar nog jaren over wordt gepraat. Wij koken voor gezelschappen vanaf 14 — en ver daarboven.</p>
+      <p class="body">Elk evenement begint met een gesprek: over jullie, jullie smaak en het ritme van de dag. Daarna stellen we een menu voor dat alleen op deze avond bestaat.</p>
+      <p class="body" style="font-style: italic; font-family: var(--serif); color: var(--bronze-light);">“One menu, one table, one story.”</p>
+    </div>
+    <div class="ev__types">
+      <div class="ev__type">
+        <span class="letter">A.</span>
+        <span class="t">Bruiloften</span>
+        <span class="d">Van intieme ceremonies tot dagen met 80 gasten. Menu en tempo strak afgestemd op jullie draaiboek.</span>
+      </div>
+      <div class="ev__type">
+        <span class="letter">B.</span>
+        <span class="t">Family gatherings</span>
+        <span class="d">Doopsels, communies, verjaardagen, jubileums. Een keuken die zich plooit naar jullie verhaal.</span>
+      </div>
+      <div class="ev__type">
+        <span class="letter">C.</span>
+        <span class="t">Destination events</span>
+        <span class="d">Een villa in Toscane, een chalet in de Alpen, een finca op Ibiza. We reizen graag — onze keuken reist mee.</span>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>B. Events &amp; weddings</span><span class="num">05</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 6 · CORPORATE
+     ───────────────────────────────────────────────────── -->
+<section class="page corp" data-screen-label="06 Corporate">
+  <div class="corp__head">
+    <span class="eyebrow">C. Corporate</span>
+    <h1 class="h1">Een diner waar<br/>het gesprek<br/>vanzelf<br/>op gang komt.</h1>
+    <span class="rule"></span>
+    <p class="lead">Bedrijven boeken ons voor avonden die ergens om draaien. Een klant die je écht wil binden. Een team dat een avond verdient. Een lancering die pers haalt.</p>
+  </div>
+  <div class="corp__grid">
+    <div>
+      <h3 class="h3" style="color: var(--cream); margin-bottom: 4mm;">Wij verzorgen</h3>
+      <ul class="corp__list">
+        <li>Klantendiners &amp; relatiemomenten</li>
+        <li>Team events &amp; offsites</li>
+        <li>Productlanceringen &amp; opening events</li>
+        <li>Kerstdiners &amp; end-of-year events</li>
+        <li>Investor- &amp; board dinners</li>
+      </ul>
+    </div>
+    <div class="corp__why">
+      <div><h4>Eén aanspreekpunt</h4><p>Van offerte tot afwas: één lijn, geen onderaannemers.</p></div>
+      <div><h4>Maatwerk menu</h4><p>Afgestemd op dieet, allergieën en het verhaal dat jullie willen vertellen.</p></div>
+      <div><h4>BTW-facturatie</h4><p>Volledige zakelijke facturatie. Breakdown per gast op aanvraag.</p></div>
+      <div><h4>Discrete service</h4><p>We houden de keuken stil. Wat aan tafel gezegd wordt, blijft aan tafel.</p></div>
+    </div>
+  </div>
+  <div class="corp__photo"></div>
+  <div class="pagefoot"><span>C. Corporate</span><span class="num">06</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 7 · WORKSHOPS
+     ───────────────────────────────────────────────────── -->
+<section class="page wks" data-screen-label="07 Workshops">
+  <div class="wks__band">
+    <div style="background-image: var(--img-private);"></div>
+    <div style="background-image: var(--img-tacos);"></div>
+    <div style="background-image: var(--img-scallops);"></div>
+    <span class="label">Workshops · Cook with us</span>
+  </div>
+  <div class="wks__body">
+    <div class="wks__head">
+      <span class="eyebrow">D. Workshops</span>
+      <h1 class="h1">Een kookworkshop,<br/>bij jou aan tafel.</h1>
+      <span class="rule"></span>
+      <p class="lead">Niet alleen proeven — ook leren. We geven kookworkshops in kleine groepen, bij jou thuis of op locatie. Hands-on, niet stijf. Tussen pannen, glazen en pratende vrienden.</p>
+    </div>
+    <div class="wks__grid">
+      <div class="wks__item"><span class="letter">A.</span><span class="t">Pasta workshop</span><span class="d">Verse pasta draaien, ravioli vullen, sauzen vanaf nul opbouwen.</span></div>
+      <div class="wks__item"><span class="letter">B.</span><span class="t">Sushi &amp; sashimi</span><span class="d">Vis fileren, rijst kruiden, rollen en serveren zoals in Tokio.</span></div>
+      <div class="wks__item"><span class="letter">C.</span><span class="t">Asado &amp; BBQ</span><span class="d">Vuur lezen, vlees op het juiste moment keren. Argentijnse chimichurri en hasselback potatoes.</span></div>
+      <div class="wks__item"><span class="letter">D.</span><span class="t">Cocktail workshop</span><span class="d">Klassiekers en eigen creaties. Shaken, stirren, bouwen met vermouts en bitters.</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>D. Workshops</span><span class="num">07</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 8 · CUSTOM EXPERIENCES
+     ───────────────────────────────────────────────────── -->
+<section class="page cst" data-screen-label="08 Custom">
+  <div class="cst__head">
+    <span class="eyebrow">Custom experiences</span>
+    <h1 class="h1">Op maat. Op aanvraag.<br/>Voor jullie alleen.</h1>
+    <span class="rule" style="background: var(--bronze);"></span>
+    <p class="lead">Niets uit een doos, niets uit een catalogus. Elke avond is een eenmalig stuk werk — gebouwd rond jullie verhaal, jullie smaak, jullie gasten.</p>
+  </div>
+  <div class="cst__pull">“We don’t build menus. We build <em>nights</em>.”</div>
+  <div class="cst__grid">
+    <div class="cst__card"><span class="num">01</span><h4>Persoonlijke aanpak</h4><p>We beginnen altijd met een gesprek — over jullie, over wat jullie graag eten, over wie er aan tafel zit. Daarna bouwen we een menu dat alleen op deze avond op de kaart staat.</p></div>
+    <div class="cst__card"><span class="num">02</span><h4>Handgemaakt</h4><p>Alles wat de keuken uitkomt is huisgemaakt. Pasta met de hand gerold, sauzen vanaf nul, kroketten zelf gepaneerd. Brood, ijs, zelfs de chimichurri.</p></div>
+    <div class="cst__card"><span class="num">03</span><h4>Voor jullie publiek</h4><p>Een bruiloft op een familielandgoed, een verloving in een loft, een teamavond in een verbouwde hangar. We komen langs, lezen de zaal en koken eromheen.</p></div>
+    <div class="cst__card"><span class="num">04</span><h4>Eenmalig menu</h4><p>Hetzelfde menu wordt nooit twee keer gekookt. Elke kaart blijft exclusief voor de avond waarvoor we hem schreven.</p></div>
+    <div class="cst__card"><span class="num">05</span><h4>Over heel België</h4><p>Anderlecht of Knokke, Gent of Durbuy — we koken overal in België. Op vraag ook in de rest van Europa, van een villa in Toscane tot een chalet in de Alpen.</p></div>
+  </div>
+  <div class="cst__photo"></div>
+  <div class="pagefoot"><span>Custom experiences</span><span class="num">08</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 9 · SAMPLE MENU
+     ───────────────────────────────────────────────────── -->
+<section class="page menu" data-screen-label="09 Sample menu">
+  <div class="menu__media"></div>
+  <div class="menu__body">
+    <span class="eyebrow">Voorgesteld menu · Signature</span>
+    <h1 class="h1">Bourgondische<br/>tafel.</h1>
+    <span class="tag">Onze iconische gedeelde tafel.</span>
+    <span class="rule" style="margin-top: 2mm;"></span>
+    <div class="menu__courses">
+      <div class="menu__course">
+        <span class="lbl">Voorgerecht</span>
+        <span class="nm">Burrata &amp; asperges</span>
+        <p class="desc">Burrata met groene asperges en pistache-gremolata.</p>
+      </div>
+      <div class="menu__course">
+        <span class="lbl">Hoofdgerecht</span>
+        <span class="nm">Bourgondische tafel</span>
+        <p class="desc">Een grote houten plank met premium rundvlees uit Ierland, Spanje en Argentinië. Gegrilde groenten, hasselback potatoes en chimichurri — alles voor de tafel om te delen, alles huisgemaakt.</p>
+      </div>
+      <div class="menu__course">
+        <span class="lbl">Dessert</span>
+        <span class="nm">Limoen &amp; mascarpone</span>
+        <p class="desc">Mousse van limoen en mascarpone met limoncello-sorbet en rode vruchten.</p>
+      </div>
+    </div>
+    <p class="menu__note">Eén menu voor het hele gezelschap. Vrij te kiezen uit zes signature menu’s, of samen te stellen uit onze à la carte kaart.</p>
+  </div>
+  <div class="pagefoot" style="color: rgba(245,240,232,0.55);"><span>Voorgesteld menu</span><span class="num">09</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 10 · À LA CARTE I
+     ───────────────────────────────────────────────────── -->
+<section class="page alc" data-screen-label="10 À la carte I">
+  <div class="alc__head">
+    <span class="eyebrow">À la carte · Small plates · I</span>
+    <h1 class="h1">Small plates,<br/>zelf samen te stellen.</h1>
+    <p class="lead">Een selectie small plates om als voorgerecht te serveren. Vrij te combineren tot een menu naar jullie smaak.</p>
+  </div>
+  <div class="alc__grid">
+    <div class="alc__col">
+      <h4>Crudo / Rauw</h4>
+      <ul>
+        <li><b>Trio van oesters</b></li>
+        <li><b>Oester met yuzu en sake</b></li>
+        <li><b>Ceviche van zeebaars</b></li>
+        <li><b>Ceviche van Sint Jacobsvrucht</b><em>Leche de tigre en dashi-bouillon.</em></li>
+        <li><b>Tartaar van Sint Jacobsnoot</b><em>Groene salsa en limoen.</em></li>
+        <li><b>Tartaar van zalm</b><em>Aziatische groene salsa.</em></li>
+        <li><b>Tartaar van tonijn, vitello tonnato style</b><em>Ansjovis en kappertjes.</em></li>
+        <li><b>Huisgemaakte gravlax van zalm</b></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Veggie</h4>
+      <ul>
+        <li><b>Burratina, gegrilde groene asperges &amp; pistache</b><em>Pistache-gremolata.</em></li>
+        <li><b>Burratina, pistache-gremolata &amp; daslook</b></li>
+        <li><b>Burratina, bloedsinaasappel &amp; lavendelhoning</b></li>
+        <li><b>Burratina, gemarineerde tomaten &amp; basilicum</b><em>Tomatenconsommé.</em></li>
+        <li><b>Burratina, gegrilde pompoen &amp; hazelnoot</b><em>Pistache-gremolata.</em></li>
+        <li><b>Krokante wortelen &amp; labneh</b><em>Midden-Oosterse kruiden.</em></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Huisgemaakte kroketten</h4>
+      <ul>
+        <li><b>Arancini</b><em>Risotto, inktvisinkt en dragon.</em></li>
+        <li><b>Garnaalkroket</b><em>Basilicum-aioli.</em></li>
+        <li><b>Kaaskroket</b></li>
+        <li><b>Kroket van parmaham &amp; parmigiano</b></li>
+        <li><b>Kroket van Thaise rode curry &amp; scampi</b></li>
+        <li><b>Samosa van gekonfijte eendenbout</b></li>
+        <li><b>Samosa van vegetarische curry</b></li>
+      </ul>
+    </div>
+  </div>
+  <p class="alc__foot">Vervolg op de volgende pagina — mediterraans, internationaal &amp; tapas.</p>
+  <div class="pagefoot"><span>À la carte · I</span><span class="num">10</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 11 · À LA CARTE II
+     ───────────────────────────────────────────────────── -->
+<section class="page alc" data-screen-label="11 À la carte II">
+  <div class="alc__head">
+    <span class="eyebrow">À la carte · Small plates · II</span>
+    <h1 class="h1">Mediterraans,<br/>internationaal &amp; tapas.</h1>
+    <p class="lead">Het tweede deel van de kaart: vis, vlees en gerechten met een knipoog naar de wereld.</p>
+  </div>
+  <div class="alc__grid">
+    <div class="alc__col">
+      <h4>Mediterraans</h4>
+      <ul>
+        <li><b>Mi cuit van tonijn in kruidenkorst</b><em>Avocado-dip.</em></li>
+        <li><b>Gebakken Sint Jacobsnoot &amp; wilde paddenstoelen</b><em>Schuim van Parmigiano.</em></li>
+        <li><b>Flatbread van pulled lamsvlees</b><em>Zwarteloksaus en gepekelde groenten.</em></li>
+        <li><b>Gegrilde langoustine</b><em>Knolselder-citruscrème.</em></li>
+        <li><b>Vongole veraci, chorizo &amp; vermout</b></li>
+        <li><b>Vongole veraci, kerstomaten &amp; venkel</b></li>
+        <li><b>Mini steak tartaar van premium rundvlees</b><em>Ansjovis en mierikswortel.</em></li>
+        <li><b>Arrosticini van lam</b><em>Zwarteloksaus.</em></li>
+        <li><b>Bruschetta met tomaat &amp; ansjovis</b></li>
+        <li><b>Ravioli van langoustine</b><em>Huisgemaakt.</em></li>
+        <li><b>Ravioli van truffel &amp; wilde bospaddenstoelen</b></li>
+        <li><b>Ravioli van krab &amp; verbena</b><em>Schaaldierensaus.</em></li>
+        <li><b>Pluma Iberico</b><em>Bloemkoolcrème.</em></li>
+        <li><b>Premium steak</b><em>Béarnaise of chimichurri, asperge, hasselback aardappel.</em></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Internationaal</h4>
+      <ul>
+        <li><b>Huisgemaakte Vietnamese spring rolls</b></li>
+        <li><b>Gegrilde octopus, chili &amp; avocado</b><em>Geraspte selder.</em></li>
+        <li><b>Thaise mosselen</b><em>Rode curry en kokos.</em></li>
+        <li><b>Mini poké bowl</b><em>Wilde zalm, chilisaus, gepekelde groenten.</em></li>
+        <li><b>Geelvinmakreel, broccoli &amp; miso</b><em>Peterseliecrème en groene salsa.</em></li>
+        <li><b>Thaise kip-satay</b><em>Pinda-dip.</em></li>
+        <li><b>Gember-gehaktballetjes</b><em>Honing-sojasaus.</em></li>
+        <li><b>Veggie taco van oesterzwam</b><em>Habanero-avocadosalsa.</em></li>
+        <li><b>Taco al Pastor</b><em>Varkensschouder van het spit, groene avocadosalsa met habanero.</em></li>
+        <li><b>Koreaanse gyoza</b><em>Kimchi.</em></li>
+        <li><b>Gerookte paling</b><em>Mole van rode biet, zure room.</em></li>
+        <li><b>Vietnamese bun</b><em>Gelakt buikspek.</em></li>
+        <li><b>Peking eend summer roll</b></li>
+        <li><b>Vietnamese Bun Cha</b><em>Gelakt buikspek, noedels, kruidenbouillon.</em></li>
+        <li><b>Gegrild buikspek</b><em>Gekarameliseerde ui.</em></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Tapas &amp; antipasti</h4>
+      <ul>
+        <li><b>Spaanse tapas plank</b><em>Olijven, serrano, manchego, huisgemaakte dips.</em></li>
+        <li><b>Antipasti plank</b><em>Iberico, manchego, olijven, dips.</em></li>
+      </ul>
+      <p class="note" style="margin-top: 4mm;">Beide planken staan klaar op de staantafels zodra de gasten arriveren — zo kan wie wil meteen beginnen. ± 70 g per persoon.</p>
+      <h4 style="margin-top: 8mm;">Desserts</h4>
+      <ul>
+        <li><b>Dessertenbuffet</b><em>Selectie ambachtelijke gebakjes, taartjes en soesjes — alles huisgemaakt.</em></li>
+        <li><b>Ricotta &amp; passievrucht cheesecake</b><em>Met ijs van bruine boter.</em></li>
+        <li><b>Vijg &amp; kardemom ijs</b><em>Huisgemaakt.</em></li>
+        <li><b>Cheese course</b><em>Selectie kazen, vijgenconfit.</em></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagefoot"><span>À la carte · II</span><span class="num">11</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 12 · DRINKS
+     ───────────────────────────────────────────────────── -->
+<section class="page drk" data-screen-label="12 Drinks">
+  <div class="drk__band">
+    <div style="background-image: var(--img-burrata);"></div>
+    <div style="background-image: var(--img-gazpacho);"></div>
+    <div style="background-image: var(--img-fig);"></div>
+    <span class="label">Wine · Cocktails · Pairings</span>
+  </div>
+  <div class="drk__body">
+    <div class="drk__head">
+      <span class="eyebrow">De drankenkaart</span>
+      <h1 class="h1">Wijnen, cocktails<br/>en pairings.</h1>
+      <span class="rule"></span>
+      <p class="lead">Drank maakt de avond. We stellen een arrangement op maat voor — of jullie schenken zelf en wij verzorgen de service.</p>
+    </div>
+    <div class="drk__col">
+      <h4>Wijn &amp; bubbels</h4>
+      <h5>Wine pairing</h5>
+      <p>Een glas per gerecht. Onze sommelier bouwt de pairing — klassiek Frans of bewust avontuurlijk, afhankelijk van het menu en de smaak aan tafel.</p>
+      <h5>Open bar wijn</h5>
+      <p>Eén wit, één rood, één rosé — geselecteerd uit onze huisselectie. Onbeperkt voor de duur van het diner.</p>
+      <h5>Champagne &amp; bubbels</h5>
+      <p>Een welkomstglas Champagne, Crémant of Franciacorta. Of een fles aan tafel bij het dessert.</p>
+      <h5>Bring your own</h5>
+      <p>Eigen kelder? Geen probleem. We rekenen geen kurkrecht — en serveren met dezelfde zorg.</p>
+    </div>
+    <div class="drk__col">
+      <h4>Cocktails &amp; alcoholvrij</h4>
+      <h5>Welkomstcocktail</h5>
+      <ul>
+        <li><b>Pisco Sour</b><em>Fris en zuur, limoen en eiwit.</em></li>
+        <li><b>Negroni met vijg</b><em>Bitterzoet — een iets rondere versie van de klassieker.</em></li>
+        <li><b>Naked &amp; Famous</b><em>Fris, kruidig en licht rokerig — met mezcal.</em></li>
+        <li><b>French 75</b><em>Gin, citroen, Champagne.</em></li>
+      </ul>
+      <h5>Mocktails &amp; pairings zonder alcohol</h5>
+      <ul>
+        <li><b>Pompelmoes &amp; alcoholvrije gin</b><em>Fris, citrus, bitter.</em></li>
+        <li><b>Verjus &amp; dragon</b><em>Verfrissend, kruidig.</em></li>
+        <li><b>Shrub van rabarber</b><em>Zuur, fruitig, lang.</em></li>
+      </ul>
+      <h5>Digestief &amp; koffie</h5>
+      <p>Espresso of filterkoffie en losse thee. Eau de vie, grappa of een goede whisky om de avond af te sluiten.</p>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Drankenkaart</span><span class="num">12</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 13 · PRACTICAL INFO
+     ───────────────────────────────────────────────────── -->
+<section class="page prac" data-screen-label="13 Practical info">
+  <div class="prac__head">
+    <span class="eyebrow">Praktisch</span>
+    <h1 class="h1">Hoe het werkt.</h1>
+    <span class="rule"></span>
+    <p class="lead">Vanaf 14 personen koken we op locatie, overal in België. Een korte aanvraag is genoeg om te starten.</p>
+  </div>
+  <div class="prac__grid">
+    <div class="prac__card">
+      <h4>01 · Aanvraag</h4>
+      <p>Stuur ons datum, aantal gasten en locatie. Binnen 48u sturen we een eerste voorstel terug.</p>
+    </div>
+    <div class="prac__card">
+      <h4>02 · Menu &amp; budget</h4>
+      <p>We stellen een menu en budget voor, afgestemd op jullie wensen, allergieën en het ritme van de dag.</p>
+    </div>
+    <div class="prac__card">
+      <h4>03 · Op de dag</h4>
+      <p>We brengen alles mee. Koken op locatie. Service aan tafel. Opkuis inbegrepen.</p>
+    </div>
+    <div class="prac__card">
+      <h4>Wat wij meebrengen</h4>
+      <p>Verse ingrediënten, mise en place, kookmateriaal, service en opkuis. Borden en glazen indien gewenst.</p>
+    </div>
+    <div class="prac__card">
+      <h4>Wat jullie voorzien</h4>
+      <p>Een werkbare keuken of buitenkeuken, tafels en stoelen. Voor de rest denken we graag mee.</p>
+    </div>
+    <div class="prac__card">
+      <h4>Budget</h4>
+      <p>Vanaf ±€95 p.p. voor een 3-gangenmenu, exclusief drank. Volledig op maat per event.</p>
+    </div>
+  </div>
+  <div class="prac__pull">
+    “Vanaf 14 personen koken we op locatie.<br/><em>Overal in België.</em>”
+  </div>
+  <div class="pagefoot"><span>Praktisch</span><span class="num">13</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 14 · BACK COVER / CONTACT
+     ───────────────────────────────────────────────────── -->
+<section class="page back" data-screen-label="14 Contact">
+  <div class="back__bg"></div>
+  <div class="back__inner">
+    <span class="back__wordmark"><span class="bar">│</span>Chef &amp; Chief<span class="bar">│</span></span>
+    <div class="back__center">
+      <span class="serif">Let’s eat.</span>
+      <h1 class="h1">At your table.</h1>
+      <span class="back__rule"></span>
+      <div class="back__contact">
+        <div><span class="lbl">Email</span><a href="mailto:info@chefandchief.be">info@chefandchief.be</a></div>
+        <div><span class="lbl">Telefoon</span>+32 476 54 96 49</div>
+        <div><span class="lbl">Web</span>chefandchief.be · @ChefandChiefBE</div>
+        <div><span class="lbl">Locatie</span>Anderlecht, Brussels · Worldwide</div>
+      </div>
+    </div>
+    <div class="back__footer">
+      <span>Chef &amp; Chief</span>
+      <span>Editie 2026</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
