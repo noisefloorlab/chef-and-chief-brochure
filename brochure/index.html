@@ -25,7 +25,7 @@
 
   /* ── Image library (real Chef & Chief gallery, Squarespace CDN) ── */
   --img-cover:        url('../assets/images/hero-lobster.jpg');
-  --img-atmosphere:   url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860550418-9IMF6LMJTII755WR1PD4/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-358.jpg?format=2500w');
+  --img-atmosphere:   url('../assets/images/atmosphere-chef-plating.JPG');
   --img-private:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968412691-F9JWECZ20L78LMMP5G68/IMG_6185.JPG?format=2500w');
   --img-burrata:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080089663-GPZ5RZHND9VFM3055HV8/IMG_7014.JPG?format=2500w');
   --img-board:        url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080087035-MGBKZ4K9FT3BKO033FTO/42017580-21F5-4D4B-87DA-BB3D124DD434.JPG?format=2500w');
@@ -141,10 +141,10 @@ body {
 }
 .cover__icon {
   position: absolute;
-  right: 18mm; top: 50%;
+  right: 22mm; top: 50%;
   transform: translateY(-55%);
-  width: 120mm; height: auto;
-  opacity: 0.22;
+  width: 100mm; height: auto;
+  opacity: 0.20;
   z-index: 1;
   filter: invert(1) brightness(2);
   mix-blend-mode: lighten;
@@ -216,7 +216,7 @@ body {
   font-family: var(--serif); font-style: italic;
   font-size: 15pt; line-height: 1.35; color: var(--bronze-light);
   padding-left: 6mm; border-left: 1px solid var(--bronze);
-  margin-top: 1mm;
+  margin-top: 6mm;
 }
 .concept__sig {
   margin-top: auto;
@@ -484,8 +484,8 @@ body {
 .back { padding: 0; }
 .back__bg {
   position: absolute; inset: 0;
-  background: url('../assets/images/hero-octopus.jpg') center/cover no-repeat;
-  filter: brightness(0.45) saturate(1.05);
+  background: url('../assets/images/signature-lobster.JPG') center/cover no-repeat;
+  filter: brightness(0.40) saturate(1.05);
 }
 .back__inner {
   position: absolute; inset: 18mm;
@@ -554,7 +554,7 @@ body {
     <span class="cover__line">Private dining · Events · Culinary experiences</span>
   </div>
   <div class="cover__caption">
-    <span>Brussels</span>
+    <span>Brussels · Worldwide</span>
     <span>Chloë &amp; Dax</span>
   </div>
 </section>
@@ -601,7 +601,7 @@ body {
       </div>
     </div>
     <div class="svc">
-      <div class="svc__img" style="background-image: var(--img-burrata);"></div>
+      <div class="svc__img" style="background-image: url('../assets/images/event-tartare-table.JPG');"></div>
       <div class="svc__body">
         <span class="svc__num">B. Private events &amp; weddings</span>
         <h3 class="svc__title">Op een locatie naar keuze.</h3>
@@ -609,7 +609,7 @@ body {
       </div>
     </div>
     <div class="svc">
-      <div class="svc__img" style="background-image: var(--img-board);"></div>
+      <div class="svc__img" style="background-image: url('../assets/images/event-art-gallery.JPG');"></div>
       <div class="svc__body">
         <span class="svc__num">C. Corporate events</span>
         <h3 class="svc__title">Verzorgd, persoonlijk, professioneel.</h3>
