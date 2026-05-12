@@ -155,14 +155,11 @@ body {
   display: flex; justify-content: space-between; align-items: flex-start;
   z-index: 2;
 }
-.cover__head .wordmark {
-  font-family: var(--sans);
-  font-weight: 200; font-size: 14pt; letter-spacing: 0.32em;
-  text-transform: uppercase; color: var(--cream);
-  line-height: 1;
+.cover__head .cover__logo {
+  height: 24mm; width: auto;
+  filter: brightness(1.05);
 }
-.cover__head .wordmark .bar { color: var(--bronze); }
-.cover__head .eyebrow { font-size: 11pt; }
+.cover__head .eyebrow { font-size: 11pt; padding-top: 8mm; }
 .cover__title {
   position: absolute; left: 22mm; right: 22mm; bottom: 40mm;
   z-index: 2;
@@ -290,12 +287,14 @@ body {
 /* ── Page 5 · Events ─────────────────────────────────── */
 .ev { display: grid; grid-template-rows: 55% 45%; }
 .ev__band {
-  background: url('../assets/images/event-hero-flowers.JPG') center/cover no-repeat;
+  display: grid; grid-template-columns: 1fr 1fr;
   position: relative;
 }
+.ev__band > div { background-size: cover; background-position: center; }
 .ev__band::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%);
+  background: linear-gradient(180deg, rgba(15,15,15,0) 60%, rgba(15,15,15,0.85) 100%);
+  pointer-events: none;
 }
 .ev .lead { font-size: 13pt; line-height: 1.4; }
 .ev .body { font-size: 11pt; line-height: 1.5; }
@@ -484,24 +483,24 @@ body {
 .alc .pagefoot .num { color: var(--bronze); }
 
 /* ── Page 13 · Drinks ────────────────────────────────── */
-.drk { padding: 0; display: grid; grid-template-rows: 28% 72%; }
+.drk { padding: 0; display: grid; grid-template-rows: 24% 76%; }
 .drk__band { display: grid; grid-template-columns: 1fr 1fr 1fr; position: relative; }
 .drk__band > div { background-size: cover; background-position: center; filter: brightness(0.85); }
 .drk__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.85) 100%); }
 .drk__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
 .drk__body {
-  padding: 10mm 16mm 16mm;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 12mm;
+  padding: 8mm 16mm 14mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 12mm;
 }
-.drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 2mm; max-width: 170mm; }
-.drk__head .lead { font-size: 12pt; line-height: 1.35; color: var(--bronze-light); }
-.drk__head .body { font-size: 9.5pt; line-height: 1.4; }
-.drk__col h4 { font-size: 9pt; padding-bottom: 1.5mm; margin-bottom: 3mm; }
-.drk__col p { font-size: 10pt; line-height: 1.4; margin-bottom: 2mm; }
-.drk__col h5 { font-size: 10.5pt; margin-top: 2.5mm; }
-.drk__col ul { gap: 1mm; }
-.drk__col ul li { font-size: 9pt; line-height: 1.3; }
-.drk__col ul li b { font-size: 8.5pt; }
+.drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 1.5mm; max-width: 170mm; }
+.drk__head .lead { font-size: 12pt; line-height: 1.3; color: var(--bronze-light); }
+.drk__head .body { font-size: 9pt; line-height: 1.4; }
+.drk__col h4 { font-size: 9pt; padding-bottom: 1.5mm; margin-bottom: 2mm; }
+.drk__col p { font-size: 9.5pt; line-height: 1.35; margin-bottom: 1.5mm; }
+.drk__col h5 { font-size: 10pt; margin-top: 2mm; }
+.drk__col ul { gap: 0.8mm; }
+.drk__col ul li { font-size: 8.5pt; line-height: 1.3; }
+.drk__col ul li b { font-size: 8pt; }
 .drk__col h4 {
   font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase;
   color: var(--bronze);
@@ -590,7 +589,7 @@ body {
   <div class="cover__rim"></div>
   <img src="../assets/logo-icon-black.png" alt="" class="cover__icon" />
   <div class="cover__head">
-    <span class="wordmark"><span class="bar">│</span>Chef &amp; Chief<span class="bar">│</span></span>
+    <img src="../assets/logo-white.png" alt="Chef &amp; Chief" class="cover__logo" />
     <span class="eyebrow" style="color: var(--bronze-light);">Services 2026</span>
   </div>
   <div class="cover__title">
@@ -671,7 +670,7 @@ body {
 <section class="page pd" data-screen-label="04 Private dining">
   <div class="pd__media">
     <div class="pd__img" style="background-image: url('../assets/images/private-burrata.JPG');"></div>
-    <div class="pd__img" style="background-image: url('../assets/images/private-burrata-service.JPG');"></div>
+    <div class="pd__img" style="background-image: url('../assets/images/private-gravlax.JPG');"></div>
     <div class="pd__img" style="background-image: url('../assets/images/private-beef.JPG');"></div>
     <div class="pd__head">
       <span class="eyebrow">A. Private dining</span>
@@ -695,7 +694,10 @@ body {
      PAGE 5 · PRIVATE EVENTS & WEDDINGS
      ───────────────────────────────────────────────────── -->
 <section class="page ev" data-screen-label="05 Events">
-  <div class="ev__band"></div>
+  <div class="ev__band">
+    <div style="background-image: url('../assets/images/event-hero-shrimp.jpg');"></div>
+    <div style="background-image: url('../assets/images/event-rosalie-582.jpg');"></div>
+  </div>
   <div class="ev__main">
     <div class="ev__left">
       <span class="eyebrow">B. Private events &amp; weddings</span>
@@ -1138,7 +1140,7 @@ body {
   <div class="drk__band">
     <div style="background-image: url('../assets/images/drink-flutes-marble.JPG');"></div>
     <div style="background-image: url('../assets/images/drink-bucket-bottles.JPG');"></div>
-    <div style="background-image: url('../assets/images/drink-coupe-blood-orange.JPG');"></div>
+    <div style="background-image: url('../assets/images/drink-rosalie-382.jpg');"></div>
     <span class="label">Wine · Cocktails · Pairings</span>
   </div>
   <div class="drk__body">
@@ -1172,7 +1174,6 @@ body {
         <li><b>Pisco Sour</b><em>Fris en zuur, met limoen en eiwit.</em></li>
         <li><b>Negroni met vijg</b><em>Bitterzoet, rond en iets zachter dan de klassieker.</em></li>
         <li><b>Naked &amp; Famous</b><em>Fris, kruidig en licht rokerig, met mezcal.</em></li>
-        <li><b>French 75</b><em>Gin, citroen en Champagne.</em></li>
         <li><b>Pompelmoes &amp; alcoholvrije gin</b><em>Fris, citrus en bitter.</em></li>
       </ul>
       <p style="font-size: 9pt; line-height: 1.4; color: rgba(245,240,232,0.58); margin-top: 2mm;">Onderstaande cocktails zijn voorbeelden. We maken de uiteindelijke selectie steeds op maat van jullie menu, seizoen en smaak.</p>
