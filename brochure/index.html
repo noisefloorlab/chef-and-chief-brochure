@@ -108,9 +108,9 @@ body {
 .h1 { font-weight: 200; font-size: 30pt; letter-spacing: 0.10em; line-height: 1.06; text-transform: uppercase; text-wrap: balance; }
 .h2 { font-weight: 300; font-size: 20pt; letter-spacing: 0.16em; line-height: 1.12; text-transform: uppercase; }
 .h3 { font-weight: 500; font-size: 11pt; letter-spacing: 0.30em; line-height: 1.25; text-transform: uppercase; }
-.serif { font-family: var(--serif); font-style: normal; }
+.serif { font-family: var(--serif); font-style: italic; }
 .lead {
-  font-family: var(--serif); font-style: normal;
+  font-family: var(--serif); font-style: italic;
   font-size: 15.5pt; line-height: 1.5;
   color: rgba(245,240,232,0.88);
   text-wrap: pretty;
@@ -141,10 +141,10 @@ body {
 }
 .cover__icon {
   position: absolute;
-  right: 8mm; top: 50%;
+  right: 18mm; top: 50%;
   transform: translateY(-55%);
-  width: 160mm; height: auto;
-  opacity: 0.18;
+  width: 120mm; height: auto;
+  opacity: 0.22;
   z-index: 1;
   filter: invert(1) brightness(2);
   mix-blend-mode: lighten;
@@ -208,15 +208,15 @@ body {
   filter: brightness(0.92);
 }
 .concept__text {
-  padding: 28mm 18mm 22mm 16mm;
-  display: flex; flex-direction: column; gap: 6mm;
+  padding: 22mm 16mm 14mm 16mm;
+  display: flex; flex-direction: column; gap: 4mm;
 }
 .concept__text .h1 { color: var(--cream); }
 .concept__quote {
   font-family: var(--serif); font-style: italic;
-  font-size: 19pt; line-height: 1.4; color: var(--bronze-light);
+  font-size: 15pt; line-height: 1.35; color: var(--bronze-light);
   padding-left: 6mm; border-left: 1px solid var(--bronze);
-  margin-top: 2mm;
+  margin-top: 1mm;
 }
 .concept__sig {
   margin-top: auto;
@@ -231,7 +231,7 @@ body {
 .services { padding: 24mm 18mm 28mm; }
 .services__head { margin-bottom: 12mm; display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
 .services__accent {
-  font-family: var(--serif); font-style: normal;
+  font-family: var(--serif); font-style: italic;
   font-size: 17pt; line-height: 1.35; color: var(--bronze-light);
   margin-top: 2mm;
 }
@@ -250,7 +250,7 @@ body {
 .svc__body { display: flex; flex-direction: column; gap: 3mm; }
 .svc__num { font-size: 10pt; letter-spacing: 0.32em; color: var(--bronze); font-weight: 600; }
 .svc__title { font-weight: 300; font-size: 18pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.svc__desc { font-family: var(--serif); font-style: normal; font-size: 12.5pt; line-height: 1.55; color: rgba(245,240,232,0.82); }
+.svc__desc { font-family: var(--serif); font-style: italic; font-size: 12.5pt; line-height: 1.55; color: rgba(245,240,232,0.82); }
 
 /* ── Page 4 · Private dining ─────────────────────────── */
 .pd { display: grid; grid-template-rows: 50% 50%; }
@@ -290,16 +290,16 @@ body {
 }
 .ev__type .letter { font-size: 10pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
 .ev__type .t { font-weight: 400; font-size: 13pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); }
-.ev__type .d { font-family: var(--serif); font-style: normal; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
+.ev__type .d { font-family: var(--serif); font-style: italic; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 
 /* ── Page 6 · Corporate ──────────────────────────────── */
 .corp { padding: 24mm 18mm 28mm; display: flex; flex-direction: column; gap: 8mm; }
 .corp__head { display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
 .corp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; align-items: start; }
-.corp__list { list-style: none; display: flex; flex-direction: column; gap: 4mm; font-family: var(--serif); font-style: normal; font-size: 12.5pt; color: rgba(245,240,232,0.82); }
+.corp__list { list-style: none; display: flex; flex-direction: column; gap: 4mm; font-family: var(--serif); font-style: italic; font-size: 12.5pt; color: rgba(245,240,232,0.82); }
 .corp__list li { padding-bottom: 4mm; border-bottom: 1px dotted rgba(245,240,232,0.16); }
 .corp__list li:last-child { border-bottom: 0; }
-.corp__list li::before { content: "→ "; color: var(--bronze); font-style: normal; font-weight: 600; }
+.corp__list li::before { content: "→ "; color: var(--bronze); font-style: italic; font-weight: 600; }
 .corp__why { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 8mm; }
 .corp__why div {
   border-top: 1px solid rgba(245,240,232,0.14);
@@ -307,7 +307,7 @@ body {
   display: flex; flex-direction: column; gap: 2mm;
 }
 .corp__why h4 { font-weight: 400; font-size: 11pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); }
-.corp__why p { font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.5; color: rgba(245,240,232,0.72); }
+.corp__why p { font-family: var(--serif); font-style: italic; font-size: 11pt; line-height: 1.5; color: rgba(245,240,232,0.72); }
 .corp__photo {
   height: 64mm;
   margin-top: 4mm;
@@ -338,7 +338,7 @@ body {
   margin-bottom: 3mm;
 }
 .wf__step p {
-  font-family: var(--serif); font-style: normal;
+  font-family: var(--serif); font-style: italic;
   font-size: 11pt; line-height: 1.55; color: rgba(245,240,232,0.78);
 }
 
@@ -358,7 +358,7 @@ body {
 .wks__item--wide { grid-column: 1 / -1; border-top-color: var(--bronze); padding-top: 3mm; margin-top: 0.5mm; }
 .wks__item .letter { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
 .wks__item .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 9.5pt; line-height: 1.45; color: rgba(245,240,232,0.78); }
+.wks__item .d { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.45; color: rgba(245,240,232,0.78); }
 
 /* ── Page 9 · Custom experiences ─────────────────────── */
 .cst { padding: 16mm 18mm 18mm; display: flex; flex-direction: column; gap: 5mm; background: var(--cream); color: var(--black); }
@@ -373,7 +373,7 @@ body {
 .cst__card { display: flex; flex-direction: column; gap: 1.5mm; }
 .cst__card .num { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
 .cst__card h4 { font-weight: 500; font-size: 11.5pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
-.cst__card p { font-family: var(--serif); font-style: normal; font-size: 10.5pt; line-height: 1.5; color: var(--warm-gray); }
+.cst__card p { font-family: var(--serif); font-style: italic; font-size: 10.5pt; line-height: 1.5; color: var(--warm-gray); }
 .cst .pagefoot { color: rgba(15,15,15,0.55); }
 .cst .pagefoot .num { color: var(--bronze); }
 
@@ -385,17 +385,17 @@ body {
   display: flex; flex-direction: column; gap: 7mm;
 }
 .menu__body .h1 { color: var(--cream); font-size: 26pt; }
-.menu__body .tag { font-family: var(--serif); font-style: normal; font-size: 14pt; color: var(--bronze-light); }
+.menu__body .tag { font-family: var(--serif); font-style: italic; font-size: 14pt; color: var(--bronze-light); }
 .menu__courses { display: flex; flex-direction: column; gap: 6mm; margin-top: 2mm; }
 .menu__course { display: flex; flex-direction: column; gap: 2mm; padding-top: 4mm; border-top: 1px solid rgba(245,240,232,0.16); }
 .menu__course .lbl { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
 .menu__course .nm { font-weight: 400; font-size: 14pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.menu__course .desc { font-family: var(--serif); font-style: normal; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
+.menu__course .desc { font-family: var(--serif); font-style: italic; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
 .menu__note {
   margin-top: auto;
   border-top: 1px solid rgba(245,240,232,0.16);
   padding-top: 4mm;
-  font-family: var(--serif); font-style: normal; font-size: 11pt; color: rgba(245,240,232,0.62);
+  font-family: var(--serif); font-style: italic; font-size: 11pt; color: rgba(245,240,232,0.62);
 }
 
 /* ── Page 11/12 · À la carte ─────────────────────────── */
@@ -413,11 +413,11 @@ body {
 .alc__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.8mm; }
 .alc__col li { font-size: 8.5pt; line-height: 1.35; }
 .alc__col li b { font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); display: block; font-size: 8pt; margin-bottom: 0.2mm; }
-.alc__col li em { font-family: var(--serif); font-style: normal; color: var(--warm-gray); font-size: 9pt; }
-.alc__col p.note { font-family: var(--serif); font-style: normal; font-size: 10pt; line-height: 1.5; color: var(--warm-gray); }
+.alc__col li em { font-family: var(--serif); font-style: italic; color: var(--warm-gray); font-size: 9pt; }
+.alc__col p.note { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: var(--warm-gray); }
 .alc__foot {
   margin-top: 4mm;
-  font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.55;
+  font-family: var(--serif); font-style: italic; font-size: 11pt; line-height: 1.55;
   color: var(--warm-gray);
   border-top: 1px solid rgba(15,15,15,0.14);
   padding-top: 4mm;
@@ -449,14 +449,14 @@ body {
 }
 .drk__col h5:first-of-type { margin-top: 0; }
 .drk__col p {
-  font-family: var(--serif); font-style: normal;
+  font-family: var(--serif); font-style: italic;
   font-size: 11.5pt; line-height: 1.55; color: rgba(245,240,232,0.78);
   margin-bottom: 3mm;
 }
 .drk__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.5mm; margin-bottom: 2mm; }
 .drk__col ul li { font-size: 10.5pt; line-height: 1.45; }
 .drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 9.5pt; color: var(--cream); display: block; margin-bottom: 0.5mm; }
-.drk__col ul li em { font-family: var(--serif); font-style: normal; color: rgba(245,240,232,0.72); }
+.drk__col ul li em { font-family: var(--serif); font-style: italic; color: rgba(245,240,232,0.72); }
 
 /* ── Page 14 · Back cover ────────────────────────────── */
 .back { padding: 0; }
