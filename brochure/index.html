@@ -316,7 +316,7 @@ body {
 .pd__col .body { font-size: 10.5pt; line-height: 1.45; }
 
 /* ── Page 5 · Events ─────────────────────────────────── */
-.ev { display: grid; grid-template-rows: 48% 52%; }
+.ev { display: grid; grid-template-rows: 42% 58%; }
 .ev__band {
   background: url('../assets/images/event-hero-shrimp.jpg') center/cover no-repeat;
   position: relative;
@@ -326,28 +326,28 @@ body {
   background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%);
   pointer-events: none;
 }
-.ev .lead { font-size: 11pt; line-height: 1.45; }
-.ev .body { font-size: 11pt; line-height: 1.45; }
+.ev .lead { font-size: 10.5pt; line-height: 1.4; }
+.ev .body { font-size: 10pt; line-height: 1.4; }
 .ev__main {
-  padding: 10mm 18mm 18mm;
+  padding: 8mm 18mm 14mm;
   display: grid; grid-template-columns: 1fr 1fr; gap: 10mm;
 }
-.ev__left { display: flex; flex-direction: column; gap: 5mm; }
-.ev__types { display: flex; flex-direction: column; gap: 5mm; }
+.ev__left { display: flex; flex-direction: column; gap: 4mm; }
+.ev__types { display: flex; flex-direction: column; gap: 3mm; }
 .ev__type {
   border-top: 1px solid rgba(245,240,232,0.14);
-  padding-top: 4mm;
-  display: flex; flex-direction: column; gap: 2mm;
+  padding-top: 3mm;
+  display: flex; flex-direction: column; gap: 1.5mm;
 }
-.ev__type .letter { font-size: 10pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
-.ev__type .t { font-weight: 400; font-size: 13pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
-.ev__type .d { font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.45; color: rgba(245,240,232,0.78); }
+.ev__type .letter { font-size: 9pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
+.ev__type .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.ev__type .d { font-family: var(--serif); font-style: normal; font-size: 10pt; line-height: 1.4; color: rgba(245,240,232,0.78); }
 .ev__quote {
   margin-top: auto;
-  padding-top: 4mm;
+  padding-top: 3mm;
   border-top: 1px solid rgba(245,240,232,0.16);
   font-family: var(--serif); font-style: italic;
-  font-size: 11pt; line-height: 1.45; color: var(--bronze-light);
+  font-size: 10pt; line-height: 1.4; color: var(--bronze-light);
 }
 
 /* ── Page 6 · Corporate ──────────────────────────────── */
@@ -715,7 +715,7 @@ body {
   </div>
   <div class="services__grid">
     <div class="svc">
-      <div class="svc__img" style="background-image: url('../assets/images/event-art-gallery.JPG');"></div>
+      <div class="svc__img" style="background-image: var(--img-private);"></div>
       <div class="svc__body">
         <span class="svc__num">A. Private dining</span>
         <h3 class="svc__title">Bij jou thuis.</h3>
@@ -731,7 +731,7 @@ body {
       </div>
     </div>
     <div class="svc">
-      <div class="svc__img" style="background-image: var(--img-private);"></div>
+      <div class="svc__img" style="background-image: url('../assets/images/event-art-gallery.JPG');"></div>
       <div class="svc__body">
         <span class="svc__num">C. Corporate events</span>
         <h3 class="svc__title">Verzorgd, persoonlijk, professioneel.</h3>
@@ -747,9 +747,9 @@ body {
      ───────────────────────────────────────────────────── -->
 <section class="page pd" data-screen-label="04 Private dining">
   <div class="pd__media">
-    <div class="pd__img" style="background-image: url('../assets/images/private-burrata.JPG');"></div>
-    <div class="pd__img" style="background-image: url('../assets/images/private-gravlax.JPG');"></div>
     <div class="pd__img" style="background-image: url('../assets/images/private-beef.JPG');"></div>
+    <div class="pd__img" style="background-image: url('../assets/images/private-gravlax.JPG');"></div>
+    <div class="pd__img" style="background-image: url('../assets/images/private-burrata.JPG');"></div>
     <div class="pd__head">
       <span class="eyebrow">A. Private dining</span>
       <h1 class="h1" style="margin-top: 4mm;">Private dining<br/>bij jou thuis.</h1>
@@ -1100,7 +1100,7 @@ body {
   </div>
   <div class="exa__grid">
     <div class="exa__menu">
-      <div class="exa__img" style="background-image: url('../assets/images/event-oysters.JPG');"></div>
+      <div class="exa__img" style="background-image: url('../assets/images/event-oysters.JPG'); background-position: center 65%;"></div>
       <span class="lbl">Voorbeeld 1</span>
       <h3 class="title">Luxury Walking Dinner.<br/>Live BBQ.</h3>
       <p class="ctx">Huwelijksverjaardag. 50 gasten. Zomer 2025.</p>
@@ -1121,7 +1121,7 @@ body {
       </div>
     </div>
     <div class="exa__menu">
-      <div class="exa__img" style="background-image: url('../assets/images/menu-ceviche.JPG');"></div>
+      <div class="exa__img" style="background-image: url('../assets/images/menu-ceviche.JPG'); background-position: center 65%;"></div>
       <span class="lbl">Voorbeeld 2</span>
       <h3 class="title">Walking Dinner.</h3>
       <p class="ctx">Bedrijfsevent. 40–60 gasten. Brussel. Lente 2026.</p>
@@ -1156,7 +1156,7 @@ body {
   </div>
   <div class="exa__grid">
     <div class="exa__menu">
-      <div class="exa__img" style="background-image: url('../assets/images/hero-meatboard.jpg'); background-position: center 30%;"></div>
+      <div class="exa__img" style="background-image: url('../assets/images/hero-meatboard.jpg'); background-position: center 65%;"></div>
       <span class="lbl">Voorbeeld 3</span>
       <h3 class="title">Walking dinner &amp;<br/>The Meat Board.</h3>
       <p class="ctx">Huwelijksfeest. 50 gasten. Middagreceptie + diner. Zomer 2025.</p>
@@ -1179,7 +1179,7 @@ body {
       </div>
     </div>
     <div class="exa__menu">
-      <div class="exa__img" style="background-image: url('../assets/images/event-lobster-pasta.jpg'); background-position: center 30%;"></div>
+      <div class="exa__img" style="background-image: url('../assets/images/event-lobster-pasta.jpg'); background-position: center 65%;"></div>
       <span class="lbl">Voorbeeld 4</span>
       <h3 class="title">Klassiek 3-gangen<br/>diner aan tafel.</h3>
       <p class="ctx">Bedrijfsdiner. 40 gasten. Najaar 2026.</p>
