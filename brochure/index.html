@@ -286,7 +286,7 @@ body {
 .svc__desc { font-family: var(--serif); font-style: normal; font-size: 10.5pt; line-height: 1.5; color: rgba(245,240,232,0.82); margin-top: 1mm; }
 
 /* ── Page 4 · Private dining ─────────────────────────── */
-.pd { display: grid; grid-template-rows: 10mm 52% 1fr; background: var(--bg); }
+.pd { display: grid; grid-template-rows: 10mm 52% 1fr; background: var(--black); }
 .pd__media {
   grid-row: 2;
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
@@ -472,7 +472,7 @@ body {
 .exa__disc { font-family: var(--serif); font-style: italic; font-size: 9.5pt; color: var(--warm-gray); line-height: 1.45; max-width: 160mm; }
 .exa__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 14mm; }
 .exa__menu { display: flex; flex-direction: column; gap: 2.5mm; border-top: 1px solid rgba(15,15,15,0.20); padding-top: 4mm; }
-.exa__menu .exa__img { width: 100%; height: 26mm; background-size: cover; background-position: center; margin-bottom: 1mm; }
+.exa__menu .exa__img { width: 100%; height: 34mm; background-size: cover; background-position: center; margin-bottom: 1mm; }
 .exa__menu .lbl { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
 .exa__menu .title { font-weight: 400; font-size: 13pt; letter-spacing: 0.06em; text-transform: uppercase; color: var(--black); line-height: 1.18; }
 .exa__menu .ctx { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.4; color: var(--warm-gray); }
@@ -590,11 +590,12 @@ body {
 
 /* ── Print rules ─────────────────────────────────────── */
 @page { size: A4; margin: 0; }
+* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 @media print {
-  html, body { background: white; }
+  html, body { background: var(--black); }
   body { padding: 0; gap: 0; }
   .brochure-bar { display: none !important; }
-  .page { box-shadow: none !important; margin: 0 !important; }
+  .page { box-shadow: none !important; margin: 0 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
 </style>
 </head>
@@ -953,7 +954,6 @@ body {
         <p class="desc">Mousse van limoen en mascarpone met limoncello-sorbet en rode vruchten.</p>
       </div>
     </div>
-    <p class="menu__note">Eén menu voor het hele gezelschap.<br/>Vrij te kiezen uit zes signature menu’s, of samen te stellen uit onze à la carte kaart.</p>
   </div>
   <div class="pagefoot" style="color: rgba(245,240,232,0.55);"><span>Voorgesteld menu</span><span class="num">11</span></div>
 </section>
@@ -1232,7 +1232,6 @@ body {
       <h4>Cocktails &amp; mocktails</h4>
       <p>Naast koken hebben we ook een sterke liefde voor cocktails, smaken en pairings. We maken klassieke cocktails, eigen creaties en alcoholvrije alternatieven op maat van jullie event.</p>
       <p>Denk aan een frisse welkomstcocktail, een signature drink voor jullie feest, een cocktail bij het dessert of een mocktail pairing zonder alcohol.</p>
-      <h5>Voorbeelden</h5>
       <ul>
         <li><b>Pisco Sour</b><em>Fris en zuur, met limoen en eiwit.</em></li>
         <li><b>Negroni met vijg</b><em>Bitterzoet, rond en iets zachter dan de klassieker.</em></li>
