@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brochure — Chef &amp; Chief</title>
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/36caa84e-1fb7-42af-bde3-f9f2f91ed161/-.png" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&family=Marcellus&display=swap" />
+<style>
+:root {
+  --black: #0F0F0F;
+  --charcoal: #1E1E1E;
+  --slate: #2E2E2E;
+  --warm-gray: #6B655E;
+  --stone: #B8B0A6;
+  --cream: #F5F0E8;
+  --white: #FFFFFF;
+  --bronze: #A07848;
+  --bronze-light: #C09A6A;
+  --bronze-dark: #7A5A34;
+  --sans: 'Jost', sans-serif;
+  --serif: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
+  --A4-w: 210mm;
+  --A4-h: 297mm;
+
+  /* ── Image library (real Chef & Chief gallery, Squarespace CDN) ── */
+  --img-cover:        url('../assets/images/hero-lobster.jpg');
+  --img-atmosphere:   url('../assets/images/atmosphere-chef-plating.JPG');
+  --img-private:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968412691-F9JWECZ20L78LMMP5G68/IMG_6185.JPG?format=2500w');
+  --img-burrata:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080089663-GPZ5RZHND9VFM3055HV8/IMG_7014.JPG?format=2500w');
+  --img-board:        url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080087035-MGBKZ4K9FT3BKO033FTO/42017580-21F5-4D4B-87DA-BB3D124DD434.JPG?format=2500w');
+  --img-shrimp:       url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860703813-BB1XM8FN0O5IWPVKWS6F/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-329.jpg?format=2500w');
+  --img-meat:         url('../assets/images/hero-meatboard.jpg');
+  --img-lobster:      url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860616181-9FBFRMZ3UKZUGQOEASMC/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-49.jpg?format=2500w');
+  --img-tacos:        url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1642080158700-8VPPJ8KRO8US4TCB0PVF/IMG_9397.JPG?format=2500w');
+  --img-scallops:     url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968399290-33KECJRUE5QXPGISNFFA/IMG_3152.jpeg?format=2500w');
+  --img-gazpacho:     url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1666968419324-PCMITQ3M27VWESWVIYDO/IMG_6853.jpeg?format=2500w');
+  --img-fig:          url('https://images.squarespace-cdn.com/content/v1/57bff78e6b8f5b66f8bb09ab/1701860657614-QM3N992PHNWS761XCSOJ/ROSALIE+VOORTMAN+-+DAX+%26+CHLO%C3%8B-271.jpg?format=2500w');
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #232323; }
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  padding: 28px 0;
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+}
+
+/* ── Screen helper toolbar ───────────────────────────── */
+.brochure-bar {
+  position: fixed; top: 16px; right: 16px;
+  display: flex; gap: 10px; z-index: 100;
+  background: rgba(10,10,10,0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245,240,232,0.12);
+  padding: 10px 14px;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--cream);
+  font-weight: 600;
+}
+.brochure-bar a, .brochure-bar button {
+  color: var(--cream); background: none; border: 1px solid rgba(245,240,232,0.28);
+  padding: 8px 14px; text-decoration: none; cursor: pointer;
+  font: inherit; transition: all 220ms ease;
+}
+.brochure-bar a:hover, .brochure-bar button:hover { background: var(--bronze); border-color: var(--bronze); }
+
+/* ── Page frame (A4) ─────────────────────────────────── */
+.page {
+  width: var(--A4-w);
+  height: var(--A4-h);
+  background: var(--black);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04);
+  page-break-after: always;
+  break-after: page;
+}
+.page--light { background: var(--cream); color: var(--black); }
+.page--charcoal { background: var(--charcoal); }
+
+/* Page number footer */
+.pagefoot {
+  position: absolute; left: 18mm; right: 18mm; bottom: 12mm;
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase;
+  color: rgba(245,240,232,0.55);
+  font-weight: 600;
+}
+.page--light .pagefoot { color: rgba(15,15,15,0.45); }
+.pagefoot .num { color: var(--bronze); }
+
+/* ── Type roles ──────────────────────────────────────── */
+.eyebrow {
+  font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--bronze);
+}
+.display {
+  font-family: var(--sans);
+  font-weight: 200;
+  font-size: 56pt; letter-spacing: 0.10em; line-height: 0.96;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.h1 { font-weight: 200; font-size: 30pt; letter-spacing: 0.10em; line-height: 1.06; text-transform: uppercase; text-wrap: balance; }
+.h2 { font-weight: 300; font-size: 20pt; letter-spacing: 0.16em; line-height: 1.12; text-transform: uppercase; }
+.h3 { font-weight: 500; font-size: 11pt; letter-spacing: 0.30em; line-height: 1.25; text-transform: uppercase; }
+.serif { font-family: var(--serif); font-style: italic; }
+.lead {
+  font-family: var(--serif); font-style: italic;
+  font-size: 15.5pt; line-height: 1.5;
+  color: rgba(245,240,232,0.88);
+  text-wrap: pretty;
+}
+.page--light .lead { color: var(--warm-gray); }
+.body {
+  font-weight: 300; font-size: 10.5pt; line-height: 1.65;
+  color: rgba(245,240,232,0.82);
+  text-wrap: pretty;
+}
+.page--light .body { color: var(--warm-gray); }
+.rule { width: 36px; height: 1px; background: var(--bronze); display: block; }
+
+/* ── Page 1 · Cover ──────────────────────────────────── */
+.cover { padding: 0; }
+.cover__bg {
+  position: absolute; inset: 0;
+  background: var(--img-cover) center/cover no-repeat;
+  filter: brightness(0.7) saturate(1.05);
+}
+.cover__veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0.55) 0%, rgba(15,15,15,0.30) 45%, rgba(15,15,15,0.85) 100%);
+}
+.cover__rim {
+  position: absolute; inset: 12mm;
+  border: 1px solid rgba(245,240,232,0.22);
+}
+.cover__icon {
+  position: absolute;
+  right: 26mm; top: 50%;
+  transform: translateY(-55%);
+  width: 82mm; height: auto;
+  opacity: 0.22;
+  z-index: 1;
+  filter: invert(1) brightness(2);
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+.cover__head {
+  position: absolute; top: 22mm; left: 22mm; right: 22mm;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  z-index: 2;
+}
+.cover__head .cover__logo {
+  height: 38mm; width: auto;
+  filter: brightness(1.05);
+}
+.cover__head .eyebrow { font-size: 11pt; padding-top: 8mm; }
+.cover__title {
+  position: absolute; left: 22mm; right: 22mm; bottom: 40mm;
+  z-index: 2;
+  display: flex; flex-direction: column; gap: 4mm;
+}
+.cover__brand {
+  font-family: var(--sans);
+  font-weight: 200;
+  font-size: 68pt;
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--bronze);
+  display: block;
+  text-wrap: balance;
+}
+.cover__sub {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 22pt;
+  letter-spacing: 0.20em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--cream);
+  display: block;
+  margin-top: 2mm;
+}
+.cover__line {
+  font-family: var(--sans);
+  font-size: 11pt;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.78);
+  display: block;
+  margin-top: 4mm;
+}
+.cover__caption {
+  position: absolute; left: 22mm; right: 22mm; bottom: 22mm;
+  z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase; color: rgba(245,240,232,0.7);
+  font-weight: 600;
+}
+.cover__caption span:first-child { color: var(--bronze); }
+
+/* ── Page 2 · Inhoud / Index ─────────────────────────── */
+.idx { padding: 22mm 18mm 22mm; display: flex; flex-direction: column; gap: 7mm; }
+.idx__head { display: flex; flex-direction: column; gap: 3mm; max-width: 150mm; }
+.idx__list { display: flex; flex-direction: column; gap: 6mm; margin-top: 2mm; }
+.idx__group { display: flex; flex-direction: column; gap: 0.5mm; }
+.idx__group-lbl {
+  font-size: 9pt; font-weight: 600; letter-spacing: 0.30em;
+  text-transform: uppercase; color: var(--bronze);
+  padding-bottom: 2mm; margin-bottom: 1mm;
+  border-bottom: 1px solid rgba(245,240,232,0.18);
+}
+.idx__item {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 2mm 0; border-bottom: 1px dotted rgba(245,240,232,0.16);
+  gap: 4mm;
+}
+.idx__item:last-child { border-bottom: 0; }
+.idx__item .t { font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--cream); }
+.idx__item--sub { padding-left: 6mm; }
+.idx__item--sub .t { font-size: 11pt; color: rgba(245,240,232,0.78); }
+.idx__item--highlight .t { color: var(--bronze-light); }
+.idx__item .num {
+  font-family: var(--sans); font-weight: 500; font-size: 11pt;
+  letter-spacing: 0.10em; color: var(--bronze);
+  min-width: 16mm; text-align: right;
+}
+
+/* ── Page 3 · Concept ────────────────────────────────── */
+.concept { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.concept__media {
+  background: var(--img-atmosphere) center/cover no-repeat;
+  filter: brightness(0.92);
+}
+.concept__text {
+  padding: 22mm 16mm 14mm 16mm;
+  display: flex; flex-direction: column; gap: 4mm;
+}
+.concept__text .h1 { color: var(--cream); }
+.concept__quote {
+  font-family: var(--serif); font-style: italic;
+  font-size: 15pt; line-height: 1.35; color: var(--bronze-light);
+  padding-left: 6mm; border-left: 1px solid var(--bronze);
+  margin-top: 6mm;
+}
+.concept__sig {
+  margin-top: auto;
+  display: flex; gap: 12mm; align-items: baseline;
+  border-top: 1px solid rgba(245,240,232,0.18);
+  padding-top: 6mm;
+}
+.concept__sig strong { font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; font-size: 10pt; }
+.concept__sig em { font-family: var(--serif); font-style: italic; font-size: 12.5pt; color: rgba(245,240,232,0.78); }
+
+/* ── Page 3 · Services ───────────────────────────────── */
+.services { padding: 18mm 18mm 22mm; }
+.services__head { margin-bottom: 6mm; display: flex; flex-direction: column; gap: 3mm; max-width: 145mm; }
+.services__head .h1 { font-size: 26pt; }
+.services__head .lead { font-size: 11pt; line-height: 1.4; }
+.services__accent {
+  font-family: var(--serif); font-style: italic;
+  font-size: 13pt; line-height: 1.3; color: var(--bronze-light);
+  margin-top: 1mm;
+}
+.services__grid { display: grid; grid-template-columns: 1fr; gap: 4mm; }
+.svc {
+  display: grid; grid-template-columns: 48mm 1fr;
+  gap: 8mm;
+  border-top: 1px solid rgba(245,240,232,0.14);
+  padding-top: 4mm;
+  align-items: center;
+}
+.svc__img {
+  height: 52mm;
+  background-size: cover; background-position: center;
+}
+.svc__body { display: flex; flex-direction: column; gap: 3mm; }
+.svc__num { font-size: 17pt; letter-spacing: 0.12em; color: var(--cream); font-weight: 300; text-transform: uppercase; }
+.svc__title { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 12pt; letter-spacing: 0.02em; text-transform: none; color: var(--bronze-light); margin-top: 0.5mm; }
+.svc__desc { font-family: var(--serif); font-style: normal; font-size: 10.5pt; line-height: 1.5; color: rgba(245,240,232,0.82); margin-top: 1mm; }
+
+/* ── Page 4 · Private dining ─────────────────────────── */
+.pd { display: grid; grid-template-rows: 10mm 52% 1fr; background: var(--black); }
+.pd__media {
+  grid-row: 2;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+  filter: none;
+  position: relative;
+  background: none;
+}
+.pd__media .pd__img {
+  background-size: cover; background-position: center;
+  filter: brightness(0.95);
+}
+.pd__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.92) 100%);
+}
+.pd__head {
+  position: absolute; left: 18mm; right: 18mm; bottom: 8mm;
+  z-index: 2;
+}
+.pd__body {
+  grid-row: 3;
+  padding: 10mm 18mm 18mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12mm;
+}
+.pd__col { display: flex; flex-direction: column; gap: 4mm; }
+.pd__col .lead { font-size: 13pt; line-height: 1.35; }
+.pd__col .body { font-size: 10.5pt; line-height: 1.45; }
+
+/* ── Page 5 · Events ─────────────────────────────────── */
+.ev { display: grid; grid-template-rows: 38% 62%; }
+.ev__band {
+  background: url('../assets/images/event-hero-shrimp.jpg') center 72% / cover no-repeat;
+  position: relative;
+}
+.ev__band::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%);
+  pointer-events: none;
+}
+.ev .lead { font-size: 10pt; line-height: 1.4; }
+.ev .body { font-size: 9.5pt; line-height: 1.4; }
+.ev__main {
+  padding: 7mm 18mm 12mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 9mm;
+}
+.ev__left { display: flex; flex-direction: column; gap: 3mm; }
+.ev__types { display: flex; flex-direction: column; gap: 2.5mm; }
+.ev__type {
+  border-top: 1px solid rgba(245,240,232,0.14);
+  padding-top: 2.5mm;
+  display: flex; flex-direction: column; gap: 1mm;
+}
+.ev__type .letter { font-size: 9pt; letter-spacing: 0.30em; color: var(--bronze); font-weight: 600; }
+.ev__type .t { font-weight: 400; font-size: 11pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.ev__type .d { font-family: var(--serif); font-style: normal; font-size: 9.5pt; line-height: 1.35; color: rgba(245,240,232,0.78); }
+.ev__quote {
+  margin-top: 3mm;
+  font-family: var(--serif); font-style: italic;
+  font-size: 9.5pt; line-height: 1.35; color: var(--bronze-light);
+}
+
+/* ── Page 6 · Corporate ──────────────────────────────── */
+.corp { padding: 0 0 18mm; display: flex; flex-direction: column; gap: 5mm; }
+.corp__band {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 58mm;
+}
+.corp__band > div { background-size: cover; background-position: center; filter: brightness(0.92); }
+.corp__head { padding: 10mm 18mm 0; display: flex; flex-direction: column; gap: 3mm; max-width: 145mm; }
+.corp__head .h1 { font-size: 26pt; }
+.corp__head .lead { font-size: 12pt; line-height: 1.4; }
+.corp__head .body { font-size: 10pt; line-height: 1.45; }
+.corp__grid-wrap { padding: 0 18mm; }
+.corp__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; align-items: start; padding: 0 18mm; }
+.corp__list { list-style: none; display: flex; flex-direction: column; gap: 3mm; font-family: var(--serif); font-style: normal; font-size: 11pt; color: rgba(245,240,232,0.82); }
+.corp__list li { padding-bottom: 3mm; border-bottom: 1px dotted rgba(245,240,232,0.16); }
+.corp__list li:last-child { border-bottom: 0; }
+.corp__list li::before { content: "→ "; color: var(--bronze); font-style: italic; font-weight: 600; }
+.corp__why { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 8mm; }
+.corp__why div {
+  border-top: 1px solid rgba(245,240,232,0.14);
+  padding-top: 4mm;
+  display: flex; flex-direction: column; gap: 2mm;
+}
+.corp__why h4 { font-weight: 400; font-size: 10pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); }
+.corp__why p { font-family: var(--serif); font-style: normal; font-size: 10pt; line-height: 1.4; color: rgba(245,240,232,0.72); }
+.corp__photo {
+  height: 64mm;
+  margin-top: 4mm;
+  background: url('../assets/images/event-art-gallery.JPG') center/cover no-repeat;
+}
+
+/* ── Page 7 · Workflow ───────────────────────────────── */
+.wf { padding: 22mm 18mm 22mm; display: flex; flex-direction: column; gap: 8mm; }
+.wf__head { display: flex; flex-direction: column; gap: 4mm; max-width: 140mm; }
+.wf__steps { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm 14mm; margin-top: 2mm; }
+.wf__step {
+  display: grid; grid-template-columns: 18mm 1fr;
+  gap: 5mm; align-items: start;
+  border-top: 1px solid rgba(245,240,232,0.16);
+  padding-top: 6mm;
+}
+.wf__num {
+  font-family: var(--sans);
+  font-weight: 200;
+  font-size: 40pt;
+  letter-spacing: 0.02em;
+  line-height: 0.88;
+  color: var(--bronze);
+}
+.wf__step h4 {
+  font-weight: 400; font-size: 13pt; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--cream);
+  margin-bottom: 3mm;
+}
+.wf__step p {
+  font-family: var(--serif); font-style: normal;
+  font-size: 11pt; line-height: 1.55; color: rgba(245,240,232,0.78);
+}
+
+/* ── Page 8 · Workshops ──────────────────────────────── */
+.wks { padding: 0; display: grid; grid-template-rows: 24% 76%; }
+.wks__band { display: grid; grid-template-columns: 1.2fr 1fr 1fr; position: relative; }
+.wks__band > div { background-size: cover; background-position: center; filter: brightness(0.88); }
+.wks__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 55%, rgba(15,15,15,0.92) 100%); }
+.wks__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
+.wks__body { padding: 10mm 18mm 18mm; display: flex; flex-direction: column; gap: 4mm; }
+.wks__head { display: flex; flex-direction: column; gap: 2mm; max-width: 165mm; }
+.wks__head .h1 { font-size: 26pt; }
+.wks__head .lead { font-size: 13pt; line-height: 1.4; }
+.wks__head .body { font-size: 9.5pt; line-height: 1.5; }
+.wks__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 12mm; }
+.wks__item { border-top: 1px solid rgba(245,240,232,0.14); padding-top: 2mm; display: flex; flex-direction: column; gap: 1mm; }
+.wks__item--wide { grid-column: 1 / -1; border-top-color: var(--bronze); padding-top: 3mm; margin-top: 0.5mm; }
+.wks__item .letter { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.wks__item .t { font-weight: 400; font-size: 12pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.wks__item .d { font-family: var(--serif); font-style: normal; font-size: 10pt; line-height: 1.45; color: rgba(245,240,232,0.78); }
+
+/* ── Page 9 · Custom experiences ─────────────────────── */
+.cst { padding: 12mm 18mm 14mm; display: flex; flex-direction: column; gap: 3mm; background: var(--cream); color: var(--black); }
+.cst__head { display: flex; flex-direction: column; gap: 2mm; max-width: 160mm; }
+.cst__head .h1 { color: var(--black); font-size: 26pt; }
+.cst__head .eyebrow { color: var(--bronze); }
+.cst__head .lead { color: var(--warm-gray); font-size: 12pt; line-height: 1.4; }
+.cst__head .body { color: var(--warm-gray); font-size: 9.5pt; line-height: 1.5; }
+.cst__pull { font-family: var(--serif); font-style: italic; font-size: 15pt; line-height: 1.3; color: var(--black); border-top: 1px solid rgba(15,15,15,0.18); border-bottom: 1px solid rgba(15,15,15,0.18); padding: 3mm 0; }
+.cst__pull em { color: var(--bronze); font-style: italic; }
+.cst__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm 10mm; }
+.cst__card { display: flex; flex-direction: column; gap: 1.5mm; }
+.cst__card .num { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; color: var(--bronze); }
+.cst__card h4 { font-weight: 500; font-size: 10pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--black); }
+.cst__card p { font-family: var(--serif); font-style: normal; font-size: 9.5pt; line-height: 1.45; color: var(--warm-gray); }
+.cst .pagefoot { color: rgba(15,15,15,0.55); }
+.cst .pagefoot .num { color: var(--bronze); }
+
+/* ── Page 10 · Sample menu ───────────────────────────── */
+.menu { display: grid; grid-template-columns: 47% 53%; }
+.menu__media { background: var(--img-meat) center/cover no-repeat; filter: brightness(0.92); }
+.menu__body {
+  padding: 24mm 16mm 24mm 14mm;
+  display: flex; flex-direction: column; gap: 7mm;
+}
+.menu__body .h1 { color: var(--cream); font-size: 26pt; }
+.menu__body .tag { font-family: var(--serif); font-style: italic; font-size: 14pt; color: var(--bronze-light); }
+.menu__courses { display: flex; flex-direction: column; gap: 6mm; margin-top: 2mm; }
+.menu__course { display: flex; flex-direction: column; gap: 2mm; padding-top: 4mm; border-top: 1px solid rgba(245,240,232,0.16); }
+.menu__course .lbl { font-size: 9.5pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
+.menu__course .nm { font-weight: 400; font-size: 14pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream); }
+.menu__course .desc { font-family: var(--serif); font-style: italic; font-size: 11.5pt; line-height: 1.5; color: rgba(245,240,232,0.78); }
+.menu__note {
+  margin-top: auto;
+  border-top: 1px solid rgba(245,240,232,0.16);
+  padding-top: 4mm;
+  font-family: var(--serif); font-style: italic; font-size: 11pt; color: rgba(245,240,232,0.62);
+}
+
+/* ── Page 11-12 · Voorbeeldmenu's ────────────────────── */
+.exa { padding: 12mm 16mm 14mm; display: flex; flex-direction: column; gap: 4mm; background: var(--cream); color: var(--black); }
+.exa__head { display: flex; flex-direction: column; gap: 2mm; max-width: 165mm; }
+.exa__head .h1 { color: var(--black); }
+.exa__head .eyebrow { color: var(--bronze); }
+.exa__head .lead { color: var(--warm-gray); font-size: 13pt; line-height: 1.4; }
+.exa__disc { font-family: var(--serif); font-style: italic; font-size: 9.5pt; color: var(--warm-gray); line-height: 1.45; max-width: 160mm; }
+.exa__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 14mm; }
+.exa__menu { display: flex; flex-direction: column; gap: 2.5mm; border-top: 1px solid rgba(15,15,15,0.20); padding-top: 4mm; }
+.exa__menu .exa__img { width: 100%; height: 34mm; background-size: cover; background-position: center; margin-bottom: 1mm; }
+.exa__menu .lbl { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
+.exa__menu .title { font-weight: 400; font-size: 13pt; letter-spacing: 0.06em; text-transform: uppercase; color: var(--black); line-height: 1.18; }
+.exa__menu .ctx { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.4; color: var(--warm-gray); }
+.exa__menu .sec { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--bronze); margin-top: 1.5mm; }
+.exa__menu .items { list-style: none; display: flex; flex-direction: column; gap: 1mm; }
+.exa__menu .items li { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.35; color: var(--black); }
+.exa__menu .desc { font-family: var(--serif); font-style: italic; font-size: 9.5pt; line-height: 1.4; color: var(--warm-gray); }
+.exa__menu .price { margin-top: auto; padding-top: 3mm; border-top: 1px solid rgba(15,15,15,0.18); display: flex; justify-content: space-between; align-items: baseline; }
+.exa__menu .price .plbl { font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); }
+.exa__menu .price .pval { font-family: var(--serif); font-style: italic; font-size: 15pt; color: var(--black); font-weight: 500; }
+.exa .pagefoot { color: rgba(15,15,15,0.55); }
+.exa .pagefoot .num { color: var(--bronze); }
+
+/* ── Page 13/14 · À la carte ─────────────────────────── */
+.alc { padding: 14mm 14mm 16mm; display: flex; flex-direction: column; gap: 4mm; background: var(--cream); color: var(--black); }
+.alc__head { display: flex; flex-direction: column; gap: 2mm; max-width: 140mm; }
+.alc__head .h1 { color: var(--black); }
+.alc__head .lead { color: var(--warm-gray); }
+.alc__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8mm 10mm; margin-top: 4mm; align-items: start; }
+.alc__col h4 {
+  font-size: 9.5pt; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--bronze);
+  padding-bottom: 2mm; margin-bottom: 3mm;
+  border-bottom: 1px solid rgba(15,15,15,0.18);
+}
+.alc__col ul { list-style: none; display: flex; flex-direction: column; gap: 1.8mm; }
+.alc__col li { font-size: 8.5pt; line-height: 1.3; }
+.alc__col li b { font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); display: block; font-size: 8pt; margin-bottom: 0.1mm; }
+.alc__col li em { font-family: var(--serif); font-style: normal; color: var(--warm-gray); font-size: 9pt; }
+.alc__col p.note { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: var(--warm-gray); }
+.alc__foot {
+  margin-top: 4mm;
+  font-family: var(--serif); font-style: normal; font-size: 11pt; line-height: 1.55;
+  color: var(--warm-gray);
+  border-top: 1px solid rgba(15,15,15,0.14);
+  padding-top: 4mm;
+  text-align: center;
+}
+.alc .pagefoot { color: rgba(15,15,15,0.5); }
+.alc .pagefoot .num { color: var(--bronze); }
+
+/* ── Page 13 · Drinks ────────────────────────────────── */
+.drk { padding: 0; display: grid; grid-template-rows: 24% 76%; }
+.drk__band { display: grid; grid-template-columns: 1fr 1fr 1fr; position: relative; }
+.drk__band > div { background-size: cover; background-position: center; filter: brightness(0.85); }
+.drk__band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,15,0) 50%, rgba(15,15,15,0.85) 100%); }
+.drk__band .label { position: absolute; left: 18mm; bottom: 6mm; z-index: 2; font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); }
+.drk__body {
+  padding: 7mm 16mm 12mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 12mm;
+}
+.drk__head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 1.5mm; max-width: 170mm; }
+.drk__head .lead { font-size: 10.5pt; line-height: 1.35; color: var(--bronze-light); }
+.drk__head .body { font-size: 9.5pt; line-height: 1.4; }
+.drk__col h4 {
+  font-size: 9pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase;
+  color: var(--bronze);
+  padding-bottom: 1.5mm; margin-bottom: 2.5mm;
+  border-bottom: 1px solid rgba(245,240,232,0.18);
+}
+.drk__col h5 {
+  font-weight: 400; font-size: 10pt; letter-spacing: 0.10em; text-transform: uppercase; color: var(--cream);
+  margin-bottom: 1mm; margin-top: 2.5mm;
+}
+.drk__col h5:first-of-type { margin-top: 0; }
+.drk__col p {
+  font-family: var(--serif); font-style: italic;
+  font-size: 9.5pt; line-height: 1.4; color: rgba(245,240,232,0.78);
+  margin-bottom: 1.5mm;
+}
+.drk__col ul { list-style: none; display: flex; flex-direction: column; gap: 1mm; margin-bottom: 1.5mm; }
+.drk__col ul li { font-size: 9pt; line-height: 1.3; }
+.drk__col ul li b { font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; font-size: 8.5pt; color: var(--cream); display: block; margin-bottom: 0.3mm; }
+.drk__col ul li em { font-family: var(--serif); font-style: italic; color: rgba(245,240,232,0.72); }
+
+/* ── Page 14 · Back cover ────────────────────────────── */
+.back { padding: 0; }
+.back__bg {
+  position: absolute; inset: 0;
+  background: url('../assets/images/hero-octopus.jpg') center/cover no-repeat;
+  filter: brightness(0.45) saturate(1.05);
+}
+.back__inner {
+  position: absolute; inset: 18mm;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  z-index: 2;
+  text-align: center;
+}
+.back__wordmark {
+  font-family: var(--sans);
+  font-weight: 200; font-size: 24pt; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--cream);
+  margin-top: 18mm; line-height: 1;
+}
+.back__wordmark .bar { color: var(--bronze); }
+.back__center { display: flex; flex-direction: column; gap: 6mm; align-items: center; max-width: 130mm; }
+.back__center .serif { font-size: 22pt; color: var(--bronze-light); }
+.back__center .h1 { color: var(--cream); font-size: 22pt; letter-spacing: 0.16em; }
+.back__contact {
+  display: flex; flex-direction: column; gap: 5mm;
+  font-weight: 300; font-size: 13pt; letter-spacing: 0.06em;
+  color: rgba(245,240,232,0.92);
+}
+.back__contact a { color: inherit; text-decoration: none; transition: color 200ms; }
+.back__contact a:hover { color: var(--bronze-light); }
+.back__contact .lbl { font-size: 10pt; font-weight: 600; letter-spacing: 0.30em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.5mm; display: block; }
+.back__rule { width: 60px; height: 1px; background: var(--bronze); margin: 4mm 0; }
+.back__footer {
+  display: flex; gap: 30mm; align-items: baseline;
+  font-size: 9pt; letter-spacing: 0.30em; text-transform: uppercase;
+  color: rgba(245,240,232,0.65);
+  font-weight: 600;
+  padding-bottom: 4mm;
+}
+
+/* ── Print rules ─────────────────────────────────────── */
+@page { size: A4; margin: 0; }
+* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+@media print {
+  html, body { background: var(--black); }
+  body { padding: 0; gap: 0; }
+  .brochure-bar { display: none !important; }
+  .page { box-shadow: none !important; margin: 0 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+
+/* ── Mobile PDF: enlarge for phone reading ─────────────────── */
+.pagefoot { display: none !important; }
+.eyebrow { font-size: 12.5pt !important; letter-spacing: 0.26em !important; }
+.lbl, .back__contact .lbl { font-size: 12pt !important; letter-spacing: 0.22em !important; }
+.alc__head .lead, .alc__head .body, .alc__head p { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.alc__col h4 { font-size: 12pt !important; letter-spacing: 0.24em !important; }
+.alc__col li { font-size: 11pt !important; line-height: 1.4 !important; }
+.alc__col li b { font-size: 11pt !important; letter-spacing: 0.06em !important; }
+.alc__col li em { font-size: 10.5pt !important; line-height: 1.35 !important; }
+.alc__col p.note { font-size: 11pt !important; line-height: 1.45 !important; }
+.alc__foot { font-size: 11pt !important; }
+.exa__menu .lbl { font-size: 12pt !important; }
+.exa__menu .sec { font-size: 10pt !important; letter-spacing: 0.22em !important; }
+.exa__menu .ctx { font-size: 11pt !important; line-height: 1.4 !important; }
+.exa__menu .title { font-size: 15pt !important; line-height: 1.18 !important; }
+.exa__menu .items li { font-size: 11pt !important; line-height: 1.4 !important; }
+.exa__menu .desc { font-size: 11pt !important; line-height: 1.4 !important; }
+.exa__menu .price .plbl { font-size: 11pt !important; }
+.exa__menu .price .pval { font-size: 16pt !important; }
+.exa__head .lead, .exa__head .body, .exa__head p { font-size: 11.5pt !important; line-height: 1.4 !important; }
+.menu .menu__sec, .menu__lbl, .menu__sec { font-size: 12pt !important; letter-spacing: 0.24em !important; }
+.menu .menu__item .t, .menu .menu__item .d, .menu li, .menu p, .menu .body { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.menu__head .lead, .menu__head .body { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.drk__col h4 { font-size: 12pt !important; letter-spacing: 0.30em !important; }
+.drk__col h5 { font-size: 12pt !important; }
+.drk__col p { font-size: 11pt !important; line-height: 1.4 !important; }
+.drk__col ul li { font-size: 10.5pt !important; line-height: 1.35 !important; }
+.drk__col ul li b { font-size: 10.5pt !important; letter-spacing: 0.10em !important; }
+.drk__col ul li em { font-size: 10.5pt !important; line-height: 1.35 !important; }
+.drk__head .lead { font-size: 12pt !important; }
+.drk__head .body { font-size: 11pt !important; line-height: 1.45 !important; }
+.idx__group-lbl { font-size: 12.5pt !important; letter-spacing: 0.30em !important; }
+.idx__item .t { font-size: 14pt !important; }
+.idx__item--sub .t { font-size: 12.5pt !important; }
+.idx__item .num { font-size: 13pt !important; }
+.svc__num { font-size: 18pt !important; }
+.svc__title { font-size: 14pt !important; }
+.svc__desc { font-size: 12pt !important; line-height: 1.5 !important; }
+.services__head .lead, .services__accent { font-size: 12.5pt !important; line-height: 1.45 !important; }
+.ev__type .letter { font-size: 11pt !important; }
+.ev__type .t { font-size: 13pt !important; }
+.ev__type .d { font-size: 11pt !important; line-height: 1.4 !important; }
+.ev .lead { font-size: 12pt !important; line-height: 1.45 !important; }
+.ev .body { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.ev__quote { font-size: 11pt !important; }
+.corp .body, .corp p, .corp .lead, .corp__why p { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.corp__why h4 { font-size: 12pt !important; }
+.wks__item .t { font-size: 13.5pt !important; }
+.wks__item .d, .wks p, .wks .body, .wks .lead { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.cst__card h4 { font-size: 12pt !important; }
+.cst__card p, .cst .body, .cst .lead { font-size: 11.5pt !important; line-height: 1.45 !important; }
+.cst__pull { font-size: 15pt !important; }
+.back__contact a, .back__contact div { font-size: 14pt !important; }
+.pd__col .body { font-size: 12pt !important; line-height: 1.5 !important; }
+.pd__col .lead { font-size: 14pt !important; line-height: 1.4 !important; }
+.concept__text p, .concept__text .lead, .concept__text .body { font-size: 12pt !important; line-height: 1.55 !important; }
+</style>
+
+</head>
+<body>
+
+<div class="brochure-bar">
+  <span style="align-self: center;">Brochure · V2</span>
+  <button onclick="window.print()">Save as PDF</button>
+  <a href="../">← Back to site</a>
+</div>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 1 · COVER
+     ───────────────────────────────────────────────────── -->
+<section class="page cover" data-screen-label="01 Cover">
+  <div class="cover__bg"></div>
+  <div class="cover__veil"></div>
+  <div class="cover__rim"></div>
+  <img src="../assets/logo-icon-black.png" alt="" class="cover__icon" />
+  <div class="cover__head">
+    <img src="../assets/logo-white.png" alt="Chef &amp; Chief" class="cover__logo" />
+    <span class="eyebrow" style="color: var(--bronze-light);">Services 2026</span>
+  </div>
+  <div class="cover__title">
+    <span class="cover__brand">Chef &amp; Chief</span>
+    <span class="cover__sub">At your table.</span>
+    <span class="cover__line">Chef à domicile · Événements · Expériences culinaires</span>
+  </div>
+  <div class="cover__caption">
+    <span>Bruxelles · Worldwide</span>
+    <span>Chloë &amp; Dax</span>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 2 · INHOUD / INDEX
+     ───────────────────────────────────────────────────── -->
+<section class="page idx" data-screen-label="02 Inhoud">
+  <div class="idx__head">
+    <h1 class="h1">Sommaire.</h1>
+    <span class="rule"></span>
+    <p class="lead" style="font-size: 12pt; line-height: 1.4;">Découvrez nos formules, notre façon de travailler, nos exemples de menus et nos prix indicatifs. Les plats et exemples de menus se trouvent dans la section Menus.</p>
+  </div>
+  <div class="idx__list">
+    <div class="idx__group">
+      <span class="idx__group-lbl">Notre histoire</span>
+      <div class="idx__item"><span class="t">Le concept</span><span class="num">03</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Services</span>
+      <div class="idx__item"><span class="t">Aperçu traiteur</span><span class="num">04</span></div>
+      <div class="idx__item idx__item--sub"><span class="t">A. Chef à domicile</span><span class="num">05</span></div>
+      <div class="idx__item idx__item--sub"><span class="t">B. Événements privés &amp; mariages</span><span class="num">06</span></div>
+      <div class="idx__item idx__item--sub"><span class="t">C. Événements d'entreprise</span><span class="num">07</span></div>
+      <div class="idx__item"><span class="t">Notre méthode, de la première idée au dernier verre</span><span class="num">08</span></div>
+      <div class="idx__item"><span class="t">Ateliers</span><span class="num">09</span></div>
+      <div class="idx__item"><span class="t">Expériences sur mesure</span><span class="num">10</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Menus</span>
+      <div class="idx__item idx__item--highlight"><span class="t">Menu proposé, La Table Généreuse</span><span class="num">11</span></div>
+      <div class="idx__item idx__item--highlight"><span class="t">À la carte, small plates &amp; plats</span><span class="num">12 – 13</span></div>
+      <div class="idx__item idx__item--highlight"><span class="t">Exemples de menus avec prix indicatifs</span><span class="num">14 – 15</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Carte des boissons</span>
+      <div class="idx__item"><span class="t">Boissons</span><span class="num">16</span></div>
+    </div>
+    <div class="idx__group">
+      <span class="idx__group-lbl">Contact</span>
+      <div class="idx__item"><span class="t">Contact &amp; réservations</span><span class="num">17</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Sommaire</span><span class="num">02</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 3 · CONCEPT
+     ───────────────────────────────────────────────────── -->
+<section class="page concept" data-screen-label="03 Concept">
+  <div class="concept__media"></div>
+  <div class="concept__text">
+    <span class="eyebrow">Le concept</span>
+    <h1 class="h1">A world<br/>of flavour,<br/>served at your table.</h1>
+    <span class="rule"></span>
+    <p class="body">Chef &amp; Chief apporte la qualité d'un restaurant chez vous, sur votre lieu d'événement ou en entreprise. Pas un service traiteur standard, mais une expérience culinaire sur mesure : personnelle, savoureuse et soignée jusque dans les moindres détails.</p>
+    <p class="body">Notre cuisine s'inspire de nos voyages, de nos racines méditerranéennes et d'un amour pour les saveurs franches, les bons produits et les cultures culinaires du monde entier. Nous recherchons des ingrédients qui ont du caractère, des associations qui fonctionnent et des plats qui rassemblent.</p>
+    <p class="body">Professionnel et qualitatif, mais jamais distant. Notre équipe crée une atmosphère chaleureuse et conviviale, pour que vous puissiez recevoir vos invités en toute sérénité et leur offrir un vrai moment de plaisir.</p>
+    <div class="concept__quote">« Du marché à la table, du voyage à l'assiette : les plus belles saveurs naissent en chemin et se retrouvent autour de la table. »</div>
+    <div class="concept__sig">
+      <span><strong>Chloë</strong><br/><em>Chef of the day</em></span>
+      <span><strong>Dax</strong><br/><em>Chief of the day</em></span>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Chef &amp; Chief · Le concept</span><span class="num">03</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 3 · SERVICES OVERVIEW
+     ───────────────────────────────────────────────────── -->
+<section class="page services" data-screen-label="03 Services">
+  <div class="services__head">
+    <span class="eyebrow">Nos services</span>
+    <h1 class="h1">Trois façons<br/>de passer<br/>à table.</h1>
+    <span class="rule"></span>
+    <p class="lead">Chez vous, lors d'un événement professionnel ou pour un mariage. Pour une réception d'équipe, un off-site ou une fête sur un lieu choisi. Chef &amp; Chief crée à chaque fois une histoire culinaire sur mesure, adaptée à vos invités, votre ambiance et votre moment.</p>
+    <p class="services__accent">Un menu. Une histoire. À votre table.</p>
+  </div>
+  <div class="services__grid">
+    <div class="svc">
+      <div class="svc__img" style="background-image: var(--img-private);"></div>
+      <div class="svc__body">
+        <span class="svc__num">A. Chef à domicile</span>
+        <h3 class="svc__title">Chez vous.</h3>
+        <p class="svc__desc">Chef &amp; Chief vient cuisiner chez vous et régale vos invités de l'apéritif au dernier verre. Personnel, savoureux et sans souci.</p>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc__img" style="background-image: url('../assets/images/event-tartare-table.JPG');"></div>
+      <div class="svc__body">
+        <span class="svc__num">B. Événements privés &amp; mariages</span>
+        <h3 class="svc__title">Sur le lieu de votre choix.</h3>
+        <p class="svc__desc">D'une fête intime à une grande célébration. Nous réfléchissons avec vous au menu, à l'ambiance et au service, et construisons l'expérience culinaire autour de votre histoire.</p>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc__img" style="background-image: url('../assets/images/event-art-gallery.JPG');"></div>
+      <div class="svc__body">
+        <span class="svc__num">C. Événements d'entreprise</span>
+        <h3 class="svc__title">Soigné, personnel, professionnel.</h3>
+        <p class="svc__desc">Un événement client, une réception d'équipe, un off-site ou un dîner sur place. Une bonne cuisine, une ambiance chaleureuse et des invités qui se sentent vraiment accueillis.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Nos services</span><span class="num">04</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 4 · PRIVATE DINING
+     ───────────────────────────────────────────────────── -->
+<section class="page pd" data-screen-label="04 Private dining">
+  <div class="pd__media">
+    <div class="pd__img" style="background-image: url('../assets/images/private-beef.JPG');"></div>
+    <div class="pd__img" style="background-image: url('../assets/images/private-gravlax.JPG');"></div>
+    <div class="pd__img" style="background-image: url('../assets/images/private-burrata.JPG');"></div>
+    <div class="pd__head">
+      <span class="eyebrow">A. Chef à domicile</span>
+      <h1 class="h1" style="margin-top: 4mm;">Private dining<br/>chez vous.</h1>
+    </div>
+  </div>
+  <div class="pd__body">
+    <div class="pd__col">
+      <p class="lead">Chef &amp; Chief vient cuisiner chez vous et régale vos invités de l'apéritif au dernier verre.</p>
+      <p class="body">Nous apportons tout le nécessaire : produits frais et de qualité, mise en place préparée, matériel de cuisine, personnel expérimenté en cuisine et en salle, et bien sûr tout ce qu'il faut pour vous faire vivre un vrai moment culinaire.</p>
+    </div>
+    <div class="pd__col">
+      <p class="body">Vous recevez vos invités en toute sérénité, un verre à la main. Nous cuisinons, servons et rangeons. À la fin de la soirée, nous laissons votre cuisine propre, comme nous l'avons trouvée.</p>
+      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--bronze-light); font-size: 12pt; line-height: 1.4;">« De l'apéritif au dernier verre. Vous recevez, nous nous occupons du reste. »</p>
+    </div>
+  </div>
+  <div class="pagefoot"><span>A. Chef à domicile</span><span class="num">05</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 5 · PRIVATE EVENTS & WEDDINGS
+     ───────────────────────────────────────────────────── -->
+<section class="page ev" data-screen-label="05 Events">
+  <div class="ev__band"></div>
+  <div class="ev__main">
+    <div class="ev__left">
+      <span class="eyebrow">B. Événements privés &amp; mariages</span>
+      <h1 class="h1">Pour des fêtes<br/>qui ont une histoire.</h1>
+      <span class="rule"></span>
+      <p class="lead">Un mariage, un baptême, une communion, un anniversaire, un jubilé ou un week-end autour d'une longue table. Chef &amp; Chief cuisine pour vos événements privés sur le lieu de votre choix, avec des plats qui correspondent à vos invités, à votre ambiance et au moment.</p>
+      <p class="body">Nous commençons toujours par une conversation. Qui êtes-vous ? Qu'aimez-vous manger ? Quelle atmosphère souhaitez-vous créer pour la journée ou la soirée ? Sur cette base, nous proposons un menu créé uniquement pour vous.</p>
+    </div>
+    <div class="ev__types">
+      <div class="ev__type">
+        <span class="letter">A.</span>
+        <span class="t">Weddings</span>
+        <span class="d">Des cérémonies intimes aux grandes journées de fête. Nous adaptons le menu, le service et le timing au déroulé de la journée, pour que l'expérience culinaire accompagne naturellement votre événement.</span>
+      </div>
+      <div class="ev__type">
+        <span class="letter">B.</span>
+        <span class="t">Réunions de famille</span>
+        <span class="d">Baptêmes, communions, anniversaires, jubilés ou longues tablées en famille et entre amis. Nous apportons la cuisine qui correspond à votre histoire.</span>
+      </div>
+      <div class="ev__type">
+        <span class="letter">C.</span>
+        <span class="t">Événements destination</span>
+        <span class="d">Une villa en Toscane, un chalet dans les Alpes ou un lieu où vous aimez vous retrouver. Nous voyageons avec vous et apportons l'expérience Chef &amp; Chief complète sur place.</span>
+      </div>
+      <p class="ev__quote">« Un seul menu pour tout le groupe. C'est ainsi que nous garantissons la qualité, gardons un service fluide et laissons de la place à l'essentiel : profiter ensemble. »</p>
+    </div>
+  </div>
+  <div class="pagefoot"><span>B. Événements privés &amp; mariages</span><span class="num">06</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 6 · CORPORATE
+     ───────────────────────────────────────────────────── -->
+<section class="page corp" data-screen-label="06 Corporate">
+  <div class="corp__band">
+    <div style="background-image: url('../assets/images/event-oysters.JPG');"></div>
+    <div style="background-image: url('../assets/images/event-tartare-table.JPG');"></div>
+    <div style="background-image: url('../assets/images/event-ceviche-glasses.JPG');"></div>
+    <div style="background-image: url('../assets/images/event-charcuterie-service.JPG');"></div>
+  </div>
+  <div class="corp__head">
+    <span class="eyebrow">C. Événements d'entreprise</span>
+    <h1 class="h1">Recevoir en entreprise,<br/>avec une vraie expérience culinaire.</h1>
+    <span class="rule"></span>
+    <p class="lead">Un dîner client, un team event, un off-site, un lancement de produit ou une fête de fin d'année demande plus qu'un bon repas. Tout doit être fluide, professionnel et suffisamment chaleureux pour rassembler les personnes autour de la table.</p>
+    <p class="body">Chef &amp; Chief propose un menu sur mesure, un service discret et une prise en charge complète, sur le lieu de votre choix. Vous pouvez ainsi vous concentrer sur vos invités, votre équipe ou les échanges à table.</p>
+  </div>
+  <div class="corp__grid">
+    <div>
+      <h3 class="h3" style="color: var(--cream); margin-bottom: 4mm;">Nous organisons notamment</h3>
+      <ul class="corp__list">
+        <li>Dîners clients &amp; soirées relationnelles</li>
+        <li>Team events &amp; offsites</li>
+        <li>Lancements de produits &amp; openings</li>
+        <li>Dîners de Noël &amp; fêtes de fin d'année</li>
+        <li>Dîners investisseurs &amp; board dinners</li>
+        <li>Réceptions, walking dinners &amp; corporate dining privé</li>
+      </ul>
+    </div>
+    <div class="corp__why">
+      <div><h4>Un seul interlocuteur</h4><p>De l'offre à l'exécution : une ligne claire, une communication fluide et une équipe qui veille à l'ensemble.</p></div>
+      <div><h4>Menu sur mesure</h4><p>Une proposition culinaire adaptée à votre entreprise, vos invités et votre moment. Nous tenons bien sûr compte des régimes spécifiques et allergies.</p></div>
+      <div><h4>Service discret</h4><p>Un service soigné, présent quand il le faut et en retrait lorsque la conversation, la présentation ou l'ambiance à table demande de l'espace.</p></div>
+      <div><h4>Prise en charge complète</h4><p>Nous prenons en main l'organisation pratique : préparation, cuisine, service, matériel et rangement.</p></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>C. Événements d'entreprise</span><span class="num">07</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 7 · WORKFLOW — Van eerste idee tot laatste glas
+     ───────────────────────────────────────────────────── -->
+<section class="page wf" data-screen-label="07 Workflow">
+  <div class="wf__head">
+    <span class="eyebrow">Notre méthode</span>
+    <h1 class="h1">De la première idée<br/>au dernier verre.</h1>
+    <span class="rule"></span>
+    <p class="lead">Quatre étapes, une soirée. Voici comment nous travaillons ensemble, du premier message jusqu'au moment où la cuisine est à nouveau impeccable.</p>
+  </div>
+  <div class="wf__steps">
+    <div class="wf__step">
+      <span class="wf__num">01</span>
+      <div>
+        <h4>Parlez-nous de votre dîner</h4>
+        <p>Nombre d'invités, date, lieu et occasion : dites-nous ce que vous avez en tête. Allergies, régimes spécifiques ou préférences personnelles ? Partagez-les avec nous dès le départ.</p>
+      </div>
+    </div>
+    <div class="wf__step">
+      <span class="wf__num">02</span>
+      <div>
+        <h4>Nous proposons un menu</h4>
+        <p>Nous élaborons une proposition adaptée à votre soirée : un menu fixe, une sélection à la carte ou une formule sur mesure. Ensemble, nous affinons le menu jusqu'à ce qu'il corresponde à vos envies et à vos invités. Cocktails originaux, boissons adaptées ou extras peuvent également être intégrés.</p>
+      </div>
+    </div>
+    <div class="wf__step">
+      <span class="wf__num">03</span>
+      <div>
+        <h4>Nous venons cuisiner</h4>
+        <p>Le jour même, nous apportons tout ce qu'il faut : ingrédients, mise en place, matériel de cuisine, verres, service et savoir-faire. En amont, nous vérifions la cuisine et le matériel disponibles afin que tout se déroule de façon fluide sur place.</p>
+      </div>
+    </div>
+    <div class="wf__step">
+      <span class="wf__num">04</span>
+      <div>
+        <h4>Vous profitez</h4>
+        <p>Vous choisissez la formule : service à table, walking dinner informel ou autre format sur mesure pour votre événement. Nous veillons à ce que tout soit parfaitement pris en charge, du service au rangement. Après l'événement, nous laissons la cuisine propre, comme nous l'avons trouvée.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Notre méthode · De la première idée au dernier verre</span><span class="num">08</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 8 · WORKSHOPS
+     ───────────────────────────────────────────────────── -->
+<section class="page wks" data-screen-label="08 Workshops">
+  <div class="wks__band">
+    <div style="background-image: url('../assets/images/workshop-bbq-tacos.JPG');"></div>
+    <div style="background-image: url('../assets/images/workshop-pasta-pan.JPG');"></div>
+    <div style="background-image: url('../assets/images/workshop-tartare.JPG');"></div>
+    <span class="label">Workshops · Cook with us</span>
+  </div>
+  <div class="wks__body">
+    <div class="wks__head">
+      <span class="eyebrow">D. Ateliers</span>
+      <h1 class="h1">Un atelier culinaire<br/>à votre table.</h1>
+      <span class="rule"></span>
+      <p class="lead">Pas seulement goûter, mais aussi apprendre, préparer et vivre un moment ensemble. Chef &amp; Chief organise des ateliers culinaires en petits groupes, chez vous ou sur le lieu de votre choix.</p>
+      <p class="body">Hands-on, détendu et savoureux. Pas un cours rigide, mais une expérience culinaire conviviale entre casseroles, verres et invités qui discutent. Nous vous accompagnons pas à pas, partageons nos techniques et veillons à ce que chacun reparte avec de l'inspiration et une table bien garnie.</p>
+    </div>
+    <div class="wks__grid">
+      <div class="wks__item"><span class="letter">A.</span><span class="t">Atelier pâtes</span><span class="d">Faire des pâtes fraîches, farcir des raviolis et préparer des sauces à partir de zéro. Un atelier chaleureux et accessible autour des techniques italiennes, des bons produits et du plaisir de cuisiner ensemble.</span></div>
+      <div class="wks__item"><span class="letter">B.</span><span class="t">Sushi &amp; sashimi</span><span class="d">Préparer le riz, découper le poisson, rouler et servir avec précision. Nous vous apprenons les bases du sushi et du sashimi, avec attention à la technique, à l'équilibre des saveurs et à la présentation.</span></div>
+      <div class="wks__item"><span class="letter">C.</span><span class="t">Asado &amp; BBQ</span><span class="d">Allumer le feu, cuire la viande et apprendre à cuisiner au feeling. De la chimichurri argentine aux pommes de terre hasselback : un atelier autour de la chaleur, de la fumée, du timing et du goût pur.</span></div>
+      <div class="wks__item"><span class="letter">D.</span><span class="t">Atelier cocktail</span><span class="d">Shaker, stirrer, goûter et associer. Nous préparons des classiques et des créations originales avec sours, vermouths, bitters et saveurs surprenantes.</span></div>
+      <div class="wks__item wks__item--wide"><span class="letter">E.</span><span class="t">Atelier sur mesure</span><span class="d">Un thème adapté à votre groupe, votre événement ou votre entreprise. Streetfood du monde, sharing dishes méditerranéens, bouchées festives, foodpairing, spice blending ou atelier autour de votre cuisine préférée. Nous définissons ensemble le thème, le niveau et la formule. Nous nous occupons des ingrédients, du matériel, de l'accompagnement et bien sûr de quoi se régaler ensemble.</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>D. Ateliers</span><span class="num">09</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 9 · CUSTOM EXPERIENCES
+     ───────────────────────────────────────────────────── -->
+<section class="page cst" data-screen-label="09 Custom">
+  <div class="cst__head">
+    <span class="eyebrow">Expériences sur mesure</span>
+    <h1 class="h1">Pour les soirées<br/>qui ne rentrent pas<br/>dans une formule standard.</h1>
+    <span class="rule" style="background: var(--bronze);"></span>
+    <p class="lead">Certains moments demandent plus qu'un menu. Un week-end à l'étranger. Une fête autour d'un thème précis. Un lancement de produit avec une histoire culinaire. Un private dinner où tout doit être juste, de l'apéritif au dernier verre.</p>
+    <p class="body" style="color: var(--warm-gray); font-size: 11pt; line-height: 1.6;">Pour ces moments-là, nous créons une expérience culinaire complète autour de votre idée. Nous réfléchissons avec vous au concept, à l'ambiance, au menu, au service, aux drinks, au timing et au flow. Pas comme une formule fixe, mais comme une expérience construite depuis zéro autour de ce que vous voulez faire ressentir.</p>
+  </div>
+  <div class="cst__pull">« Pas seulement ce qui arrive à table, mais <em>la manière dont toute la soirée se vit</em>. »</div>
+  <div class="cst__grid">
+    <div class="cst__card"><span class="num">01</span><h4>De l'idée au concept</h4><p>Nous ne commençons pas uniquement par le menu, mais par l'idée plus large. Que célébrez-vous ? Qui sera à table ? Quelle atmosphère souhaitez-vous créer ? Sur cette base, nous construisons un concept culinaire qui va au-delà des plats.</p></div>
+    <div class="cst__card"><span class="num">02</span><h4>Tout autour d'une histoire</h4><p>Un sharing dinner du sud, un fire dinner accordé au whisky, une soirée japonaise, une fête familiale méditerranéenne ou un dîner inspiré d'un voyage. Nous traduisons le thème en saveurs, rythme, présentation et expérience.</p></div>
+    <div class="cst__card"><span class="num">03</span><h4>Plus que cuisiner</h4><p>Nous pensons au flow complet de la soirée : accueil, apéritif, moments culinaires, boissons, service, timing et éventuels extras comme des cocktails, des pairings, du live cooking ou une longue table dressée.</p></div>
+    <div class="cst__card"><span class="num">04</span><h4>Pour des lieux particuliers</h4><p>Une villa en Toscane, un loft à Bruxelles, une garden party, une galerie, un chalet ou un lieu d'entreprise. Nous adaptons l'expérience au lieu pour que cuisine, ambiance et service s'accordent naturellement.</p></div>
+    <div class="cst__card"><span class="num">05</span><h4>En Belgique et au-delà</h4><p>Nous cuisinons sur des lieux partout en Belgique et, sur demande, nous voyageons aussi plus loin. Pas encore de lieu ? Dans la région bruxelloise, nous pouvons vous aider à trouver un endroit adapté pour votre dîner, fête ou événement d'entreprise.</p></div>
+  </div>
+  <div class="pagefoot"><span>Expériences sur mesure</span><span class="num">10</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 10 · SAMPLE MENU
+     ───────────────────────────────────────────────────── -->
+<section class="page menu" data-screen-label="10 Sample menu">
+  <div class="menu__media"></div>
+  <div class="menu__body">
+    <span class="eyebrow">Menu proposé · Signature</span>
+    <h1 class="h1">La Table<br/>Généreuse.</h1>
+    <span class="tag">Food sharing menu.</span>
+    <span class="rule" style="margin-top: 2mm;"></span>
+    <div class="menu__courses">
+      <div class="menu__course">
+        <span class="lbl">Entrée</span>
+        <span class="nm">Burrata &amp; asperges</span>
+        <p class="desc">Burrata, asperges vertes et gremolata de pistache.</p>
+      </div>
+      <div class="menu__course">
+        <span class="lbl">Plat principal</span>
+        <span class="nm">La Table Généreuse</span>
+        <p class="desc">Une grande planche en bois garnie de viandes de bœuf premium d'Irlande, d'Espagne et d'Argentine. Légumes grillés, pommes de terre hasselback et chimichurri. Tout à partager à table. Tout est fait maison.</p>
+      </div>
+      <div class="menu__course">
+        <span class="lbl">Dessert</span>
+        <span class="nm">Citron vert &amp; mascarpone</span>
+        <p class="desc">Mousse au citron vert et mascarpone, sorbet limoncello et fruits rouges.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot" style="color: rgba(245,240,232,0.55);"><span>Menu proposé</span><span class="num">11</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 11 · À LA CARTE I
+     ───────────────────────────────────────────────────── -->
+<section class="page alc" data-screen-label="11 À la carte I">
+  <div class="alc__head">
+    <span class="eyebrow">À la carte · Small plates · I</span>
+    <h1 class="h1">Small plates,<br/>à composer selon vos envies.</h1>
+    <p class="lead">Une sélection de small plates à servir en entrée ou à combiner librement pour créer un menu selon vos goûts.</p>
+  </div>
+  <div class="alc__grid">
+    <div class="alc__col">
+      <h4>Crudo / Cru</h4>
+      <ul>
+        <li><b>Trio d'huîtres</b></li>
+        <li><b>Huître au yuzu et saké</b></li>
+        <li><b>Ceviche de bar</b></li>
+        <li><b>Ceviche de Saint-Jacques</b><em>Leche de tigre et bouillon dashi.</em></li>
+        <li><b>Tartare de Saint-Jacques</b><em>Salsa de cresson et citron vert.</em></li>
+        <li><b>Tartare de saumon</b><em>Salsa verte asiatique.</em></li>
+        <li><b>Tartare de thon, façon vitello tonnato</b><em>Anchois et câpres.</em></li>
+        <li><b>Gravlax de saumon maison</b></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Végé</h4>
+      <ul>
+        <li><b>Burratina, asperges vertes grillées &amp; pistache</b><em>Gremolata de pistache.</em></li>
+        <li><b>Burratina, gremolata de pistache &amp; ail des ours</b></li>
+        <li><b>Burratina, orange sanguine &amp; miel de lavande</b></li>
+        <li><b>Burratina, tomates marinées &amp; basilic</b><em>Consommé de tomate.</em></li>
+        <li><b>Burratina, potimarron grillé &amp; noisette</b><em>Gremolata de pistache.</em></li>
+        <li><b>Carottes croustillantes &amp; labneh</b><em>Épices du Moyen-Orient.</em></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Croquettes artisanales</h4>
+      <ul>
+        <li><b>Arancini</b><em>Risotto, encre de seiche et estragon.</em></li>
+        <li><b>Croquette aux crevettes</b><em>Aïoli au basilic.</em></li>
+        <li><b>Croquette au fromage</b></li>
+        <li><b>Croquette au jambon de Parme &amp; parmigiano</b></li>
+        <li><b>Croquette au curry rouge thaï &amp; scampi</b></li>
+        <li><b>Samosa de cuisse de canard confite</b></li>
+        <li><b>Samosa au curry végétarien</b></li>
+      </ul>
+    </div>
+  </div>
+  <p class="alc__foot">Suite à la page suivante. Méditerranéen, international &amp; tapas.</p>
+  <div class="pagefoot"><span>À la carte · I</span><span class="num">12</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 12 · À LA CARTE II
+     ───────────────────────────────────────────────────── -->
+<section class="page alc" data-screen-label="12 À la carte II">
+  <div class="alc__head">
+    <span class="eyebrow">À la carte · Small plates · II</span>
+    <h1 class="h1">Méditerranéen,<br/>international &amp; tapas.</h1>
+    <p class="lead">La deuxième partie de la carte : poisson, viande et plats inspirés du monde entier.</p>
+  </div>
+  <div class="alc__grid">
+    <div class="alc__col">
+      <h4>Méditerranéen</h4>
+      <ul>
+        <li><b>Mi-cuit de thon en croûte d'herbes</b><em>Dip à l'avocat.</em></li>
+        <li><b>Noix de Saint-Jacques poêlée &amp; champignons sauvages</b><em>Émulsion de parmigiano.</em></li>
+        <li><b>Flatbread d'agneau effiloché</b><em>Crème d'ail noir et légumes pickles.</em></li>
+        <li><b>Langoustine grillée</b><em>Crème céleri-rave &amp; agrumes.</em></li>
+        <li><b>Vongole veraci, chorizo &amp; vermouth</b></li>
+        <li><b>Vongole veraci, tomates cerises &amp; fenouil</b></li>
+        <li><b>Mini steak tartare de bœuf premium</b><em>Anchois et raifort.</em></li>
+        <li><b>Arrosticini d'agneau</b><em>Salsa de choucroute.</em></li>
+        <li><b>Bruschetta tomate &amp; anchois</b></li>
+        <li><b>Ravioli de langoustine</b><em>Fait maison.</em></li>
+        <li><b>Ravioli de truffe &amp; champignons sauvages</b></li>
+        <li><b>Ravioli de crabe &amp; verveine</b><em>Sauce aux crustacés.</em></li>
+        <li><b>Pluma Iberico</b><em>Crème de chou-fleur.</em></li>
+        <li><b>Steak premium</b><em>Béarnaise ou chimichurri, asperge, pomme de terre hasselback.</em></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>International</h4>
+      <ul>
+        <li><b>Spring rolls vietnamiens maison</b></li>
+        <li><b>Poulpe grillé, chili &amp; avocat</b><em>Céleri râpé.</em></li>
+        <li><b>Moules thaïes</b><em>Curry rouge et coco.</em></li>
+        <li><b>Mini poké bowl</b><em>Saumon sauvage, sauce chili, légumes pickles.</em></li>
+        <li><b>Maquereau à queue jaune, brocoli &amp; miso</b><em>Crème de persil et salsa verte.</em></li>
+        <li><b>Brochette de poulet thaï</b><em>Dip à la cacahuète.</em></li>
+        <li><b>Boulettes au gingembre</b><em>Sauce miel-soja.</em></li>
+        <li><b>Taco végétarien de pleurotes</b><em>Salsa avocat-habanero.</em></li>
+        <li><b>Taco al Pastor</b><em>Épaule de porc à la broche, salsa verte avocat-habanero.</em></li>
+        <li><b>Gyoza coréen</b><em>Kimchi.</em></li>
+        <li><b>Anguille fumée</b><em>Mole de betterave rouge, crème aigre.</em></li>
+        <li><b>Bun vietnamien</b><em>Poitrine de porc laquée.</em></li>
+        <li><b>Summer roll au canard laqué</b></li>
+        <li><b>Bun cha vietnamien</b><em>Poitrine de porc laquée, nouilles, bouillon aux herbes.</em></li>
+        <li><b>Poitrine de porc grillée</b><em>Oignon caramélisé.</em></li>
+      </ul>
+    </div>
+    <div class="alc__col">
+      <h4>Tapas &amp; antipasti</h4>
+      <ul>
+        <li><b>Planche de tapas espagnoles</b><em>Olives, serrano, manchego, dips maison.</em></li>
+        <li><b>Planche antipasti</b><em>Iberico, manchego, olives, dips.</em></li>
+      </ul>
+      <h4 style="margin-top: 8mm;">Desserts</h4>
+      <ul>
+        <li><b>Buffet de desserts</b><em>Sélection de pâtisseries artisanales, tartelettes et choux. Tout est fait maison.</em></li>
+        <li><b>Cheesecake ricotta &amp; fruit de la passion</b><em>Avec glace au beurre noisette.</em></li>
+        <li><b>Glace figue &amp; cardamome</b><em>Maison.</em></li>
+        <li><b>Cheese course</b><em>Sélection de fromages, confit de figues.</em></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagefoot"><span>À la carte · II</span><span class="num">13</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 13 · VOORBEELDMENU'S — INTRO + EXAMPLE 1 + 2
+     ───────────────────────────────────────────────────── -->
+<section class="page exa" data-screen-label="13 Voorbeeldmenu's I">
+  <div class="exa__head">
+    <span class="eyebrow">Exemples de menus</span>
+    <h1 class="h1">Pour vous inspirer.</h1>
+    <span class="rule" style="background: var(--bronze);"></span>
+    <p class="lead">Aucun événement ne se ressemble. C'est pourquoi chaque menu est créé sur mesure, en fonction de vos invités, du lieu, de la saison et du rythme de la journée.</p>
+    <p class="exa__disc">Les exemples ci-dessous donnent une idée de notre style, de nos formules et de nos prix indicatifs. Les prix sont indicatifs et dépendent de la formule, du lieu, de la saison, du nombre d'invités et des besoins pratiques.</p>
+  </div>
+  <div class="exa__grid">
+    <div class="exa__menu">
+      <div class="exa__img" style="background-image: url('../assets/images/event-oysters.JPG'); background-position: center 80%;"></div>
+      <span class="lbl">Exemple 1</span>
+      <h3 class="title">Luxury Walking Dinner —<br/>Seafood &amp; Live BBQ.</h3>
+      <p class="ctx">Anniversaire de mariage. 50 invités. Été 2025.</p>
+      <span class="sec">Menu</span>
+      <ul class="items">
+        <li>Huîtres crues, espuma de yuzu, perles d'agrumes</li>
+        <li>Tartare de coquille Saint-Jacques, leche de tigre, pico de gallo, crème d'avocat</li>
+        <li>Mi-cuit de thon, nori &amp; sésame</li>
+        <li>Burratina, asperges vertes grillées, gremolata de pistache</li>
+        <li>Langoustine grillée, glaze au yuzu, crème céleri-rave &amp; agrumes</li>
+        <li>Pluma Iberico, chimichurri</li>
+        <li>Pork belly &amp; rice cake, saké, soja, oignon caramélisé</li>
+        <li>Buffet de desserts artisanaux</li>
+      </ul>
+      <div class="price">
+        <span class="plbl">Prix indicatif</span>
+        <span class="pval">€ 95 p.p.</span>
+      </div>
+    </div>
+    <div class="exa__menu">
+      <div class="exa__img" style="background-image: url('../assets/images/menu-ceviche.JPG'); background-position: center 80%;"></div>
+      <span class="lbl">Exemple 2</span>
+      <h3 class="title">Walking Dinner.</h3>
+      <p class="ctx">Événement d'entreprise. 40–60 invités. Bruxelles. Printemps 2026.</p>
+      <span class="sec">Menu</span>
+      <ul class="items">
+        <li>Ceviche de Saint-Jacques, leche de tigre, bouillon dashi</li>
+        <li>Croquette aux crevettes, aïoli au basilic</li>
+        <li>Burratina, orange sanguine, miel de lavande</li>
+        <li>Spring rolls vietnamiens maison</li>
+        <li>Ravioli de truffe &amp; champignons sauvages</li>
+        <li>Gyoza coréen, kimchi</li>
+        <li>Mini steak tartare de bavette légèrement fumée, anchois, raifort</li>
+        <li>Pluma Iberico, crème de chou-fleur</li>
+      </ul>
+      <div class="price">
+        <span class="plbl">Prix indicatif</span>
+        <span class="pval">€ 75 p.p.</span>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Exemples de menus · I</span><span class="num">14</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 14 · VOORBEELDMENU'S — EXAMPLE 3 + 4
+     ───────────────────────────────────────────────────── -->
+<section class="page exa" data-screen-label="14 Voorbeeldmenu's II">
+  <div class="exa__head">
+    <span class="eyebrow">Exemples de menus · suite</span>
+    <h1 class="h1" style="font-size: 24pt;">Walking dinners &amp;<br/>menus classiques.</h1>
+    <span class="rule" style="background: var(--bronze);"></span>
+  </div>
+  <div class="exa__grid">
+    <div class="exa__menu">
+      <div class="exa__img" style="background-image: url('../assets/images/hero-meatboard.jpg'); background-position: center 80%;"></div>
+      <span class="lbl">Exemple 3</span>
+      <h3 class="title">Walking dinner &amp;<br/>The Meat Board.</h3>
+      <p class="ctx">Mariage. 50 invités. Réception de midi + dîner. Été 2025.</p>
+      <span class="sec">Réception · Walking dinner</span>
+      <ul class="items">
+        <li>Mi-cuit de thon, croûte d'herbes, dip à l'avocat</li>
+        <li>Burratina, tomates marinées, consommé de tomate au basilic</li>
+        <li>Croquette aux crevettes, aïoli au basilic</li>
+        <li>Ravioli de crabe, verveine, sauce aux crustacés</li>
+      </ul>
+      <span class="sec">Plat principal · The Meat Board</span>
+      <p class="desc">Grandes planches de partage en bois servies à table, avec une sélection de viandes premium. Minimum quatre variétés de bœuf premium, complétées par du Pluma Iberico et des gambas grillées. Servies avec pommes de terre hasselback au beurre aux herbes, légumes de saison et sauces maison.</p>
+      <span class="sec">Dessert</span>
+      <ul class="items">
+        <li>Glace maison à la cardamome, abricots marinés</li>
+      </ul>
+      <div class="price">
+        <span class="plbl">Prix indicatif</span>
+        <span class="pval">€ 115 p.p.</span>
+      </div>
+    </div>
+    <div class="exa__menu">
+      <div class="exa__img" style="background-image: url('../assets/images/event-lobster-pasta.jpg'); background-position: center 80%;"></div>
+      <span class="lbl">Exemple 4</span>
+      <h3 class="title">Dîner classique 3 services<br/>à table.</h3>
+      <p class="ctx">Dîner d'entreprise. 40 invités. Automne 2026.</p>
+      <span class="sec">Apéritif</span>
+      <ul class="items">
+        <li>Planches en bois d'olivier avec charcuterie fine, fromages, olives et dips maison</li>
+      </ul>
+      <span class="sec">Entrée</span>
+      <ul class="items">
+        <li>Ravioli maison à l'asperge, asperges blanches et herbes fraîches</li>
+      </ul>
+      <span class="sec">Plat principal</span>
+      <ul class="items">
+        <li>Tagliata de bœuf premium, parmigiano, roquette, pomme de terre hasselback et légumes de saison</li>
+      </ul>
+      <span class="sec">Dessert</span>
+      <ul class="items">
+        <li>Buffet de desserts artisanaux avec pâtisseries, choux et tartelettes aux fruits</li>
+      </ul>
+      <div class="price">
+        <span class="plbl">Prix indicatif</span>
+        <span class="pval">€ 95 p.p.</span>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Exemples de menus · II</span><span class="num">15</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 15 · DRINKS
+     ───────────────────────────────────────────────────── -->
+<section class="page drk" data-screen-label="15 Drinks">
+  <div class="drk__band">
+    <div style="background-image: url('../assets/images/drink-flutes-marble.JPG');"></div>
+    <div style="background-image: url('../assets/images/drink-bucket-bottles.JPG');"></div>
+    <div style="background-image: url('../assets/images/drink-rosalie-382.jpg');"></div>
+    <span class="label">Wine · Cocktails · Pairings</span>
+  </div>
+  <div class="drk__body">
+    <div class="drk__head">
+      <span class="eyebrow">La carte des boissons</span>
+      <h1 class="h1">Vins, cocktails<br/>et pairings.</h1>
+      <span class="rule"></span>
+      <p class="lead">Le bon accord sublime la soirée.</p>
+      <p class="body">Du wine pairing au Champagne, en passant par les cocktails signature ou les alternatives sans alcool : Chef &amp; Chief compose une formule boissons sur mesure, adaptée à votre menu, vos invités et votre moment.</p>
+      <p class="body">Vous avez vos propres vins ou des bouteilles particulières que vous souhaitez servir ? Nous les intégrons avec plaisir dans la soirée. Vous pouvez choisir une formule boissons complète via Chef &amp; Chief, ou fournir vous-mêmes les boissons pendant que notre équipe assure le service.</p>
+    </div>
+    <div class="drk__col">
+      <h4>Vins &amp; bulles</h4>
+      <h5>Wine pairing</h5>
+      <p>Notre sommelier construit un pairing autour du menu : classique français, élégant et accessible, ou volontairement plus aventureux avec des régions et cépages plus surprenants. Nous travaillons avec trois niveaux.</p>
+      <ul>
+        <li><b>Basic</b><em>Des vins accessibles et de qualité, qui s'accordent joliment avec le menu.</em></li>
+        <li><b>Medium</b><em>Une sélection plus raffinée, avec davantage de caractère, de complexité et d'attention à l'origine.</em></li>
+        <li><b>Luxe</b><em>Des bouteilles particulières et des pairings premium pour celles et ceux qui veulent donner au vin un vrai rôle dans la soirée.</em></li>
+      </ul>
+      <h5>Champagne &amp; bulles</h5>
+      <p>Une coupe de Champagne, Crémant, Franciacorta ou autre bulle festive à l'apéritif, pour un toast ou comme clôture élégante avec le dessert.</p>
+    </div>
+    <div class="drk__col">
+      <h4>Cocktails &amp; mocktails</h4>
+      <p>Au-delà de la cuisine, nous avons aussi une vraie passion pour les cocktails, les saveurs et les pairings. Nous créons des cocktails classiques, des créations originales et des alternatives sans alcool sur mesure pour votre événement.</p>
+      <p>Un cocktail de bienvenue frais, une signature drink pour votre fête, un cocktail au dessert ou un mocktail pairing sans alcool : tout est possible.</p>
+      <ul>
+        <li><b>Pisco Sour</b><em>Frais et acidulé, avec citron vert et blanc d'œuf.</em></li>
+        <li><b>Negroni à la figue</b><em>Doux-amer, rond et un peu plus souple que le classique.</em></li>
+        <li><b>Naked &amp; Famous</b><em>Frais, épicé et légèrement fumé, au mezcal.</em></li>
+        <li><b>Pamplemousse &amp; gin sans alcool</b><em>Frais, agrumes et amertume.</em></li>
+      </ul>
+      <p style="font-size: 9pt; line-height: 1.4; color: rgba(245,240,232,0.58); margin-top: 2mm;">Les cocktails ci-dessus sont des exemples. La sélection finale est toujours adaptée à votre menu, à la saison et à vos goûts.</p>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Boissons</span><span class="num">16</span></div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────
+     PAGE 14 · BACK COVER / CONTACT
+     ───────────────────────────────────────────────────── -->
+<section class="page back" data-screen-label="14 Contact">
+  <div class="back__bg"></div>
+  <div class="back__inner">
+    <span class="back__wordmark"><span class="bar">│</span>Chef &amp; Chief<span class="bar">│</span></span>
+    <div class="back__center">
+      <span class="serif">Let’s eat.</span>
+      <h1 class="h1">At your table.</h1>
+      <span class="back__rule"></span>
+      <div class="back__contact">
+        <div><span class="lbl">Email</span><a href="mailto:info@chefandchief.be">info@chefandchief.be</a></div>
+        <div><span class="lbl">Téléphone</span><a href="tel:+32476549649">+32 476 54 96 49</a></div>
+        <div><span class="lbl">Web/Social</span><a href="https://www.chefandchief.be">www.chefandchief.be</a> · <a href="https://www.instagram.com/chefandchiefbe">@ChefandChiefBE</a></div>
+        <div><span class="lbl">Localisation</span>Bruxelles · Worldwide</div>
+      </div>
+    </div>
+    <div class="back__footer">
+      <span>Chef &amp; Chief</span>
+      <span>Édition 2026</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
