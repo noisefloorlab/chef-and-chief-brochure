@@ -588,6 +588,38 @@ body {
   padding-bottom: 4mm;
 }
 
+/* ── Typographic refinement v2: less italic, more rhythm ────── */
+.eyebrow { font-size: 9pt !important; letter-spacing: 0.30em !important; }
+.alc__head .lead, .exa__head .lead, .menu__head .lead, .drk__head .lead,
+.ev .lead, .corp .lead, .wks .lead, .cst .lead,
+.services__head .lead, .pd__col .lead, .concept__text .lead {
+  font-style: normal !important;
+}
+.concept__text p, .pd__col .body,
+.corp p, .corp .body, .corp__why p,
+.wks p, .wks .body, .wks__item .d,
+.cst p, .cst .body, .cst__card p,
+.alc__head p, .exa__head p, .menu__head p, .drk__head .body,
+.ev .body, .ev__type .d,
+.drk__col p {
+  font-family: var(--serif) !important;
+  font-style: normal !important;
+}
+.bleed__quote, .ev__quote, .story__quote, .cst__pull,
+.menu .menu__item .d, .exa__menu .ctx, .exa__menu .desc,
+.alc__col li em, .drk__col ul li em {
+  font-style: italic !important;
+}
+.alc__col li { font-size: 9.5pt !important; line-height: 1.4 !important; }
+.alc__col li b { font-size: 9pt !important; letter-spacing: 0.08em !important; }
+.alc__col li em { font-size: 9.5pt !important; }
+.alc__col h4 { font-size: 9.5pt !important; letter-spacing: 0.28em !important; }
+.drk__col ul li { font-size: 10pt !important; line-height: 1.4 !important; }
+.drk__col ul li b { font-size: 9.5pt !important; }
+.drk__col ul li em { font-size: 10pt !important; }
+.exa__menu .items li, .exa__menu .desc { font-size: 10.5pt !important; line-height: 1.4 !important; }
+.exa__menu .sec { font-size: 8.5pt !important; letter-spacing: 0.28em !important; }
+
 /* ── Print rules ─────────────────────────────────────── */
 @page { size: A4; margin: 0; }
 * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
@@ -656,7 +688,7 @@ body {
     </div>
     <div class="idx__group">
       <span class="idx__group-lbl">Menus</span>
-      <div class="idx__item idx__item--highlight"><span class="t">Suggested menu, The Feast Table</span><span class="num">11</span></div>
+      <div class="idx__item idx__item--highlight"><span class="t">Suggested menu, The Meat Board</span><span class="num">11</span></div>
       <div class="idx__item idx__item--highlight"><span class="t">À la carte, small plates &amp; dishes</span><span class="num">12 – 13</span></div>
       <div class="idx__item idx__item--highlight"><span class="t">Sample menus with price indications</span><span class="num">14 – 15</span></div>
     </div>
@@ -934,7 +966,7 @@ body {
   <div class="menu__media"></div>
   <div class="menu__body">
     <span class="eyebrow">Suggested menu · Signature</span>
-    <h1 class="h1">The Feast<br/>Table.</h1>
+    <h1 class="h1">The Meat<br/>Board.</h1>
     <span class="tag">Food sharing menu.</span>
     <span class="rule" style="margin-top: 2mm;"></span>
     <div class="menu__courses">
@@ -945,7 +977,7 @@ body {
       </div>
       <div class="menu__course">
         <span class="lbl">Main course</span>
-        <span class="nm">The Feast Table</span>
+        <span class="nm">Bourgondische tafel</span>
         <p class="desc">A large wooden board with premium beef from Ireland, Spain and Argentina. Grilled vegetables, hasselback potatoes and chimichurri. Everything served for the table to share. Everything homemade.</p>
       </div>
       <div class="menu__course">
@@ -1059,15 +1091,14 @@ body {
       </ul>
     </div>
     <div class="alc__col">
-      <h4>Tapas &amp; antipasti</h4>
+      <h4>Antipasti</h4>
       <ul>
-        <li><b>Spanish tapas board</b><em>Olives, serrano, manchego, homemade dips.</em></li>
-        <li><b>Antipasti board</b><em>Iberico, manchego, olives, dips.</em></li>
+        <li><b>Antipasti board</b><em>Cheese &amp; charcuterie, homemade dips, olives.</em></li>
       </ul>
       <h4 style="margin-top: 8mm;">Desserts</h4>
       <ul>
         <li><b>Dessert buffet</b><em>Selection of artisanal pastries, tartlets and choux. Everything homemade.</em></li>
-        <li><b>Ricotta &amp; passion fruit cheesecake</b><em>With brown butter ice cream.</em></li>
+        <li><b>Ricotta &amp; orange cheesecake</b><em>Burnt lemon ice cream.</em></li>
         <li><b>Fig &amp; cardamom ice cream</b><em>Homemade.</em></li>
         <li><b>Cheese course</b><em>Selection of cheeses, fig confit.</em></li>
       </ul>
@@ -1160,7 +1191,7 @@ body {
       <p class="desc">Large wooden sharing boards served at the table with a selection of premium meat. Minimum four varieties of premium beef, complemented with Pluma Iberico and grilled prawns. Served with hasselback potatoes with herb butter, seasonal vegetables and homemade sauces.</p>
       <span class="sec">Dessert</span>
       <ul class="items">
-        <li>Homemade cardamom ice cream, marinated apricots</li>
+        <li>Marinated apricots with homemade cardamom-lemon ice cream</li>
       </ul>
       <div class="price">
         <span class="plbl">Price indication</span>

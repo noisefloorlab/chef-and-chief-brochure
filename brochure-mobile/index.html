@@ -588,6 +588,47 @@ body {
   padding-bottom: 4mm;
 }
 
+/* ── Typographic refinement v2: less italic, more rhythm ────── */
+/* Eyebrows: consistent across pages */
+.eyebrow { font-size: 9pt !important; letter-spacing: 0.30em !important; }
+
+/* Section leads: Roman serif instead of italic, bronze-light tone */
+.alc__head .lead, .exa__head .lead, .menu__head .lead, .drk__head .lead,
+.ev .lead, .corp .lead, .wks .lead, .cst .lead,
+.services__head .lead, .pd__col .lead, .concept__text .lead {
+  font-style: normal !important;
+}
+
+/* Body paragraphs: Roman serif (no italic), unified */
+.concept__text p, .pd__col .body,
+.corp p, .corp .body, .corp__why p,
+.wks p, .wks .body, .wks__item .d,
+.cst p, .cst .body, .cst__card p,
+.alc__head p, .exa__head p, .menu__head p, .drk__head .body,
+.ev .body, .ev__type .d,
+.drk__col p {
+  font-family: var(--serif) !important;
+  font-style: normal !important;
+}
+
+/* Pull quotes: italic stays — but only on the deliberate "voice" moments */
+.bleed__quote, .ev__quote, .story__quote, .cst__pull,
+.menu .menu__item .d, .exa__menu .ctx, .exa__menu .desc,
+.alc__col li em, .drk__col ul li em {
+  font-style: italic !important;
+}
+
+/* Bump small list type for legibility */
+.alc__col li { font-size: 9.5pt !important; line-height: 1.4 !important; }
+.alc__col li b { font-size: 9pt !important; letter-spacing: 0.08em !important; }
+.alc__col li em { font-size: 9.5pt !important; }
+.alc__col h4 { font-size: 9.5pt !important; letter-spacing: 0.28em !important; }
+.drk__col ul li { font-size: 10pt !important; line-height: 1.4 !important; }
+.drk__col ul li b { font-size: 9.5pt !important; }
+.drk__col ul li em { font-size: 10pt !important; }
+.exa__menu .items li, .exa__menu .desc { font-size: 10.5pt !important; line-height: 1.4 !important; }
+.exa__menu .sec { font-size: 8.5pt !important; letter-spacing: 0.28em !important; }
+
 /* ── Print rules ─────────────────────────────────────── */
 @page { size: A4; margin: 0; }
 * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
@@ -598,7 +639,7 @@ body {
   .page { box-shadow: none !important; margin: 0 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
 
-/* ── Mobile: enlarge for phone reading ─────────────────── */
+/* ── Mobile: enlarge for phone reading, hide pagefoots ─────── */
 .pagefoot { display: none !important; }
 .eyebrow { font-size: 12.5pt !important; letter-spacing: 0.26em !important; }
 .lbl, .back__contact .lbl { font-size: 12pt !important; letter-spacing: 0.22em !important; }
@@ -714,7 +755,7 @@ body {
     </div>
     <div class="idx__group">
       <span class="idx__group-lbl">Menukaart</span>
-      <div class="idx__item idx__item--highlight"><span class="t">Voorgesteld menu. Bourgondische tafel</span><span class="num">11</span></div>
+      <div class="idx__item idx__item--highlight"><span class="t">Voorgesteld menu. The Meat Board</span><span class="num">11</span></div>
       <div class="idx__item idx__item--highlight"><span class="t">À la carte. small plates &amp; gerechten</span><span class="num">12 – 13</span></div>
       <div class="idx__item idx__item--highlight"><span class="t">Voorbeeldmenu's met prijssuggesties</span><span class="num">14 – 15</span></div>
     </div>
@@ -992,7 +1033,7 @@ body {
   <div class="menu__media"></div>
   <div class="menu__body">
     <span class="eyebrow">Voorgesteld menu · Signature</span>
-    <h1 class="h1">Bourgondische<br/>tafel.</h1>
+    <h1 class="h1">The Meat<br/>Board.</h1>
     <span class="tag">Food sharing menu.</span>
     <span class="rule" style="margin-top: 2mm;"></span>
     <div class="menu__courses">
@@ -1117,17 +1158,16 @@ body {
       </ul>
     </div>
     <div class="alc__col">
-      <h4>Tapas &amp; antipasti</h4>
+      <h4>Antipasti</h4>
       <ul>
-        <li><b>Spaanse tapas plank</b><em>Olijven, serrano, manchego, huisgemaakte dips.</em></li>
-        <li><b>Antipasti plank</b><em>Iberico, manchego, olijven, dips.</em></li>
+        <li><b>Antipasti plank</b><em>Kaas &amp; charcuterie, huisgemaakte dips, olijven.</em></li>
       </ul>
       <h4 style="margin-top: 8mm;">Desserts</h4>
       <ul>
         <li><b>Dessertenbuffet</b><em>Selectie ambachtelijke gebakjes, taartjes en soesjes. Alles huisgemaakt.</em></li>
-        <li><b>Ricotta &amp; passievrucht cheesecake</b><em>Met ijs van bruine boter.</em></li>
+        <li><b>Ricotta &amp; sinaasappel cheesecake</b><em>IJs van gebrande citroen.</em></li>
         <li><b>Vijg &amp; kardemom ijs</b><em>Huisgemaakt.</em></li>
-        <li><b>Cheese course</b><em>Selectie kazen, vijgenconfit.</em></li>
+        <li><b>Selectie van onze kazen</b><em>Met vijgenconfit.</em></li>
       </ul>
     </div>
   </div>
@@ -1218,7 +1258,7 @@ body {
       <p class="desc">Grote houten sharing boards aan tafel met een selectie premium vlees. Minimum vier soorten premium rundvlees, aangevuld met Pluma Iberico en gegrilde gamba's. Geserveerd met hasselback potatoes met kruidenboter, seizoensgroenten en huisgemaakte sauzen.</p>
       <span class="sec">Dessert</span>
       <ul class="items">
-        <li>Huisgemaakt kardemomijs, gemarineerde abrikozen</li>
+        <li>Gemarineerde abrikozen met huisgemaakt kardemom-citroenijs</li>
       </ul>
       <div class="price">
         <span class="plbl">Prijsindicatie</span>
